@@ -71,7 +71,7 @@ The portfolio with the highest Sharpe Ratio (i.e., the one offering the best ret
 
 
 ---
-![image](https://github.com/user-attachments/assets/e3e73eba-3747-4e37-918c-5f9af1e8d601)
+![image](IMAGES/monte_carlo.jpg)
 
 - **Average value at the end of 2 years**: $503,867.89
 - **Median final value**: $492,655.62
