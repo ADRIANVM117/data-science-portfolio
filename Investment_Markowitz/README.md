@@ -84,7 +84,7 @@ The efficient frontier was plotted showing the simulated portfolios, with the mi
 
 
 ---
-![image](https://github.com/user-attachments/assets/e3e73eba-3747-4e37-918c-5f9af1e8d601)
+![image](IMAGES/frontera_eficien.jpg)
 
 ## Conclusions
 
