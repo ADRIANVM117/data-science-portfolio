@@ -91,6 +91,8 @@ The results from the model evaluations are as follows:
   - **Weighted avg:** 0.88 (Precision), 0.85 (Recall), 0.85 (F1-score)
 
 ---
+![image](https://github.com/user-attachments/assets/e3e73eba-3747-4e37-918c-5f9af1e8d601)
 
+---
 This project provides a comprehensive approach to analyzing and predicting NBA game outcomes, using statistical analysis, data cleaning, and advanced machine learning models. The results show high performance from both the Random Forest and Gradient Boosting models, with a slightly lower performance from the MLP model.
 
