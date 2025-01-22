@@ -69,6 +69,10 @@ The portfolio with the highest Sharpe Ratio (i.e., the one offering the best ret
 
 ### Simulation Results
 
+
+---
+![image](https://github.com/user-attachments/assets/e3e73eba-3747-4e37-918c-5f9af1e8d601)
+
 - **Average value at the end of 2 years**: $503,867.89
 - **Median final value**: $492,655.62
 - **5th Percentile (pessimistic scenario)**: $347,577.36
@@ -77,6 +81,10 @@ The portfolio with the highest Sharpe Ratio (i.e., the one offering the best ret
 ### Visualization of Results
 
 The efficient frontier was plotted showing the simulated portfolios, with the minimum volatility portfolio and the Sharpe ratio portfolio highlighted.
+
+
+---
+![image](https://github.com/user-attachments/assets/e3e73eba-3747-4e37-918c-5f9af1e8d601)
 
 ## Conclusions
 
