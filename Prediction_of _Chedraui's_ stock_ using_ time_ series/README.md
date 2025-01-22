@@ -72,7 +72,7 @@ The analysis highlights the importance of combining visualization techniques, pr
 ---
 
 ## **Forecast Plot**
-![Forecast Plot](path/to/forecast.png)
+![Forecast Plot](Prediction_of _Chedraui's_ stock_ using_ time_ series/Iamge/pronostico.jpg)
 
 ---
 
