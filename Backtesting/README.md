@@ -99,7 +99,7 @@ The backtesting includes interactive charts generated with **bokeh**, which disp
 | MAE              | 87.54  |
 | R²               | 0.92   |
 
-![Estrategy Plot](path/to/forecast_optimized.png)
+![Estrategy Plot](Images/ichimoku_strategy.jpg)
 
 ---
 
