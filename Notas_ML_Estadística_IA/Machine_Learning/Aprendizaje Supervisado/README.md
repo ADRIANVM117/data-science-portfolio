@@ -1,6 +1,7 @@
-# Aprendizaje Supervisado 
+1. Aprendizaje Supervisado
     - [Regresión Lineal](#regresión-lineal)
     - [Regresión Logística](#regresión-logística)
+    - [Regresión Ridgel](#regresión-lineal)
     - [Árboles de Decisión](#árboles-de-decisión)
     - [Bosques Aleatorios](#bosques-aleatorios)
     - [Máquinas de Soporte Vectorial (SVM)](#máquinas-de-soporte-vectorial-svm)
