@@ -1,4 +1,4 @@
-[Aprendizaje Supervisado](#aprendizaje-supervisado)
+# Aprendizaje Supervisado 
     - [Regresión Lineal](#regresión-lineal)
     - [Regresión Logística](#regresión-logística)
     - [Árboles de Decisión](#árboles-de-decisión)
