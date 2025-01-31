@@ -1,0 +1,7 @@
+[Aprendizaje Supervisado](#aprendizaje-supervisado)
+    - [Regresión Lineal](#regresión-lineal)
+    - [Regresión Logística](#regresión-logística)
+    - [Árboles de Decisión](#árboles-de-decisión)
+    - [Bosques Aleatorios](#bosques-aleatorios)
+    - [Máquinas de Soporte Vectorial (SVM)](#máquinas-de-soporte-vectorial-svm)
+    - [K-Vecinos Más Cercanos (KNN)](#k-vecinos-más-cercanos-knn)
