@@ -8,6 +8,7 @@
 2. [Aprendizaje Supervisado](#aprendizaje-supervisado)
     - [Regresión Lineal](#regresión-lineal)
     - [Regresión Ridge](#regresión-lineal)
+    - [Creacioómn de caracteristicas por agrupamiento y separación](#regresión-lineal)
     - [Regresión Logística](#regresión-logística)
     - [Árboles de Decisión](#árboles-de-decisión)
     - [Bosques Aleatorios](#bosques-aleatorios)
