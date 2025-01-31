@@ -7,6 +7,7 @@
 1. [Introducción al Machine Learning](#introducción-al-machine-learning)
 2. [Aprendizaje Supervisado](#aprendizaje-supervisado)
     - [Regresión Lineal](#regresión-lineal)
+    - [Regresión Ridge](#regresión-lineal)
     - [Regresión Logística](#regresión-logística)
     - [Árboles de Decisión](#árboles-de-decisión)
     - [Bosques Aleatorios](#bosques-aleatorios)
