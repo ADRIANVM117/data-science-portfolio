@@ -1,56 +1,64 @@
-📈 Backtesting Cuantitativo con LSTM y Modelos Estocásticos de Volatilidad
-Este proyecto presenta una arquitectura robusta de backtesting cuantitativo aplicada al precio de acciones, utilizando modelos de predicción con LSTM, simulación con Geometric Brownian Motion modificado (MGBM), volatilidad estocástica y el modelo de Heston.
+# 📈 Quantitative Backtesting with LSTM and Stochastic Volatility Models
 
-🚀 Objetivo
-Evaluar el desempeño de una estrategia de inversión mediante técnicas avanzadas de Machine Learning y modelos estocásticos, para responder a la pregunta clave:
+This project presents a robust **quantitative backtesting framework** applied to stock price forecasting, combining **LSTM neural networks**, **Modified Geometric Brownian Motion (MGBM)** simulations, **stochastic volatility**, and the **Heston model**.
 
-"¿Qué tan bien habría funcionado mi estrategia si la hubiera aplicado en el pasado?"
+---
 
-🧠 Tecnologías Utilizadas
-📊 LSTM (Long Short-Term Memory) para predicción de precios
+## 🚀 Objective
 
-🔁 MGBM (Modified Geometric Brownian Motion) para simulación de trayectorias
+Evaluate the performance of an investment strategy using advanced Machine Learning techniques and stochastic models to answer the key question:  
+> _"How well would my strategy have performed in the past?"_
 
-🔄 Modelo de Heston para modelar volatilidad estocástica
+---
 
-🧮 Backtesting con comparación entre valores reales, predichos y simulados
+## 🧠 Technologies Used
 
-💻 Python (NumPy, Pandas, Matplotlib, TensorFlow, SciPy)
+- 📊 **LSTM (Long Short-Term Memory)** for price forecasting  
+- 🔁 **MGBM (Modified Geometric Brownian Motion)** for trajectory simulation  
+- 🔄 **Heston Model** to model stochastic volatility  
+- 🧮 **Backtesting** by comparing real, predicted, and simulated prices  
+- 💻 **Python** (NumPy, Pandas, Matplotlib, TensorFlow, SciPy)
 
-📂 Estructura del Notebook
-Carga y preprocesamiento del set de datos (GE stock 30m)
+---
 
-Entrenamiento de modelo LSTM
+## 📂 Notebook Structure
 
-Predicción de precios
+1. **Loading and preprocessing** GE 30-minute stock data  
+2. **Training the LSTM model**  
+3. **Forecasting future prices**  
+4. **Simulating price paths using MGBM and Heston**  
+5. **Visual and quantitative backtesting**  
+6. **Error analysis and strategy comparison**
 
-Simulación de trayectorias con MGBM y modelo de Heston
+---
 
-Backtesting visual y cuantitativo
+## 📌 Why It's Interesting
 
-Evaluación de errores y comparación de estrategias
+- Combines **Machine Learning** with traditional quantitative finance techniques  
+- Implements advanced **stochastic volatility models** like Heston  
+- A solid foundation for building **algorithmic trading strategies**  
+- Modular and scalable for other financial assets or timeframes
 
-📌 ¿Por qué es interesante?
-Integra Machine Learning (LSTM) con métodos clásicos de finanzas cuantitativas.
+---
 
-Aplica modelos sofisticados de volatilidad usados en derivados.
+## 🧪 Expected Results
 
-Puede extenderse a estrategias de trading algorítmico.
+✔️ Visual comparison between simulated and actual price paths  
+✔️ Error metrics for model evaluation  
+✔️ Reusable tool for backtesting investment strategies
 
-Ideal para quienes buscan aplicar inteligencia artificial al mundo de las finanzas.
+---
 
-🧪 Resultados esperados
-✔️ Visualización de trayectorias simuladas vs reales
-✔️ Métricas de error entre predicciones y datos reales
-✔️ Herramienta modular para pruebas de estrategia
+## 📉 Dataset
 
-📉 Dataset
-Datos de General Electric (GE) en intervalos de 30 minutos, incluyendo:
+Based on **General Electric (GE)** 30-minute interval stock data, including:
 
-Open, High, Low, Close, Volume
+- `Open`, `High`, `Low`, `Close`, `Volume`  
+- Calculated technical indicators and volatility metrics
 
-Indicadores técnicos y de volatilidad
+---
 
-📬 Contacto
-Este proyecto forma parte de un portafolio orientado a finanzas cuantitativas con inteligencia artificial.
-Si quieres colaborar o tienes dudas, ¡no dudes en escribirme!
+## 📬 Contact
+
+This project is part of a portfolio focused on **quantitative finance and artificial intelligence**.  
+Feel free to reach out for collaboration, questions, or feedback!
