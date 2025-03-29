@@ -3,7 +3,7 @@ import pandas as pd
 import time
 
 # 🔹 Configura tu API Key de Alpha Vantage
-API_KEY = "#######"
+API_KEY = "EUD9X61S0RN343RB"
 
 # 🔹 Función para descargar datos según las opciones del usuario
 def get_stock_data(symbol, function="TIME_SERIES_DAILY_ADJUSTED", interval="30min", outputsize="compact"):
