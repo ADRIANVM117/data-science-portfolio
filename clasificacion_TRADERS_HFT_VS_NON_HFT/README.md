@@ -1,6 +1,8 @@
 #  Clasificación de Traders HFT vs NON-HFT con LDA
 
 Este proyecto aplica Machine Learning para predecir si un trader es **High-Frequency Trader (HFT)** o **NON-HFT** usando un dataset financiero real.
+## <b> Puedes revisar el codigo en GoogleColab </b>
+[![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ADRIANVM117/data-science-portfolio/blob/main/clasificacion_TRADERS_HFT_VS_NON_HFT/clasificacion_TRADERS.ipynb)
 
 ## 📂 Pasos del proyecto
 
