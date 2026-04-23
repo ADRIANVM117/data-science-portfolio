@@ -12,8 +12,6 @@ Executing large orders in financial markets introduces a fundamental trade-off b
 
 Naive execution strategies such as TWAP and VWAP do not explicitly account for this trade-off, potentially leading to suboptimal performance under varying market conditions.
 
-<<<<<<< HEAD
-
 ##  Project Structure
 
 ```text
@@ -37,8 +35,6 @@ optimal-execution/
 
 ```
 =======
->>>>>>> dc0a2f4e8713988c735414593f89e49f7bb9375d
----
 
 ##  Objective
 
