@@ -1,3 +1,4 @@
+
 import numpy as np 
 def generate_vwap_schedule(total_shares: float, volume_profile: np.ndarray) -> np.ndarray:
     """
