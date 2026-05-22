@@ -1,62 +1,144 @@
+# Optimal Execution under Market Impact
 
-# Optimal Execution under Market Impact  
-### A Comparative Study of TWAP, VWAP, and Almgren–Chriss  
+### Stochastic Execution, Market Microstructure, and Reinforcement Learning
+
 **Adrián Vázquez**
+
+---
+
+## Overview
+
+This project develops a quantitative execution research framework for studying optimal execution under market impact.
+
+The framework combines:
+
+- Classical execution schedules
+- Stochastic execution simulation
+- Real intraday market data
+- Market microstructure modeling
+- Reinforcement Learning execution environments
+
+The project progressively evolves from analytical execution models toward adaptive execution systems capable of learning from market state dynamics.
 
 ---
 
 ## Problem
 
-Executing large orders in financial markets introduces a fundamental trade-off between:
+Executing large institutional orders introduces a fundamental trade-off between:
 
-- **Market impact** (execution cost)
-- **Price uncertainty** (execution risk)
+- **Market impact (execution cost)**
+- **Price uncertainty (execution risk)**
 
-Naive execution strategies such as **TWAP** and **VWAP** do not explicitly optimize this trade-off, potentially leading to suboptimal outcomes under stochastic price dynamics.
+Aggressive execution reduces exposure to stochastic price movements but increases market impact. Slower execution reduces impact but increases inventory risk.
 
----
+Traditional execution schedules such as TWAP and VWAP provide heuristic solutions, while optimal control frameworks such as Almgren–Chriss explicitly model the cost-risk trade-off.
 
-## Objective
-
-This project develops a **stochastic optimal execution framework** to:
-
-- Compare TWAP, VWAP, and Almgren–Chriss strategies  
-- Quantify execution performance under market impact  
-- Analyze the **cost–risk trade-off** via Monte Carlo simulation  
-- Identify regimes where optimal execution improves performance  
+This project explores both classical and modern approaches to optimal execution under realistic market conditions.
 
 ---
 
-## Project Structure
+# Core Components
+
+## 1. Classical Execution Schedules
+
+Implementation and comparison of:
+
+- TWAP
+- VWAP
+- Almgren–Chriss
+
+including inventory trajectories, execution prices, and implementation shortfall analysis.
+
+---
+
+## 2. Stochastic Execution Simulation
+
+Execution dynamics under stochastic price evolution using:
+
+- Arithmetic Brownian Motion
+- Monte Carlo simulation
+- Cost-risk decomposition
+- Execution path distributions
+
+The framework studies how volatility and market impact jointly affect execution quality.
+
+---
+
+## 3. Real Market Execution
+
+Execution analysis using real intraday SPY market data sampled at 5-minute intervals.
+
+Features include:
+
+- Real volume dynamics
+- Intraday liquidity structure
+- Volume-aware execution
+- Participation analysis
+- Execution benchmarking
+
+---
+
+## 4. Reinforcement Learning Execution Environment
+
+Development of a reinforcement learning environment for adaptive execution.
+
+The environment includes:
+
+- Inventory-aware state representations
+- Market microstructure features
+- Participation-based market impact
+- Benchmark execution policies
+- Sequential execution dynamics
+
+This framework serves as the foundation for training Deep Q-Network execution agents.
+
+---
+
+# Project Structure
 
 ```text
-optimal-execution/
-│
-├── README.md
-├── requirements.txt
-│
-├── src/
-│   ├── models/          # TWAP, VWAP, Almgren–Chriss
-│   ├── simulations/     # Brownian motion, execution engine
-│   └── analytics/       # IS, cost, variance
+Optimal_execution_under_market_impact/
 │
 ├── notebooks/
 │   ├── 01_execution_schedules.ipynb
-│   └── 02_stochastic_execution.ipynb
+│   ├── 02_stochastic_execution.ipynb
+│   ├── 03_real_data_execution_analysis.ipynb
+│   └── 04_Reiforcment_Learning_execution.ipynb
 │
-└── results/
-    ├── plots/
-    └── tables/
-
-
+├── results/
+│   ├── plots/
+│   ├── tables/
+│   ├── reports/
+│   └── papers/
+│
+├── src/
+│   ├── models/
+│   ├── simulation/
+│   ├── analytics/
+│   └── rl/
+│
+├── requirements.txt
+└── README.md
 ```
-=======
 
-## Methodology
+---
 
-### Price Dynamics
+# Notebook Roadmap
 
-We model price evolution using an Arithmetic Brownian Motion:
+| Notebook | Description |
+|---|---|
+| 01 | Classical execution schedules: TWAP, VWAP, Almgren–Chriss |
+| 02 | Stochastic execution simulation under Brownian dynamics |
+| 03 | Real intraday execution analysis using SPY 5-minute data |
+| 04 | Market state representation and RL execution environment |
+
+---
+
+# Methodology
+
+## Price Dynamics
+
+Price evolution is modeled using Arithmetic Brownian Motion:
 
 $$
 dS_t = \sigma dW_t
@@ -65,147 +147,169 @@ $$
 In discrete time:
 
 $$
-S_{k+1} = S_k + \sigma \sqrt{\tau} \epsilon_k, \quad \epsilon_k \sim \mathcal{N}(0,1)
+S_{k+1} = S_k + \sigma \sqrt{\tau} \epsilon_k,
+\quad
+\epsilon_k \sim \mathcal{N}(0,1)
 $$
 
 This captures stochastic price uncertainty during the execution horizon.
 
 ---
 
-### Market Impact Model
+## Market Impact Model
 
-Execution prices incorporate both permanent and temporary impact:
+Execution prices incorporate temporary market impact:
 
 $$
-P_k = S_k + \gamma \sum_{j<k} n_j + \eta \frac{n_k}{\tau}
+P_t^{exec} =
+P_t
++
+\eta
+\left(
+\frac{q_t}{V_t}
+\right)
 $$
 
-Where:
+where:
 
-- $S_k$ = mid price  
-- $P_k$ = execution price  
-- $\gamma$ = permanent impact  
-- $\eta$ = temporary impact  
-- $n_k$ = shares executed at time $k$  
-- $\tau$ = time step  
+- $P_t$ = observed market price
+- $q_t$ = executed shares
+- $V_t$ = market volume
+- $\eta$ = impact intensity parameter
 
-**Interpretation:**
-
-- Permanent impact accumulates as trading progresses  
-- Temporary impact penalizes aggressive execution  
+The framework studies how participation rate affects execution quality.
 
 ---
 
-### Execution Strategies
+## Implementation Shortfall
 
-- **TWAP** — uniform execution over time  
-- **VWAP** — proportional to expected volume  
-- **Almgren–Chriss** — optimal control balancing cost and risk  
+Execution performance is evaluated through Implementation Shortfall (IS):
+
+$$
+IS = \sum_{t=1}^{T} q_t P_t^{exec} - Q P_0
+$$
+
+where:
+
+- $Q$ = total parent order
+- $P_0$ = arrival price
 
 ---
 
-## Performance Metrics
+## Reinforcement Learning State Representation
 
-### Implementation Shortfall (IS)
+The RL environment constructs state vectors containing:
 
+$$ s_t =
+[
+\text{inventory ratio},
+\text{time remaining},
+\text{relative volume},
+\text{rolling volatility},
+\text{spread proxy},
+\text{momentum}
+]
 $$
-\text{IS} = \sum_{k=1}^{N} n_k P_k - Q S_0
-$$
 
-Where:
+This allows the execution agent to jointly observe:
 
-- $Q$ = total shares  
-- $S_0$ = initial price  
+- inventory pressure
+- liquidity conditions
+- volatility dynamics
+- market microstructure behavior
 
 ---
 
-### Expected Cost
+# Key Results
 
-$$
-\mathbb{E}[\text{Cost}] = \gamma \sum_{k=1}^{N} n_k X_{k-1} + \eta \sum_{k=1}^{N} \frac{n_k^2}{\tau}
-$$
-
-Where:
-
-$$
-X_{k-1} = \sum_{j<k} n_j
-$$
+- Liquidity-aware execution significantly improves execution stability
+- VWAP-like execution produces smoother participation trajectories
+- Execution quality depends strongly on intraday liquidity structure
+- Benchmark simulations exhibit coherent market microstructure behavior
+- Smaller execution participation rates generate more realistic execution dynamics
+- The resulting environment provides a suitable foundation for reinforcement learning execution research
 
 ---
 
-### Execution Risk
+# Example Outputs
 
-$$
-\text{Var}[\text{Cost}] = \sigma^2 \tau \sum_{k=1}^{N} x_k^2
-$$
+## Inventory Dynamics
 
-Where:
+The framework compares inventory liquidation trajectories across execution policies:
 
-- $x_k$ = remaining inventory  
+- Random execution
+- TWAP
+- VWAP-like execution
 
----
-
-## Experiments
-
-We simulate execution under stochastic price dynamics using Monte Carlo:
-
-- Generate multiple price paths  
-- Apply execution strategies  
-- Compute distributions of outcomes  
-
-**Key parameters:**
-
-- Volatility $ \sigma $  
-- Market impact $(\gamma, \eta)$  
-- Risk aversion $ \lambda $  
+under realistic market conditions.
 
 ---
 
-## Results
+## Execution Cost Dynamics
 
-### Key Findings
+The simulator tracks cumulative execution cost across time, allowing analysis of:
 
-- Stochastic price dynamics introduce variability in execution cost  
-- Market impact shifts execution prices above mid price  
-- VWAP shows higher cost and heavier tail risk  
-- Almgren–Chriss provides a tunable cost–risk trade-off  
-
----
-
-### Cost-Risk Trade-off
-
-By varying $\lambda$, we trace a cost-risk curve:
-
-- Low $\lambda$ → low cost, high risk  
-- High $\lambda$ → high cost, low risk  
-- Intermediate $\lambda$ → optimal balance  
+- execution aggressiveness
+- participation dynamics
+- liquidity sensitivity
+- execution stability
 
 ---
 
-## Key Insight
+## Intraday Volume Structure
 
-Execution strategies must be evaluated across the full distribution of outcomes — not just expected cost.
-
-A slightly higher expected cost may be justified if it significantly reduces execution risk.
+The project reconstructs intraday liquidity profiles directly from market data, capturing the classical U-shaped equity market volume curve.
 
 ---
 
-## Conclusion
+# Research Motivation
 
 Optimal execution is fundamentally a stochastic control problem under market impact.
 
-The Almgren–Chriss framework provides a systematic way to balance:
+This project bridges:
 
-- Market impact (cost)  
-- Price uncertainty (risk)  
+- stochastic processes,
+- market microstructure,
+- optimal control,
+- reinforcement learning,
+- quantitative trading research.
 
-making it a core tool in quantitative trading and execution research.
+The long-term objective is to develop adaptive execution agents capable of learning execution policies directly from market state dynamics.
 
 ---
 
-## Future Work
+# Future Work
 
-- Calibration with real market data  
-- Dynamic volume profiles  
-- Multi-asset execution  
-- Reinforcement learning for adaptive execution strategies  
+- Deep Q-Network (DQN) execution agent
+- Adaptive execution policies
+- Double DQN execution
+- Multi-asset execution
+- Limit Order Book simulation
+- Transaction Cost Analysis (TCA)
+- Real-time execution systems
+- Execution policy learning under stochastic liquidity
+
+---
+
+# References
+
+- Almgren, R., & Chriss, N. (2001). *Optimal Execution of Portfolio Transactions.*
+
+- Cartea, Á., Jaimungal, S., & Penalva, J. (2015). *Algorithmic and High-Frequency Trading.*
+
+- Ning, B., Treichler, D., & Chen, S. (2021). *Double Deep Q-Learning for Optimal Execution.* Applied Mathematical Finance.
+
+---
+
+# Author
+
+**Adrián Vázquez**
+
+Actuary | Data Scientist | Quantitative Finance & Machine Learning
+
+Focused on:
+- Optimal execution
+- Quantitative trading
+- Reinforcement learning in finance
+- Market microstructure
+- Stochastic modeling
