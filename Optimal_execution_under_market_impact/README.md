@@ -17,6 +17,7 @@ The framework combines:
 - Real intraday market data
 - Market microstructure modeling
 - Reinforcement Learning execution environments
+- Deep Q-Network adaptive execution agents
 
 The project progressively evolves from analytical execution models toward adaptive execution systems capable of learning from market state dynamics.
 
@@ -94,6 +95,47 @@ This framework serves as the foundation for training Deep Q-Network execution ag
 
 ---
 
+## 5. Deep Reinforcement Learning Execution Agent
+
+Development and training of a Deep Q-Network (DQN) execution agent capable of learning adaptive execution policies from market state observations.
+
+The RL framework includes:
+
+- Replay Buffer experience storage
+- Epsilon-greedy exploration
+- Target network stabilization
+- State-dependent execution decisions
+- Dynamic participation control
+- Inventory-aware execution learning
+
+The agent is evaluated against:
+
+- Random execution
+- TWAP
+- VWAP-like execution
+- Volume-Aware Almgren–Chriss
+
+under realistic intraday market conditions.
+
+---
+
+# Key Findings
+
+The Reinforcement Learning execution agent successfully learned a coherent execution policy under realistic intraday market conditions.
+
+Main observations:
+
+- The DQN agent converged toward a strongly front-loaded execution strategy.
+- The learned policy aggressively reduced inventory during the early trading horizon.
+- Participation intensity dynamically decreased as inventory exposure declined.
+- The learned execution trajectory remained smooth and stable despite exploration-based training.
+- The DQN agent achieved the lowest cumulative execution cost among benchmark policies during the evaluated trading session.
+- The agent learned adaptive state-dependent execution behavior rather than a static deterministic schedule.
+
+The results suggest that Reinforcement Learning can discover meaningful execution policies under market microstructure constraints.
+
+---
+
 # Project Structure
 
 ```text
@@ -103,7 +145,9 @@ Optimal_execution_under_market_impact/
 │   ├── 01_execution_schedules.ipynb
 │   ├── 02_stochastic_execution.ipynb
 │   ├── 03_real_data_execution_analysis.ipynb
-│   └── 04_Reiforcment_Learning_execution.ipynb
+│   ├── 04_volume_aware_execution.ipynb
+│   ├── 05_RL_Execution_agent.ipynb
+│   └── 06_out_of_sample_generalization.ipynb
 │
 ├── results/
 │   ├── plots/
@@ -130,7 +174,9 @@ Optimal_execution_under_market_impact/
 | 01 | Classical execution schedules: TWAP, VWAP, Almgren–Chriss |
 | 02 | Stochastic execution simulation under Brownian dynamics |
 | 03 | Real intraday execution analysis using SPY 5-minute data |
-| 04 | Market state representation and RL execution environment |
+| 04 | Volume-aware execution and market microstructure modeling |
+| 05 | Deep Reinforcement Learning execution agent |
+| 06 | Out-of-sample generalization and robustness analysis |
 
 ---
 
@@ -181,113 +227,83 @@ The framework studies how participation rate affects execution quality.
 
 ---
 
-## Implementation Shortfall
-
-Execution performance is evaluated through Implementation Shortfall (IS):
-
-$$
-IS = \sum_{t=1}^{T} q_t P_t^{exec} - Q P_0
-$$
-
-where:
-
-- $Q$ = total parent order
-- $P_0$ = arrival price
-
----
-
 ## Reinforcement Learning State Representation
 
-The RL environment constructs state vectors containing:
+The execution agent observes both execution state and market state variables:
 
-$$ s_t =
+$$
+s_t =
 [
-\text{inventory ratio},
-\text{time remaining},
-\text{relative volume},
-\text{rolling volatility},
-\text{spread proxy},
-\text{momentum}
+x_t,
+T-t,
+\text{market features}
 ]
 $$
 
-This allows the execution agent to jointly observe:
+where the state includes:
 
-- inventory pressure
-- liquidity conditions
-- volatility dynamics
-- market microstructure behavior
-
----
-
-# Key Results
-
-- Liquidity-aware execution significantly improves execution stability
-- VWAP-like execution produces smoother participation trajectories
-- Execution quality depends strongly on intraday liquidity structure
-- Benchmark simulations exhibit coherent market microstructure behavior
-- Smaller execution participation rates generate more realistic execution dynamics
-- The resulting environment provides a suitable foundation for reinforcement learning execution research
+- remaining inventory,
+- remaining execution horizon,
+- relative volume,
+- rolling volatility,
+- momentum,
+- participation proxies,
+- and liquidity-related features.
 
 ---
 
-# Example Outputs
+## Deep Q-Learning
 
-## Inventory Dynamics
+The DQN agent learns execution policies through sequential interaction with the execution environment.
 
-The framework compares inventory liquidation trajectories across execution policies:
+At each timestep:
 
-- Random execution
-- TWAP
-- VWAP-like execution
+$$
+(s_t, a_t, r_t, s_{t+1})
+$$
 
-under realistic market conditions.
+transitions are stored in a Replay Buffer and used to optimize the Q-network.
 
----
-
-## Execution Cost Dynamics
-
-The simulator tracks cumulative execution cost across time, allowing analysis of:
-
-- execution aggressiveness
-- participation dynamics
-- liquidity sensitivity
-- execution stability
-
----
-
-## Intraday Volume Structure
-
-The project reconstructs intraday liquidity profiles directly from market data, capturing the classical U-shaped equity market volume curve.
-
----
-
-# Research Motivation
-
-Optimal execution is fundamentally a stochastic control problem under market impact.
-
-This project bridges:
-
-- stochastic processes,
-- market microstructure,
-- optimal control,
-- reinforcement learning,
-- quantitative trading research.
-
-The long-term objective is to develop adaptive execution agents capable of learning execution policies directly from market state dynamics.
+The learned policy dynamically adapts execution intensity according to observed market conditions.
 
 ---
 
 # Future Work
 
-- Deep Q-Network (DQN) execution agent
-- Adaptive execution policies
-- Double DQN execution
-- Multi-asset execution
-- Limit Order Book simulation
-- Transaction Cost Analysis (TCA)
-- Real-time execution systems
-- Execution policy learning under stochastic liquidity
+Future extensions include:
+
+- Out-of-sample evaluation across multiple trading sessions
+- Regime-aware execution analysis
+- Reward engineering experiments
+- Advanced market microstructure features
+- Robustness testing under volatile market conditions
+- Continuous-action RL execution frameworks
+- Multi-asset execution environments
+
+---
+
+# Technologies
+
+- Python
+- PyTorch
+- NumPy
+- Pandas
+- Plotly
+- Reinforcement Learning
+- Alpha Vantage API
+
+---
+
+# Research Focus
+
+This project focuses on the intersection of:
+
+- Quantitative Finance
+- Optimal Execution
+- Market Microstructure
+- Reinforcement Learning
+- Algorithmic Trading
+- Stochastic Processes
 
 ---
 
