@@ -1,5 +1,12 @@
 import numpy as np 
 import pandas as pd
+import torch
+import torch.nn as nn
+import torch.optim as optim
+from collections import deque
+import random
+
+
 class StateBuilder:
     def __init__(self, market_data, feature_cols):
         self.market_data = market_data.reset_index(drop=True).copy()
@@ -313,5 +320,184 @@ def run_volume_aware_ac_policy(
 
     history = env.get_execution_history()
     history["policy"] = "VA-AC"
+
+    return history
+################################################3
+# DQN network 
+
+class DQN(nn.Module):
+    def __init__(self, state_dim, action_dim, hidden_dim=128):
+        super(DQN, self).__init__()
+        
+        self.network = nn.Sequential(
+            nn.Linear(state_dim, hidden_dim),
+            nn.ReLU(),
+            nn.Linear(hidden_dim, hidden_dim),
+            nn.ReLU(),
+            nn.Linear(hidden_dim, action_dim)
+        )
+    
+    def forward(self, x):
+        return self.network(x)
+    
+############
+
+class ReplayBuffer:
+    def __init__(self, capacity=10_000):
+        self.buffer = deque(maxlen=capacity)
+
+    def push(
+        self,
+        state,
+        action,
+        reward,
+        next_state,
+        done
+    ):
+        self.buffer.append(
+            (
+                state,
+                action,
+                reward,
+                next_state,
+                done
+            )
+        )
+
+    def sample(self, batch_size):
+        batch = random.sample(
+            self.buffer,
+            batch_size
+        )
+
+        states, actions, rewards, next_states, dones = zip(*batch)
+
+        return (
+            torch.tensor(
+                np.array(states),
+                dtype=torch.float32
+            ),
+            torch.tensor(
+                actions,
+                dtype=torch.long
+            ),
+            torch.tensor(
+                rewards,
+                dtype=torch.float32
+            ),
+            torch.tensor(
+                np.array(next_states),
+                dtype=torch.float32
+            ),
+            torch.tensor(
+                dones,
+                dtype=torch.float32
+            )
+        )
+
+    def __len__(self):
+        return len(self.buffer)
+    
+##################################333
+def select_action(state, policy_net, action_dim, epsilon):
+    """
+    Epsilon-greedy action selection.
+    """
+
+    if np.random.rand() < epsilon:
+        return np.random.randint(action_dim)
+
+    state_tensor = torch.tensor(
+        state,
+        dtype=torch.float32
+    ).unsqueeze(0)
+
+    with torch.no_grad():
+        q_values = policy_net(state_tensor)
+
+    action_idx = torch.argmax(q_values).item()
+
+    return action_idx
+# Target network update:
+def update_target_network(policy_net, target_net):
+    """
+    Copy policy network weights into target network.
+    """
+    target_net.load_state_dict(
+        policy_net.state_dict()
+    )
+
+# DRN training loop
+
+def train_dqn_step(
+    policy_net,
+    target_net,
+    replay_buffer,
+    optimizer,
+    batch_size=64,
+    gamma=0.99
+):
+    """
+    Perform one DQN optimization step.
+    """
+
+    if len(replay_buffer) < batch_size:
+        return None
+
+    states, actions, rewards, next_states, dones = replay_buffer.sample(
+        batch_size
+    )
+
+    # Current Q-values for selected actions
+    current_q_values = (
+        policy_net(states)
+        .gather(1, actions.unsqueeze(1))
+        .squeeze(1)
+    )
+
+    # Target Q-values
+    with torch.no_grad():
+        max_next_q_values = target_net(next_states).max(dim=1)[0]
+
+        target_q_values = rewards + gamma * max_next_q_values * (1 - dones)
+
+    # Loss
+    loss = nn.MSELoss()(
+        current_q_values,
+        target_q_values
+    )
+
+    # Gradient descent step
+    optimizer.zero_grad()
+    loss.backward()
+    optimizer.step()
+
+    return loss.item()
+
+################################3
+# DNQ policy 
+def run_dqn_policy(env, policy_net):
+    """
+    Run trained DQN policy with no exploration.
+    """
+
+    state = env.reset()
+    done = False
+
+    while not done:
+
+        action_idx = select_action(
+            state=state,
+            policy_net=policy_net,
+            action_dim=len(env.action_space),
+            epsilon=0.0
+        )
+
+        next_state, reward, done, info = env.step(action_idx)
+
+        state = next_state
+
+    history = env.get_execution_history()
+    history["policy"] = "DQN"
 
     return history
