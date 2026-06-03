@@ -1,8 +1,5 @@
 # V3 — Regime-Conditioned Alpha Discovery
 
---- 
-
-
 ## Research Question
 
 Can Bayesian mispricing become informative once conditioned on market regime?
@@ -44,12 +41,12 @@ Characteristics:
 
 Bayesian mispricing was defined as:
 
-$ mispricing = bayesian_fair_probability - final_probability $
+ mispricing = bayesian_fair_probability - final_probability 
 
 Future market error was defined as:
 
 
-$ future_error = outcome - final_probability $
+future_error = outcome - final_probability 
 
 The objective was to determine whether the predictive relationship between mispricing and future error remains constant across regimes.
 
@@ -75,7 +72,7 @@ This suggests that Bayesian fair value and realized outcomes move in the same di
 
 Correlation:
 
-$ \rho = -0.455 $
+$\rho = -0.455 $
 
 Positive mispricing tends to be associated with negative future errors.
 
@@ -109,7 +106,7 @@ The interval remains entirely negative, providing evidence that the inverse rela
 
 The following interaction model was estimated:
 
-$ future\_error = \beta_0 + \beta_1 mispricing + \beta_2 regime + \beta_3(mispricing \times regime) $
+$ future_{error} = \beta_0 + \beta_{1mispricing} + \beta_{2regime} + \beta_{3(mispricing \times regime)} $
 
 
 Results:
