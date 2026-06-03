@@ -138,22 +138,49 @@ Bayesian_Fair_Value_Estimation_and_Mispricing_Detection_in_Prediction_Markets/
 | Binary Outcomes Available           | 43                   |
 | Time Span                           | Feb-2023 to Dec-2024 |
 
-### Phase 3 — Exploratory Analysis - IN PROGRESS
+### Phase 3 — Exploratory Analysis  - DONE
+
+The exploratory analysis successfully validated the research dataset and provided an initial characterization of prediction market behavior.
+
+Completed analyses:
+
+* Market outcome distribution
+* Final probability distribution
+* Probability vs realized outcome analysis
+* Market-level descriptive statistics
+* Historical probability trajectory validation
+* Data quality verification
+* Missing value assessment
+* Initial evidence of market informativeness
+
+Key findings:
+
+* 43 resolved prediction markets were successfully collected.
+* More than 100,000 historical probability observations were recovered.
+* Final market probabilities show strong separation between realized successes and failures.
+* Several markets exhibit apparent probability mispricing, motivating further calibration analysis.
+* Historical probability trajectories were successfully reconstructed from Polymarket's CLOB API.
+
+---
+
+### Phase 4 — Market Calibration Analysis  IN PROGRESS
 
 Next step:
 
-* Probability distribution analysis
-* Market duration analysis
-* Liquidity analysis
-* Probability trajectory analysis
-* Outcome imbalance analysis
-* Initial calibration diagnostics
+* Reliability diagrams
+* Calibration curves
+* Probability binning analysis
+* Brier Score evaluation
+* Sharpness analysis
+* Overconfidence vs underconfidence diagnostics
+* Market efficiency assessment
 
 ---
 
 ## Expected Deliverables
 
 * Historical prediction market dataset
+* Exploratory market analysis
 * Market calibration analysis
 * Brier Score evaluation
 * Reliability and calibration curves
@@ -167,22 +194,30 @@ Next step:
 
 ## Preliminary Results
 
-The project successfully recovered historical probability trajectories for resolved Polymarket markets.
+The project successfully reconstructed historical probability trajectories for resolved prediction markets and generated a research dataset containing:
+
+* 43 resolved markets
+* 100,642 historical probability observations
+* Binary event outcomes
+* Market metadata (volume, liquidity, expiration dates)
 
 Example:
 
-| Timestamp        | Implied Probability |
-| ---------------- | ------------------- |
-| 2024-03-21 17:00 | 0.16                |
-| 2024-03-21 18:00 | 0.16                |
-| 2024-03-21 19:00 | 0.17                |
+| Timestamp | Implied Probability |
+|------------|------------|
+| 2024-03-21 17:00 | 0.16 |
+| 2024-03-21 18:00 | 0.16 |
+| 2024-03-21 19:00 | 0.17 |
 
-This validates the feasibility of constructing a prediction-market research dataset suitable for:
+Initial exploratory results suggest that prediction markets contain meaningful information regarding future outcomes, while also exhibiting potential cases of probability mispricing that justify further calibration and Bayesian analysis.
 
-* Calibration studies
+This validates the feasibility of constructing a quantitative research framework for:
+
+* Market calibration studies
 * Bayesian probability estimation
-* Systematic mispricing detection
+* Mispricing detection
 * Trading signal generation
+* Systematic prediction-market research
 
 ---
 
