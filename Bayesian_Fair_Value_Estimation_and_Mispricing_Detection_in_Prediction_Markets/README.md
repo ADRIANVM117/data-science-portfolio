@@ -1,59 +1,45 @@
 # Bayesian Fair Value Estimation and Mispricing Detection in Prediction Markets
 
-## Adrian Vazquez
+### Adrian Vazquez
 
 ---
 
 ## Research Question
 
-Can Bayesian models identify systematic mispricing in prediction markets and generate exploitable trading signals?
+Can Bayesian calibration identify systematic mispricing in prediction markets and generate exploitable trading signals?
 
 ---
 
-## Research Objective
+## Motivation
 
-The objective of this project is to investigate whether Bayesian methods can identify systematic mispricing in prediction markets by estimating a fair probability and comparing it against the market-implied probability.
-
-The ultimate goal is to determine whether these discrepancies can generate exploitable trading signals.
-
----
-
-## Why Prediction Markets?
-
-Prediction markets aggregate information from thousands of participants and continuously update probabilities regarding future events.
+Prediction markets continuously aggregate information from thousands of participants and express beliefs about future events through market prices.
 
 Examples include:
 
 * Federal Reserve decisions
-* Interest rate changes
 * Inflation releases
 * Macroeconomic events
 * Political outcomes
+* Cryptocurrency-related events
 
 In binary prediction markets, contract prices can be interpreted as market-implied probabilities.
-
-For example:
 
 | Contract Price | Implied Probability |
 | -------------- | ------------------- |
 | 0.75           | 75%                 |
 
-This project investigates whether these probabilities are systematically biased and whether Bayesian methods can improve probability estimation.
+This project investigates whether Bayesian methods can improve these probability estimates and uncover systematic market mispricing.
 
 ---
 
 ## Research Workflow
 
-The project follows a professional Quant Research workflow:
-
-1. Data Acquisition
+1. Historical Data Acquisition
 2. Dataset Construction
-3. Exploratory Analysis
+3. Exploratory Data Analysis
 4. Market Calibration Analysis
-5. Bayesian Fair Value Modeling
-6. Signal Generation
-7. Backtesting
-8. Performance Evaluation
+5. Bayesian Fair Value Estimation
+6. Signal Generation & Validation
 
 ---
 
@@ -68,9 +54,7 @@ Bayesian_Fair_Value_Estimation_and_Mispricing_Detection_in_Prediction_Markets/
 │   ├── 03_Exploratory_Data_Analysis.ipynb
 │   ├── 04_Market_Calibration.ipynb
 │   ├── 05_Bayesian_Fair_Value_Model.ipynb
-│   ├── 06_Signal_Generation.ipynb
-│   ├── 07_Backtesting.ipynb
-│   └── 08_Performance_Evaluation.ipynb
+│   └── 06_Signal_Generation.ipynb
 │
 ├── data/
 │   ├── raw/
@@ -80,256 +64,189 @@ Bayesian_Fair_Value_Estimation_and_Mispricing_Detection_in_Prediction_Markets/
 ├── results/
 │   ├── plots/
 │   ├── tables/
-│   ├── reports/
-│   └── papers/
+│   └── reports/
 │
 ├── src/
 │   ├── analytics/
 │   ├── models/
-│   ├── backtesting/
-│   ├── simulation/
 │   └── utils/
 │
-├── requirements.txt
 └── README.md
 ```
 
 ---
 
-## Notebook Roadmap
+## Dataset
 
-| Notebook | Description                                        |
-| -------- | -------------------------------------------------- |
-| 01       | Historical Market Data Acquisition from Polymarket |
-| 02       | Research Dataset Construction                      |
-| 03       | Exploratory Analysis of Prediction Markets         |
-| 04       | Calibration Analysis and Brier Score Evaluation    |
-| 05       | Bayesian Fair Probability Estimation               |
-| 06       | Mispricing Detection and Signal Generation         |
-| 07       | Strategy Backtesting                               |
-| 08       | Performance Evaluation and Research Conclusions    |
+The project reconstructed a historical dataset from Polymarket using both the Gamma API and CLOB API.
 
----
+Dataset summary:
 
-## Current Status
-
-### Phase 1 — Data Acquisition - DONE
-
-* Historical market metadata successfully downloaded from the Polymarket Gamma API.
-* Historical implied probabilities successfully recovered from the Polymarket CLOB API.
-* Temporal chunking framework implemented to bypass API time-window limitations.
-* Successfully collected historical trajectories for resolved prediction markets.
-
-### Phase 2 — Dataset Construction - DONE 
-
-* Historical probability trajectories merged with market metadata.
-* Market-level feature engineering completed.
-* Final probabilities extracted for each market.
-* Market outcomes successfully reconstructed from resolved contract prices.
-* Binary target variable generated for calibration and forecasting analysis.
-* Research dataset validated and ready for quantitative analysis.
-
-### Current Dataset
-
-| Metric                              | Value                |
-| ----------------------------------- | -------------------- |
-| Markets                             | 43                   |
-| Historical Probability Observations | 100,642              |
-| Binary Outcomes Available           | 43                   |
-| Time Span                           | Feb-2023 to Dec-2024 |
-
-### Phase 3 — Exploratory Analysis  - DONE
-
-The exploratory analysis successfully validated the research dataset and provided an initial characterization of prediction market behavior.
-
-Completed analyses:
-
-* Market outcome distribution
-* Final probability distribution
-* Probability vs realized outcome analysis
-* Market-level descriptive statistics
-* Historical probability trajectory validation
-* Data quality verification
-* Missing value assessment
-* Initial evidence of market informativeness
-
-Key findings:
-
-* 43 resolved prediction markets were successfully collected.
-* More than 100,000 historical probability observations were recovered.
-* Final market probabilities show strong separation between realized successes and failures.
-* Several markets exhibit apparent probability mispricing, motivating further calibration analysis.
-* Historical probability trajectories were successfully reconstructed from Polymarket's CLOB API.
-
----
-
-### Phase 4 — Market Calibration Analysis  COMPLETED
-
-The market calibration framework was successfully implemented and evaluated using several probabilistic forecasting metrics.
-
-Completed analyses:
-
-* Probability binning analysis
-* Reliability diagram construction
-* Calibration table generation
-* Brier Score evaluation
-* Expected Calibration Error (ECE) estimation
-* Overconfidence and underconfidence assessment
-* Preliminary market efficiency evaluation
-
----
-
-### Calibration Results
-
-| Metric                              | Value   |
-| ----------------------------------- | ------- |
-| Brier Score                         | 0.0532  |
-| Expected Calibration Error (ECE)    | 0.0559  |
-| Markets Evaluated                   | 43      |
-| Historical Probability Observations | 100,642 |
-
----
-
-### Key Findings
-
-#### Strong Calibration at Probability Extremes
-
-Markets assigned very low probabilities rarely occurred, while markets assigned probabilities close to one were realized almost universally.
-
-This behavior is consistent with the expectations of an informationally efficient prediction market.
-
-#### Intermediate Probability Regions Remain Noisy
-
-The largest calibration gaps were observed in the intermediate probability ranges. However, these bins contained very few observations, making it difficult to distinguish genuine miscalibration from sampling variability.
-
-#### Probability Mass Concentrated at the Extremes
-
-Most resolved markets finished near probabilities of either zero or one.
-
-Specifically:
-
-* 24 markets finished in the 0–10% probability range.
-* 8 markets finished in the 90–100% probability range.
-
-This concentration contributes to the relatively low Brier Score and Expected Calibration Error observed in the dataset.
-
----
-
-### Current Research Conclusion
-
-The calibration analysis suggests that Polymarket probabilities are broadly informative and reasonably calibrated.
-
-Although no strong evidence of systematic market inefficiency has yet been identified, the observed calibration gaps motivate further investigation through Bayesian probability estimation.
-
-The next phase of the project will evaluate whether Bayesian methods can improve probability calibration relative to the market itself.
-
----
-
-## Expected Deliverables
-
-* Historical prediction market dataset
-* Exploratory market analysis
-* Market calibration analysis
-* Bayesian fair probability estimator
-* Market vs Bayesian calibration comparison
-* Mispricing detection framework
-* Trading signal generation engine
-* Backtesting framework
-* Research report and conclusions
-
----
-
-## Preliminary Results
-
-The project successfully reconstructed historical probability trajectories for resolved prediction markets and generated a research dataset containing:
-
-* 43 resolved markets
+* 43 resolved prediction markets
 * 100,642 historical probability observations
 * Binary event outcomes
+* Historical probability trajectories
 * Market metadata (volume, liquidity, expiration dates)
 
-Example:
+---
 
-| Timestamp        | Implied Probability |
-| ---------------- | ------------------- |
-| 2024-03-21 17:00 | 0.16                |
-| 2024-03-21 18:00 | 0.16                |
-| 2024-03-21 19:00 | 0.17                |
+## Methodology
 
-The calibration analysis demonstrates that prediction markets contain meaningful information regarding future outcomes while still exhibiting calibration imperfections that justify Bayesian adjustment and fair-value estimation.
+### Market Calibration
+
+Prediction markets were evaluated using:
+
+* Brier Score
+* Reliability Diagrams
+* Expected Calibration Error (ECE)
+
+The objective was to determine whether market-implied probabilities accurately reflected realized event frequencies.
 
 ---
 
-## Future Research Questions
+### Bayesian Fair Value Estimation
 
-* Are prediction markets fully calibrated?
-* Can Bayesian methods improve probability estimation?
-* Can Bayesian-adjusted probabilities outperform market-implied probabilities?
-* Can probability mispricing generate statistically significant trading signals?
-* Do these signals survive realistic transaction costs and liquidity constraints?
-* Which probability regions exhibit the largest calibration errors?
+A Beta-Binomial framework was used to estimate fair probabilities.
 
----
+Prior:
 
-# Future Research Extensions
+p ~ Beta(1,1)
 
-The following extensions are intentionally excluded from Version 1 in order to first establish a robust baseline research framework.
+Likelihood:
 
----
+y ~ Binomial(n,p)
 
-## Version 2 — Information-Theoretic Features
+Posterior:
 
-Inspired by the work of Marcos López de Prado.
+p | y ~ Beta(α+s, β+f)
 
-Potential features include:
+where:
 
-* Shannon Entropy
-* Probability Path Entropy
-* Permutation Entropy
-* Information Regime Classification
-* Entropy-Based Market Segmentation
+* s = historical successes
+* f = historical failures
 
-Potential research questions:
-
-* Do high-entropy markets exhibit worse calibration?
-* Does entropy predict future probability revisions?
-* Are mispricing opportunities concentrated in information-rich markets?
+Posterior means were used as Bayesian fair probabilities.
 
 ---
 
-## Version 3 — Regime Detection and Market States
+### Mispricing Detection
 
-Potential methodologies:
+Mispricing was defined as:
 
+Mispricing = P(Bayes) − P(Market)
+
+Positive values indicate potential BUY opportunities.
+
+Negative values indicate potential SELL opportunities.
+
+---
+
+## Key Findings
+
+### Market Calibration
+
+Prediction markets appear reasonably well calibrated.
+
+Metrics:
+
+* Brier Score ≈ 0.053
+* Expected Calibration Error (ECE) ≈ 0.056
+
+Reliability analysis showed that extreme probabilities near 0% and 100% were generally consistent with realized outcomes.
+
+---
+
+### Bayesian Fair Value Results
+
+The Bayesian model generated measurable deviations from market-implied probabilities.
+
+However, most deviations remained relatively small and centered around zero.
+
+Average absolute mispricing:
+
+≈ 6.2%
+
+---
+
+### Signal Validation
+
+Signal generation was evaluated across multiple mispricing thresholds.
+
+Results indicate:
+
+* Signal counts decrease rapidly as thresholds increase.
+* Large mispricing events are relatively rare.
+* Neither BUY-only nor BUY/SELL strategies produced accuracy materially above random chance.
+
+The strongest BUY signals achieved only:
+
+* 33% accuracy at τ = 0.05
+* 50% accuracy at τ = 0.10
+* 50% accuracy at τ = 0.15
+
+These results provide no evidence that simple Bayesian calibration generates exploitable trading signals within the current sample.
+
+---
+
+## Conclusion
+
+Within this dataset, a simple Beta-Binomial Bayesian calibration framework does not improve upon market-implied probabilities.
+
+Although measurable mispricings exist, they do not appear to contain persistent predictive information.
+
+The findings suggest that prediction markets already incorporate most publicly available information and are broadly efficient.
+
+Importantly, this negative result establishes a rigorous quantitative baseline for future research.
+
+---
+
+## Future Research — Version 2
+
+The current version applies a single calibration model across all prediction markets.
+
+A natural extension is to investigate whether calibration and mispricing behavior differ across market categories.
+
+Examples:
+
+* Federal Reserve markets
+* Inflation markets
+* Macroeconomic events
+* Political markets
+* Sports markets
+* Cryptocurrency markets
+
+Potential improvements include:
+
+* Market-specific Bayesian calibration
+* Hierarchical Bayesian models
+* Dynamic priors
+* Time-to-expiration effects
+* Liquidity-aware fair value estimation
+* Category-level calibration analysis
+
+---
+
+## Future Research — Version 3
+
+Inspired by modern Quant Research methodologies and the work of Marcos López de Prado.
+
+Potential extensions include:
+
+* Entropy-based features
+* Information-theoretic signals
+* Regime-dependent calibration
+* Market state classification
 * Hidden Markov Models (HMM)
-* Bayesian State Space Models
-* Regime-Switching Probability Models
+* Bayesian regime switching
+* Meta-labeling frameworks
+* Cross-market information flow analysis
 
-Potential market states:
-
-* Consensus Regime
-* Information Arrival Regime
-* Panic Regime
-* High-Uncertainty Regime
-
-Potential research questions:
-
-* Do calibration errors vary across market regimes?
-* Does Bayesian fair value depend on market state?
-* Can regime information improve trading signals?
-* Can latent-state models identify periods of market inefficiency?
+The objective is to move beyond simple probability calibration and investigate whether market inefficiencies emerge under specific information regimes.
 
 ---
 
-## Long-Term Vision
+## Main Takeaway
 
-The long-term goal of this research is to bridge:
+A simple Bayesian calibration framework is not sufficient to outperform prediction markets.
 
-* Bayesian Statistics
-* Prediction Markets
-* Information Theory
-* Market Microstructure
-* Quantitative Trading
-
-into a unified framework for identifying and exploiting probability mispricing in real-world prediction markets.
-
+The next research question is not whether mispricing exists, but under what market conditions mispricing becomes predictive.
