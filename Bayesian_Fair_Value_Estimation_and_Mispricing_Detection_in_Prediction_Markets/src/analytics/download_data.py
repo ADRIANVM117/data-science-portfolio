@@ -42,6 +42,9 @@ def fetch_polymarket_markets(limit=500, offset=0, closed=True):
 
 def fetch_many_markets(max_pages=50, limit=500, closed=True):
     all_markets = []
+    """"
+    download all market 
+    """ 
 
     for page in range(max_pages):
         offset = page * limit
@@ -122,6 +125,10 @@ def extract_yes_token_id(row):
 
 
 def get_price_history(clob_token_id, start_ts=None, end_ts=None, interval=None, fidelity_minutes=60):
+    """
+    Getting the price history from CLOB Base  
+    and return timestamp implied probability
+    """ 
     url = f"{CLOB_BASE}/prices-history"
 
     params = {
@@ -160,17 +167,13 @@ def get_price_history(clob_token_id, start_ts=None, end_ts=None, interval=None, 
 
 
 
-def get_price_history_chunked(
-    clob_token_id,
-    start_ts,
-    end_ts,
-    fidelity_minutes=60,
-    chunk_days=7,        # Reducido a 7 días para evitar el bloqueo del servidor
-    sleep_seconds=0.15   # Incrementado ligeramente para evitar Rate Limiting
+def get_price_history_chunked(clob_token_id,start_ts,end_ts,fidelity_minutes=60,
+    chunk_days=7,        # we reduced  the chunk_size to 7 days to avoid server lock    
+    sleep_seconds=0.15   #  Increment slightly to avoid rate limiting  
 ):
     """
     Fetch price history by splitting the query into micro time chunks.
-    Bypasses the strict Polymarket CLOB max-interval limit.
+    By passes the strict Polymarket CLOB max-interval limit.
     """
     url = f"{CLOB_BASE}/prices-history"
 
@@ -183,8 +186,7 @@ def get_price_history_chunked(
 
     while current_start < end_dt:
         current_end = min(current_start + chunk_delta, end_dt)
-
-        # Estructura limpia de parámetros: enviamos estrictamente lo necesario
+        # cleaning parameter structure :  avoiding  unnecessary parameters 
         params = {
             "market": str(clob_token_id),
             "startTs": int(current_start.timestamp()),
@@ -201,26 +203,22 @@ def get_price_history_chunked(
                     all_chunks.extend(data)
             else:
                 print(
-                    f"Skipping chunk {current_start.date()} to {current_end.date()} "
-                    f"| HTTP {response.status_code} | {response.text[:150]}"
+                    f"skipping chunk {current_start.date()} to {current_end.date()} "
+                    f" HTTP {response.status_code} | {response.text[:150]}"
                 )
         except Exception as e:
-            print(f"Network error on chunk {current_start.date()}: {e}")
+            print(f"network error on chunk {current_start.date()}: {e}")
 
         current_start = current_end
         time.sleep(sleep_seconds)
 
     if not all_chunks:
         return pd.DataFrame(columns=["timestamp", "implied_probability"])
-
-    # Procesamiento y limpieza del dataset unificado
+    # processing and cleaning the unified dataset
     df = pd.DataFrame(all_chunks)
     df = df.drop_duplicates(subset=["t"])
-
     df["timestamp"] = pd.to_datetime(df["t"], unit="s", utc=True)
     df["implied_probability"] = df["p"].astype(float)
-
-    # Retorno limpio de DataFrame (Corregido: sin coma al final)
     return df[["timestamp", "implied_probability"]].sort_values("timestamp").reset_index(drop=True)
 
 
