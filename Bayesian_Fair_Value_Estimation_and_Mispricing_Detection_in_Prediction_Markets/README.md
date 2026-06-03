@@ -163,17 +163,65 @@ Key findings:
 
 ---
 
-### Phase 4 — Market Calibration Analysis  IN PROGRESS
+### Phase 4 — Market Calibration Analysis  COMPLETED
 
-Next step:
+The market calibration framework was successfully implemented and evaluated using several probabilistic forecasting metrics.
 
-* Reliability diagrams
-* Calibration curves
+Completed analyses:
+
 * Probability binning analysis
+* Reliability diagram construction
+* Calibration table generation
 * Brier Score evaluation
-* Sharpness analysis
-* Overconfidence vs underconfidence diagnostics
-* Market efficiency assessment
+* Expected Calibration Error (ECE) estimation
+* Overconfidence and underconfidence assessment
+* Preliminary market efficiency evaluation
+
+---
+
+### Calibration Results
+
+| Metric                              | Value   |
+| ----------------------------------- | ------- |
+| Brier Score                         | 0.0532  |
+| Expected Calibration Error (ECE)    | 0.0559  |
+| Markets Evaluated                   | 43      |
+| Historical Probability Observations | 100,642 |
+
+---
+
+### Key Findings
+
+#### Strong Calibration at Probability Extremes
+
+Markets assigned very low probabilities rarely occurred, while markets assigned probabilities close to one were realized almost universally.
+
+This behavior is consistent with the expectations of an informationally efficient prediction market.
+
+#### Intermediate Probability Regions Remain Noisy
+
+The largest calibration gaps were observed in the intermediate probability ranges. However, these bins contained very few observations, making it difficult to distinguish genuine miscalibration from sampling variability.
+
+#### Probability Mass Concentrated at the Extremes
+
+Most resolved markets finished near probabilities of either zero or one.
+
+Specifically:
+
+* 24 markets finished in the 0–10% probability range.
+* 8 markets finished in the 90–100% probability range.
+
+This concentration contributes to the relatively low Brier Score and Expected Calibration Error observed in the dataset.
+
+---
+
+### Current Research Conclusion
+
+The calibration analysis suggests that Polymarket probabilities are broadly informative and reasonably calibrated.
+
+Although no strong evidence of systematic market inefficiency has yet been identified, the observed calibration gaps motivate further investigation through Bayesian probability estimation.
+
+The next phase of the project will evaluate whether Bayesian methods can improve probability calibration relative to the market itself.
 
 ---
 
@@ -182,9 +230,8 @@ Next step:
 * Historical prediction market dataset
 * Exploratory market analysis
 * Market calibration analysis
-* Brier Score evaluation
-* Reliability and calibration curves
 * Bayesian fair probability estimator
+* Market vs Bayesian calibration comparison
 * Mispricing detection framework
 * Trading signal generation engine
 * Backtesting framework
@@ -203,31 +250,24 @@ The project successfully reconstructed historical probability trajectories for r
 
 Example:
 
-| Timestamp | Implied Probability |
-|------------|------------|
-| 2024-03-21 17:00 | 0.16 |
-| 2024-03-21 18:00 | 0.16 |
-| 2024-03-21 19:00 | 0.17 |
+| Timestamp        | Implied Probability |
+| ---------------- | ------------------- |
+| 2024-03-21 17:00 | 0.16                |
+| 2024-03-21 18:00 | 0.16                |
+| 2024-03-21 19:00 | 0.17                |
 
-Initial exploratory results suggest that prediction markets contain meaningful information regarding future outcomes, while also exhibiting potential cases of probability mispricing that justify further calibration and Bayesian analysis.
-
-This validates the feasibility of constructing a quantitative research framework for:
-
-* Market calibration studies
-* Bayesian probability estimation
-* Mispricing detection
-* Trading signal generation
-* Systematic prediction-market research
+The calibration analysis demonstrates that prediction markets contain meaningful information regarding future outcomes while still exhibiting calibration imperfections that justify Bayesian adjustment and fair-value estimation.
 
 ---
 
 ## Future Research Questions
 
-* Are prediction markets well calibrated?
-* Do market-implied probabilities systematically overestimate or underestimate event occurrence?
+* Are prediction markets fully calibrated?
 * Can Bayesian methods improve probability estimation?
+* Can Bayesian-adjusted probabilities outperform market-implied probabilities?
 * Can probability mispricing generate statistically significant trading signals?
 * Do these signals survive realistic transaction costs and liquidity constraints?
+* Which probability regions exhibit the largest calibration errors?
 
 ---
 
