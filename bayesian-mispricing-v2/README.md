@@ -1,249 +1,126 @@
-# V2 – Information Dynamics and Market Efficiency in Prediction Markets
+---
 
+## Predicting Market Efficiency
 
-The initial objective of V2 was to investigate whether prediction market calibration differed across market categories such as macroeconomic events and political events.
+A Logistic Regression model was trained to classify markets as:
 
-However, exploratory analysis revealed little evidence that market topic alone explained forecast accuracy.
+- Efficient Markets
+- Inefficient Markets
 
-This led to a different research question:
+using only trajectory-based features.
 
-Do information incorporation dynamics explain prediction market accuracy better than market categories?
+### Features
+
+- Realized Volatility
+- Probability Range
+- Trend
+- Max Drawdown
+- Reversals
+- Shannon Entropy
+- Skewness
+- Kurtosis
+- Autocorrelation
+
+### Cross-Validation Results
+
+| Metric | Score |
+|----------|----------:|
+| Accuracy | 74.7% |
+| F1 Score | 77.1% |
+
+These results indicate that information-dynamics features contain meaningful predictive information regarding future market efficiency.
 
 ---
 
-## Dataset
+## Early Warning System
 
-### Market-Level Dataset
+A key practical question is whether market efficiency can be identified before market resolution.
 
-43 prediction markets collected from Polymarket.
+To investigate this, trajectory features were recalculated using only the first portion of each market's life.
 
-Variables include:
+Three horizons were analyzed:
 
-* Market outcome
-* Final probability
-* Market duration
-* Liquidity
-* Volume
-* Market category labels
+- First 25% of observations
+- First 50% of observations
+- First 75% of observations
 
-### Time-Series Dataset
+### Results
 
-100,642 probability observations across the 43 markets.
+| Horizon | Accuracy | F1 Score |
+|----------|----------:|----------:|
+| 25% | 67.5% | 70.1% |
+| 50% | 67.5% | 70.1% |
+| 75% | 67.2% | 72.7% |
 
-Variables include:
+### Key Insight
 
-* `market_id`
-* `timestamp`
-* `implied_probability`
+Most of the predictive signal appears extremely early.
 
-This dataset captures the full evolution of market beliefs over time.
+Using only the first 25% of market life, the model retains most of the predictive power achieved using the complete trajectory.
 
----
-
-## Research Workflow
-
-###  Category Tagging
-
-Markets were manually classified into:
-
-* Monetary & Macro
-* Politics & Geopolitics
-* Other
-
-Distribution:
-
-| Category               | Markets |
-| ---------------------- | ------- |
-| Monetary & Macro       | 22      |
-| Politics & Geopolitics | 13      |
-| Other                  | 8       |
+This suggests that market quality is revealed surprisingly early.
 
 ---
 
-### Category EDA
+## Early Signal Interpretability
 
-The objective was to determine whether market topic explained forecast accuracy.
+The final stage of the analysis investigated which early trajectory features drive predictive performance.
 
-Metrics analyzed:
+Logistic Regression coefficients were estimated at each horizon.
 
-* Outcome rate
-* Market duration
-* Probability distributions
-* Final probabilities
-* Forecast error (`abs_surprise`)
+### Feature Importance Across Horizons
 
-Result:
+| Feature | 25% | 50% | 75% |
+|----------|----------:|----------:|----------:|
+| Early Reversals | 0.966 | 0.779 | 0.725 |
+| Early Max Drawdown | 0.604 | 0.690 | 0.802 |
+| Early Entropy | -0.072 | -0.437 | -0.500 |
+| Early Trend | -0.176 | -0.376 | 0.443 |
+| Early Probability Range | 0.003 | 0.009 | 0.159 |
+| Early Realized Volatility | -0.315 | -0.125 | 0.023 |
 
-No statistically meaningful differences were found between macroeconomic and political markets.
+### Interpretation
 
----
+Three signals consistently emerged:
 
-### Trajectory Feature Engineering
+#### Early Reversals
 
-Using the complete probability trajectories, the following market-level features were constructed:
+Markets that frequently revise beliefs during their early stages are more likely to become efficient.
 
-#### Realized Volatility
+#### Early Max Drawdown
 
-Measures cumulative probability movement.
+Markets that aggressively correct mistakes converge to more accurate forecasts.
 
-#### Probability Range
+#### Early Entropy
 
-[
-\max(P_t)-\min(P_t)
-]
-
-Measures how far market beliefs traveled.
-
-#### Trend
-
-Linear slope of probability evolution.
-
-#### Max Drawdown
-
-Largest peak-to-trough decline in market probability.
-
-#### Reversals
-
-Number of probability direction changes.
-
-#### Information-Theoretic Features
-
-* Shannon Entropy
-* Skewness
-* Kurtosis
-* Lag-1 Autocorrelation
+Efficient markets exhibit lower entropy, suggesting less randomness and more structured information incorporation.
 
 ---
 
-## Forecast Error Definition
+## Final Ranking of Signals
 
-Forecast accuracy was measured using:
+Across all analyses:
 
-[
-AbsSurprise = |Outcome - FinalProbability|
-]
-
-Interpretation:
-
-* Small values indicate accurate forecasts.
-* Large values indicate inaccurate forecasts.
+1. Early Reversals
+2. Early Max Drawdown
+3. Early Entropy
+4. Trend
+5. Probability Range
+6. Realized Volatility
 
 ---
 
-## Main Results
+## Main Conclusion
 
-### Correlation Analysis
+Prediction market efficiency is not primarily determined by market category.
 
-Correlation with forecast error (`abs_surprise`):
+Instead, efficiency is strongly associated with the dynamics of information incorporation.
 
-| Feature           | Correlation |
-| ----------------- | ----------: |
-| Max Drawdown      |      -0.756 |
-| Probability Range |      -0.587 |
-| Reversals         |      -0.370 |
-| Kurtosis          |      -0.306 |
-| Shannon Entropy   |       0.234 |
+Efficient markets are characterized by:
 
-The strongest relationship was observed for Max Drawdown.
+- Frequent early belief revisions
+- Strong error-correction dynamics
+- Lower information entropy
+- Early emergence of predictive signals
 
----
-
-### OLS Regression
-
-Model:
-
-[
-AbsSurprise
-===========
-
-\beta_0
-+
-\beta_1(MaxDrawdown)
-+
-\beta_2(ProbabilityRange)
-+
-\varepsilon
-]
-
-Results:
-
-* (R^2 = 0.614)
-* Max Drawdown significant ((p < 0.001))
-* Probability Range significant ((p = 0.042))
-
-These two variables alone explained approximately 61% of the variation in forecast error.
-
----
-
-### High vs Low Drawdown Markets
-
-Markets were split at the median Max Drawdown.
-
-#### Mean Forecast Error
-
-| Group         | Mean Abs Surprise |
-| ------------- | ----------------: |
-| High Drawdown |            0.0188 |
-| Low Drawdown  |            0.2109 |
-
-#### Median Forecast Error
-
-| Group         | Median Abs Surprise |
-| ------------- | ------------------: |
-| High Drawdown |              0.0050 |
-| Low Drawdown  |              0.0575 |
-
-High-drawdown markets exhibited approximately 11x lower forecast error.
-
----
-
-### Mann-Whitney Test
-
-Hypothesis:
-
-[
-H_0:
-\text{High Drawdown Markets}
-============================
-
-\text{Low Drawdown Markets}
-]
-
-Result:
-
-* p-value = 0.012
-
-The null hypothesis was rejected.
-
-Forecast accuracy differs significantly between the two groups.
-
----
-
-## Key Finding
-
-The evidence suggests that prediction market efficiency is not primarily driven by market topic.
-
-Instead, efficiency appears to be strongly associated with the magnitude of belief revisions occurring throughout the market lifecycle.
-
-Markets that aggressively revise probabilities in response to new information ultimately converge to substantially more accurate forecasts.
-
----
-
-## Future Work
-
-Potential extensions include:
-
-* Hidden Markov Models (HMM)
-* Regime detection
-* Information flow metrics
-* Advanced entropy measures
-* Prediction of forecast accuracy from trajectory dynamics
-* Bayesian state-space models
-
----
-
-## Conclusion
-
-This study provides evidence that information incorporation dynamics are more informative than market categories for explaining prediction market accuracy.
-
-The strongest predictor identified was Max Drawdown, suggesting that markets capable of correcting large belief errors ultimately produce more accurate forecasts than markets that remain anchored to their initial expectations.
+The evidence suggests that market quality can be identified long before market resolution using only trajectory-based information.
