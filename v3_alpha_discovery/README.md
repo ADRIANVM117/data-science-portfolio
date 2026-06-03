@@ -96,7 +96,7 @@ The interval crosses zero, indicating insufficient evidence for a stable relatio
 
 95% Confidence Interval:
 
-$ [-0.821,\ -0.164] $
+$[-0.821,\ -0.164]$
 
 The interval remains entirely negative, providing evidence that the inverse relationship is statistically stable within this regime.
 
@@ -106,7 +106,7 @@ The interval remains entirely negative, providing evidence that the inverse rela
 
 The following interaction model was estimated:
 
-$ future_{error} = \beta_0 + \beta_{1mispricing} + \beta_{2regime} + \beta_{3(mispricing \times regime)} $
+$future_{error} = \beta_0 + \beta_{1mispricing} + \beta_{2regime} + \beta_{3(mispricing \times regime)} $
 
 
 Results:
