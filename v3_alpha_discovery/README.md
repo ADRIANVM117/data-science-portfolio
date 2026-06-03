@@ -1,11 +1,13 @@
 # V3 — Regime-Conditioned Alpha Discovery
 
+--- 
+
+
 ## Research Question
 
 Can Bayesian mispricing become informative once conditioned on market regime?
 
 ---
-
 Results from V1 showed that Bayesian fair value estimation did not generate consistent alpha when applied across all prediction markets.
 
 This motivated a new hypothesis:
@@ -89,9 +91,7 @@ Bootstrap confidence intervals were used to evaluate the robustness of the obser
 
 95% Confidence Interval:
 
-```math
-[-0.295,\ 0.924]
-```
+$[-0.295,\ 0.924] $
 
 The interval crosses zero, indicating insufficient evidence for a stable relationship.
 
@@ -99,9 +99,7 @@ The interval crosses zero, indicating insufficient evidence for a stable relatio
 
 95% Confidence Interval:
 
-```math
-[-0.821,\ -0.164]
-```
+$ [-0.821,\ -0.164] $
 
 The interval remains entirely negative, providing evidence that the inverse relationship is statistically stable within this regime.
 
