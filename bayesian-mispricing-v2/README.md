@@ -1,126 +1,193 @@
----
+## Information-Theoretic Market States
 
-## Predicting Market Efficiency
+The final stage of the project investigated whether prediction markets naturally organize into distinct information-processing regimes.
 
-A Logistic Regression model was trained to classify markets as:
+Rather than imposing labels such as "efficient" or "inefficient", an unsupervised learning approach was used.
 
-- Efficient Markets
-- Inefficient Markets
+### Methodology
 
-using only trajectory-based features.
+* Standardization
+* Principal Component Analysis (PCA)
+* K-Means Clustering
+* Silhouette Analysis
 
-### Features
+### PCA Results
 
-- Realized Volatility
-- Probability Range
-- Trend
-- Max Drawdown
-- Reversals
-- Shannon Entropy
-- Skewness
-- Kurtosis
-- Autocorrelation
+| Metric                   | Value |
+| ------------------------ | ----: |
+| PC1 Variance Explained   | 28.1% |
+| PC2 Variance Explained   | 17.0% |
+| Total Variance Explained | 45.1% |
 
-### Cross-Validation Results
+### Cluster Selection
 
-| Metric | Score |
-|----------|----------:|
-| Accuracy | 74.7% |
-| F1 Score | 77.1% |
+Several values of (K) were evaluated using the Silhouette Score.
 
-These results indicate that information-dynamics features contain meaningful predictive information regarding future market efficiency.
+| K | Silhouette Score |
+| - | ---------------: |
+| 2 |            0.226 |
+| 3 |            0.178 |
+| 4 |            0.186 |
+| 5 |            0.223 |
+| 6 |            0.217 |
 
----
+The optimal solution was:
 
-## Early Warning System
+$ K = 2 $
 
-A key practical question is whether market efficiency can be identified before market resolution.
-
-To investigate this, trajectory features were recalculated using only the first portion of each market's life.
-
-Three horizons were analyzed:
-
-- First 25% of observations
-- First 50% of observations
-- First 75% of observations
-
-### Results
-
-| Horizon | Accuracy | F1 Score |
-|----------|----------:|----------:|
-| 25% | 67.5% | 70.1% |
-| 50% | 67.5% | 70.1% |
-| 75% | 67.2% | 72.7% |
-
-### Key Insight
-
-Most of the predictive signal appears extremely early.
-
-Using only the first 25% of market life, the model retains most of the predictive power achieved using the complete trajectory.
-
-This suggests that market quality is revealed surprisingly early.
 
 ---
 
-## Early Signal Interpretability
+## Market State Characteristics
 
-The final stage of the analysis investigated which early trajectory features drive predictive performance.
+### Cluster 0 — Information Processing Markets
 
-Logistic Regression coefficients were estimated at each horizon.
+Characteristics:
 
-### Feature Importance Across Horizons
+* High Drawdown
+* High Reversals
+* High Probability Range
+* Low Entropy
 
-| Feature | 25% | 50% | 75% |
-|----------|----------:|----------:|----------:|
-| Early Reversals | 0.966 | 0.779 | 0.725 |
-| Early Max Drawdown | 0.604 | 0.690 | 0.802 |
-| Early Entropy | -0.072 | -0.437 | -0.500 |
-| Early Trend | -0.176 | -0.376 | 0.443 |
-| Early Probability Range | 0.003 | 0.009 | 0.159 |
-| Early Realized Volatility | -0.315 | -0.125 | 0.023 |
+| Feature           | Value |
+| ----------------- | ----: |
+| Max Drawdown      | 0.870 |
+| Reversals         | 702.8 |
+| Probability Range | 0.618 |
+| Shannon Entropy   | 0.181 |
 
-### Interpretation
+### Cluster 1 — Anchored / Noisy Markets
 
-Three signals consistently emerged:
+Characteristics:
 
-#### Early Reversals
+* Low Drawdown
+* Low Reversals
+* Low Probability Range
+* High Entropy
 
-Markets that frequently revise beliefs during their early stages are more likely to become efficient.
-
-#### Early Max Drawdown
-
-Markets that aggressively correct mistakes converge to more accurate forecasts.
-
-#### Early Entropy
-
-Efficient markets exhibit lower entropy, suggesting less randomness and more structured information incorporation.
-
----
-
-## Final Ranking of Signals
-
-Across all analyses:
-
-1. Early Reversals
-2. Early Max Drawdown
-3. Early Entropy
-4. Trend
-5. Probability Range
-6. Realized Volatility
+| Feature           | Value |
+| ----------------- | ----: |
+| Max Drawdown      | 0.448 |
+| Reversals         |  96.7 |
+| Probability Range | 0.218 |
+| Shannon Entropy   | 0.568 |
 
 ---
 
-## Main Conclusion
+## Forecast Accuracy by Market State
 
-Prediction market efficiency is not primarily determined by market category.
+### Cluster 0
 
-Instead, efficiency is strongly associated with the dynamics of information incorporation.
+| Metric              | Value |
+| ------------------- | ----: |
+| Markets             |    32 |
+| Mean Abs Surprise   | 0.040 |
+| Median Abs Surprise | 0.005 |
 
-Efficient markets are characterized by:
+### Cluster 1
 
-- Frequent early belief revisions
-- Strong error-correction dynamics
-- Lower information entropy
-- Early emergence of predictive signals
+| Metric              | Value |
+| ------------------- | ----: |
+| Markets             |    11 |
+| Mean Abs Surprise   | 0.340 |
+| Median Abs Surprise | 0.435 |
 
-The evidence suggests that market quality can be identified long before market resolution using only trajectory-based information.
+### Key Result
+
+Markets belonging to the Information Processing Regime exhibit approximately:
+
+* **8.5× lower mean forecast error**
+* **83× lower median forecast error**
+
+than markets belonging to the Anchored / Noisy Regime.
+
+---
+
+## Final Research Insight
+
+Prediction markets do not appear to form a homogeneous population.
+
+Instead, they naturally organize into distinct information-processing regimes.
+
+The most accurate markets are characterized by:
+
+* Frequent belief revisions
+* Strong error-correction dynamics
+* Large probability adjustments
+* Low information entropy
+
+while the least accurate markets exhibit:
+
+* Limited belief updating
+* Weak error correction
+* Higher entropy
+* Persistent forecast errors
+
+These findings suggest that prediction market efficiency is fundamentally linked to how information is incorporated into prices rather than the topic being forecast.
+
+---
+
+## Project Summary
+
+The project evolved through four major stages:
+
+### Stage 1 — Market Categories
+
+Question:
+
+Do different market topics explain forecast accuracy?
+
+Result: No meaningful evidence.
+
+---
+
+### Stage 2 — Information Dynamics
+
+Question:
+
+Do probability trajectories explain forecast accuracy?
+
+Strong evidence.
+
+Max Drawdown emerged as the dominant explanatory variable.
+
+---
+
+### Stage 3 — Early Warning System
+
+Question:
+
+Can efficiency be detected before market resolution?
+
+Result: Yes. Using only the first 25% of market life:
+* Accuracy = 67.5%
+* F1 Score = 70.1%
+
+---
+
+### Stage 4  Market States
+
+Question:
+
+Do distinct information-processing regimes exist?
+
+Result: Yes.
+
+Two natural market states emerged:
+
+1. Information Processing Markets
+2. Anchored / Noisy Markets
+
+with dramatically different forecast performance.
+
+---
+
+## Overall Conclusion
+
+Prediction market accuracy is not primarily determined by market category.
+
+Instead, forecast performance is driven by information-processing dynamics.
+
+Markets that actively revise beliefs, aggressively correct mistakes, and maintain lower entropy consistently achieve superior forecasting performance.
+
+These dynamics emerge early, remain interpretable, and ultimately define distinct market regimes.
