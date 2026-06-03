@@ -1,5 +1,7 @@
 # Bayesian Fair Value Estimation and Mispricing Detection in Prediction Markets
-## <b> Adrian Vazquez </b>
+
+## Adrian Vazquez
+
 ---
 
 ## Research Question
@@ -42,7 +44,7 @@ This project investigates whether these probabilities are systematically biased 
 
 ## Research Workflow
 
-The project follows a  workflow:
+The project follows a professional Quant Research workflow:
 
 1. Data Acquisition
 2. Dataset Construction
@@ -111,23 +113,41 @@ Bayesian_Fair_Value_Estimation_and_Mispricing_Detection_in_Prediction_Markets/
 
 ## Current Status
 
-### Completed
+### Phase 1 — Data Acquisition - DONE
 
- -  Historical market metadata successfully downloaded from the Polymarket Gamma API.
+* Historical market metadata successfully downloaded from the Polymarket Gamma API.
+* Historical implied probabilities successfully recovered from the Polymarket CLOB API.
+* Temporal chunking framework implemented to bypass API time-window limitations.
+* Successfully collected historical trajectories for resolved prediction markets.
 
- - Historical implied probabilities successfully recovered from the Polymarket CLOB API using temporal chunking.
+### Phase 2 — Dataset Construction - DONE 
 
- -  Market filtering framework for Federal Reserve, interest rate, inflation, and macroeconomic events.
+* Historical probability trajectories merged with market metadata.
+* Market-level feature engineering completed.
+* Final probabilities extracted for each market.
+* Market outcomes successfully reconstructed from resolved contract prices.
+* Binary target variable generated for calibration and forecasting analysis.
+* Research dataset validated and ready for quantitative analysis.
 
- - Initial historical dataset construction pipeline completed.
+### Current Dataset
 
-### In Progress
+| Metric                              | Value                |
+| ----------------------------------- | -------------------- |
+| Markets                             | 43                   |
+| Historical Probability Observations | 100,642              |
+| Binary Outcomes Available           | 43                   |
+| Time Span                           | Feb-2023 to Dec-2024 |
 
-$ \rightarrow  $  Research dataset construction.
+### Phase 3 — Exploratory Analysis - IN PROGRESS
 
-$ \rightarrow  $ Market calibration analysis.
+Next step:
 
-$ \rightarrow  $ Probability forecasting evaluation.
+* Probability distribution analysis
+* Market duration analysis
+* Liquidity analysis
+* Probability trajectory analysis
+* Outcome imbalance analysis
+* Initial calibration diagnostics
 
 ---
 
@@ -157,7 +177,12 @@ Example:
 | 2024-03-21 18:00 | 0.16                |
 | 2024-03-21 19:00 | 0.17                |
 
-This validates the feasibility of constructing a prediction-market research dataset suitable for calibration studies, Bayesian probability estimation, and systematic mispricing detection.
+This validates the feasibility of constructing a prediction-market research dataset suitable for:
+
+* Calibration studies
+* Bayesian probability estimation
+* Systematic mispricing detection
+* Trading signal generation
 
 ---
 
@@ -168,3 +193,67 @@ This validates the feasibility of constructing a prediction-market research data
 * Can Bayesian methods improve probability estimation?
 * Can probability mispricing generate statistically significant trading signals?
 * Do these signals survive realistic transaction costs and liquidity constraints?
+
+---
+
+# Future Research Extensions
+
+The following extensions are intentionally excluded from Version 1 in order to first establish a robust baseline research framework.
+
+---
+
+## Version 2 — Information-Theoretic Features
+
+Inspired by the work of Marcos López de Prado.
+
+Potential features include:
+
+* Shannon Entropy
+* Probability Path Entropy
+* Permutation Entropy
+* Information Regime Classification
+* Entropy-Based Market Segmentation
+
+Potential research questions:
+
+* Do high-entropy markets exhibit worse calibration?
+* Does entropy predict future probability revisions?
+* Are mispricing opportunities concentrated in information-rich markets?
+
+---
+
+## Version 3 — Regime Detection and Market States
+
+Potential methodologies:
+
+* Hidden Markov Models (HMM)
+* Bayesian State Space Models
+* Regime-Switching Probability Models
+
+Potential market states:
+
+* Consensus Regime
+* Information Arrival Regime
+* Panic Regime
+* High-Uncertainty Regime
+
+Potential research questions:
+
+* Do calibration errors vary across market regimes?
+* Does Bayesian fair value depend on market state?
+* Can regime information improve trading signals?
+* Can latent-state models identify periods of market inefficiency?
+
+---
+
+## Long-Term Vision
+
+The long-term goal of this research is to bridge:
+
+* Bayesian Statistics
+* Prediction Markets
+* Information Theory
+* Market Microstructure
+* Quantitative Trading
+
+into a unified framework for identifying and exploiting probability mispricing in real-world prediction markets.
