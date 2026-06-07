@@ -3,6 +3,7 @@ import logging
 from websocket_client import PolymarketMarketDataClient
 from order_book import OrderBook
 from market_discovery import get_top_market_tokens
+from features import compute_book_features
 #Configuración de logs limpia y optimizada para producción
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 logger = logging.getLogger(__name__)
@@ -30,23 +31,24 @@ class QuantTradingEngine:
         while True:
             try:
                 book = await self.queue.get()
-                if book.best_bid is None or book.best_ask is None:
+                features = compute_book_features(book)
+                if features is None:
                     self.queue.task_done()
-                    continue
-                
-                # --- AQUÍ INICIA TU FASE 2: MODELADO ESTADÍSTICO / MARKET MAKING ---
-                # Este bloque simula tus algoritmos de arbitraje o cálculo de valor teórico
-                print(f"\n[Estrategia] Procesando Asset: {book.asset_id[:10]}...")
-                print(f"   Best Bid: {book.best_bid.price if book.best_bid else 'N/A'}")
-                print(f"   Best Ask: {book.best_ask.price if book.best_ask else 'N/A'}")
-                print(f"   Spread: {book.spread if book.spread else 'N/A'} | Mid Price: {book.mid_price if book.mid_price else 'N/A'}")
-                
-                # Notificar a la cola que la tarea asociada al objeto ha sido completada
+                continue
+            # --- FASE 2: MARKET MICROSTRUCTURE FEATURES ---
+                print(f"\n[Features] Asset: {features.asset_id[:10]}...")
+                print(f"   Bid/Ask: {features.best_bid} / {features.best_ask}")
+                print(f"   Spread: {features.spread} | Mid: {features.mid_price}")
+                print(f"   Imbalance: {features.book_imbalance}")
+                print(f"   Microprice: {features.microprice}")
+                print(f"   Top Depth: {features.top_depth}")
+
                 self.queue.task_done()
-                
+
             except asyncio.CancelledError:
                 logger.info("Hilo de estrategia cancelado de forma segura.")
                 break
+
             except Exception as e:
                 logger.error("Error crítico ejecutando el modelo en el worker: %s", e)
 
