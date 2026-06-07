@@ -6,7 +6,7 @@ from time import time
 from typing import Optional
 
 from features import BookFeatures
-
+from filters import is_tradable
 
 @dataclass
 class MarketState:
@@ -61,3 +61,24 @@ class MarketState:
             key=lambda x: x.top_depth,
             reverse=True,
         )[:n]
+    
+    def tradable_features(self) -> list[BookFeatures]:
+        """Return only features that pass the tradable-universe filter."""
+        return [f for f in self.all_features() if is_tradable(f)]
+
+    def top_tradable_spreads(self, n: int = 10) -> list[BookFeatures]:
+        """Tradable assets with widest spreads."""
+        return sorted(self.tradable_features(), key=lambda x: x.spread,reverse=True,)[:n]
+
+    def top_tradable_buy_imbalance(self, n: int = 10) -> list[BookFeatures]:
+        """Tradable assets with strongest bid-side pressure."""
+        return sorted(self.tradable_features(),key=lambda x: x.book_imbalance,reverse=True,
+                      )[:n]
+
+    def top_tradable_sell_imbalance(self, n: int = 10) -> list[BookFeatures]:
+        """Tradable assets with strongest ask-side pressure."""
+        return sorted(self.tradable_features(),key=lambda x: x.book_imbalance,)[:n]
+
+    def top_tradable_depth(self, n: int = 10) -> list[BookFeatures]:
+        """Tradable assets with largest top-of-book depth."""
+        return sorted(self.tradable_features(),key=lambda x: x.top_depth,reverse=True,)[:n]
