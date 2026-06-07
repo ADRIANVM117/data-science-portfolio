@@ -72,19 +72,21 @@ class PolymarketMarketDataClient:
     async def stop(self) -> None:
         """Stop the WebSocket loop safely."""
         self._running = False
-
+    
     async def _subscribe(self, ws) -> None:
         """Subscribe to Polymarket market-data channel."""
         payload = {
-            "asset_ids": self.asset_ids,
+            "assets_ids": self.asset_ids,
             "type": "market",
-        }
+            "custom_feature_enabled": True,}
 
         await ws.send(json.dumps(payload))
         logger.info("Subscribed to %d asset_ids.", len(self.asset_ids))
 
     async def _handle_raw_message(self, raw_message: str) -> None:
         """Parse raw WebSocket message and route it."""
+        #print("\nRAW MESSAGE:")
+        #print(raw_message[:1000])
         try:
             message = json.loads(raw_message)
         except json.JSONDecodeError:
@@ -102,6 +104,9 @@ class PolymarketMarketDataClient:
         else:
             logger.debug("Unknown message type: %s", type(message))
 
+
+    
+
     async def _handle_message(self, message: dict) -> None:
         """Handle one decoded WebSocket event."""
         event_type = message.get("event_type")
@@ -118,15 +123,17 @@ class PolymarketMarketDataClient:
             await self._emit(book)
 
         elif event_type == "price_change":
-            asset_id = message.get("asset_id")
+            changes = message.get("price_changes", [])
+            for change in changes:
+                asset_id = change.get("asset_id")
 
-            if asset_id is None:
-                logger.warning("Price change without asset_id: %s", message)
-                return
+                if asset_id is None:
+                    logger.warning("Price change item without asset_id: %s", change)
+                    continue
 
-            book = self.books.setdefault(asset_id, OrderBook(asset_id=asset_id))
-            book.apply_price_change(message)
-            await self._emit(book)
+                book = self.books.setdefault(asset_id, OrderBook(asset_id=asset_id))
+                book.apply_price_change(change)
+                await self._emit(book)
 
         elif event_type in {"last_trade_price", "best_bid_ask"}:
             logger.debug("Market event: %s | %s", event_type, message)

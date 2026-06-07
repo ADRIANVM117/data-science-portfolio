@@ -2,13 +2,14 @@ import asyncio
 import logging
 from websocket_client import PolymarketMarketDataClient
 from order_book import OrderBook
-
-# Configuración de logs limpia y optimizada para producción
+from market_discovery import get_top_market_tokens
+#Configuración de logs limpia y optimizada para producción
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 logger = logging.getLogger(__name__)
 
 class QuantTradingEngine:
     def __init__(self, asset_ids: list[str]):
+
         self.asset_ids = asset_ids
         # Cola asíncrona intermedia para transferir snapshots del libro sin bloquear el WS
         self.queue: asyncio.Queue[OrderBook] = asyncio.Queue(maxsize=5000)
@@ -29,6 +30,9 @@ class QuantTradingEngine:
         while True:
             try:
                 book = await self.queue.get()
+                if book.best_bid is None or book.best_ask is None:
+                    self.queue.task_done()
+                    continue
                 
                 # --- AQUÍ INICIA TU FASE 2: MODELADO ESTADÍSTICO / MARKET MAKING ---
                 # Este bloque simula tus algoritmos de arbitraje o cálculo de valor teórico
@@ -63,13 +67,13 @@ class QuantTradingEngine:
             await asyncio.gather(self._strategy_task, return_exceptions=True)
         logger.info("Motor de trading totalmente detenido.")
 
-
 async def main():
     # Token YES de un mercado con alto volumen y trading constante
-    mercados_activos = [
-        "22046754593467471415174021272023581561726002341257416393181467440628329621347"
-    ]
     
+    mercados_activos = get_top_market_tokens(limit=20)
+    
+
+
     engine = QuantTradingEngine(asset_ids=mercados_activos)
 
     
