@@ -5,6 +5,7 @@ from order_book import OrderBook
 from market_discovery import get_top_market_tokens
 from features import compute_book_features
 from state_manager import MarketState
+from signal_engine import generate_signal, SignalType
 #Configuración de logs limpia y optimizada para producción
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 logger = logging.getLogger(__name__)
@@ -20,52 +21,7 @@ class QuantTradingEngine:
         self._strategy_task: asyncio.Task | None = None
         self._monitor_task: asyncio.Task | None = None
 
-    async def monitor_worker(self, interval_seconds: int = 5) -> None:
-        """Print periodic market microstructure summaries."""
-        logger.info("Monitor de microestructura inicializado.")
-        while True:
-            try:
-                await asyncio.sleep(interval_seconds)
-
-                all_features = self.state.all_features()
-                if not all_features:
-                    logger.info("Monitor: aún no hay features disponibles.")
-                    continue
-
-                print("\n" + "=" * 80)
-                print("MARKET MICROSTRUCTURE SNAPSHOT")
-                print("=" * 80)
-
-                print("\nTop Spreads:")
-                for f in self.state.top_spreads(n=5):
-                    print(
-                    f"Asset {f.asset_id[:10]} | "
-                    f"Spread={f.spread} | Mid={f.mid_price} | Depth={f.top_depth}"
-                )
-                print("\nTop Buy Imbalance:")
-                for f in self.state.top_buy_imbalance(n=5):
-                    print(
-                    f"Asset {f.asset_id[:10]} | "
-                    f"Imbalance={f.book_imbalance:.4f} | Microprice={f.microprice:.4f} | Mid={f.mid_price}"
-                )
-                print("\nTop Sell Imbalance:")
-                for f in self.state.top_sell_imbalance(n=5):
-                    print(
-                        f"Asset {f.asset_id[:10]} | "
-                        f"Imbalance={f.book_imbalance:.4f} | Microprice={f.microprice:.4f} | Mid={f.mid_price}"
-                        )
-
-                print("\nTop Depth:")
-                for f in self.state.top_depth(n=5):
-                    print(
-                        f"Asset {f.asset_id[:10]} | "
-                        f"Depth={f.top_depth} | Spread={f.spread} | Mid={f.mid_price}"
-                        )
-
-            except asyncio.CancelledError:
-                logger.info("Monitor de microestructura cancelado de forma segura.")
-                break
-        
+    
 
     async def _enqueue_book(self, book: OrderBook) -> None:
         """Callback del productor: Recibe el libro actualizado y lo empuja a la cola."""
@@ -105,6 +61,71 @@ class QuantTradingEngine:
         # Lanzamos el productor (WebSocket)
         await self.client.connect_forever()
 
+    async def monitor_worker(self, interval_seconds: int = 5) -> None:
+        """Print periodic market microstructure summaries."""
+        logger.info("Monitor de microestructura inicializado.")
+        while True:
+            try:
+                await asyncio.sleep(interval_seconds)
+                tradable_features = self.state.tradable_features()
+                
+                if not tradable_features:
+                    logger.info("Monitor: aún no hay activos tradables.")
+                    continue
+
+                print("\n" + "=" * 80)
+                print("TRADABLE MARKET MICROSTRUCTURE SNAPSHOT")
+                print("=" * 80)
+                print("\nTop Tradable Spreads:")
+                for f in self.state.top_tradable_spreads(n=5):
+                    print(
+                    f"Asset {f.asset_id[:10]} | "
+                    f"Spread={f.spread} | Mid={f.mid_price} | Depth={f.top_depth}")
+
+                print("\nTop Tradable Buy Imbalance:")
+                for f in self.state.top_tradable_buy_imbalance(n=5):
+                    print(
+                    f"Asset {f.asset_id[:10]} | "
+                    f"Imbalance={f.book_imbalance:.4f} | "
+                    f"Microprice={f.microprice:.4f} | "
+                    f"Mid={f.mid_price}")
+
+                print("\nTop Tradable Sell Imbalance:")
+                for f in self.state.top_tradable_sell_imbalance(n=5):
+                    print(
+                    f"Asset {f.asset_id[:10]} | "
+                    f"Imbalance={f.book_imbalance:.4f} | "
+                    f"Microprice={f.microprice:.4f} | "
+                    f"Mid={f.mid_price}")
+
+                print("\nTop Tradable Depth:")
+                for f in self.state.top_tradable_depth(n=5):
+                    print(
+                    f"Asset {f.asset_id[:10]} | "
+                    f"Depth={f.top_depth} | "
+                    f"Spread={f.spread} | "
+                    f"Mid={f.mid_price}")
+
+                print("\nActive Signals:")
+                signals = [ generate_signal(f) for f in tradable_features]
+
+                active_signals = [s for s in signals if s.signal != SignalType.NEUTRAL]
+
+                if not active_signals: print("No active signals.")
+                else:
+                    for s in active_signals[:10]:
+                        print(
+                            f"Asset {s.asset_id[:10]} | "
+                            f"Signal={s.signal.value} | "
+                            f"Edge={s.microprice_edge:.4f} | "
+                            f"Imbalance={s.imbalance:.4f} | "
+                            f"Spread={s.spread} | "
+                            f"Depth={s.depth}")
+
+            except asyncio.CancelledError:
+                logger.info("Monitor de microestructura cancelado de forma segura.")
+                break
+
     
     async def stop(self) -> None:
         """Detiene de forma controlada el WebSocket y las tareas de procesamiento."""
@@ -128,14 +149,6 @@ class QuantTradingEngine:
         logger.info("Motor de trading totalmente detenido.")
 
     
-    async def stop(self) -> None:
-        """Detiene de forma controlada el WebSocket y las tareas de procesamiento."""
-        logger.info("Iniciando secuencia de apagado seguro...")
-        await self.client.stop()
-        if self._strategy_task:
-            self._strategy_task.cancel()
-            await asyncio.gather(self._strategy_task, return_exceptions=True)
-        logger.info("Motor de trading totalmente detenido.")
 
 async def main():
     # Token YES de un mercado con alto volumen y trading constante
