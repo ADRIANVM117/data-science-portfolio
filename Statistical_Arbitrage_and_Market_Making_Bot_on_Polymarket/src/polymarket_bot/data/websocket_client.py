@@ -3,11 +3,10 @@ from __future__ import annotations
 import asyncio
 import json
 import logging
-from collections.abc import Callable, Awaitable
+from collections.abc import Awaitable, Callable
 
 import websockets
 
-# CORREGIDO: Importación directa desde tu archivo local order_book.py
 from order_book import OrderBook
 
 logger = logging.getLogger(__name__)
@@ -17,7 +16,8 @@ POLYMARKET_MARKET_WS = "wss://ws-subscriptions-clob.polymarket.com/ws/market"
 
 class PolymarketMarketDataClient:
     """
-    Async Polymarket market-data WebSocket client corregido y optimizado.
+    Async Polymarket market-data WebSocket client.
+    Streams L2 order book updates and keeps an in-memory book per asset_id.
     """
 
     def __init__(
@@ -50,72 +50,91 @@ class PolymarketMarketDataClient:
                     max_queue=10_000,
                 ) as ws:
                     logger.info("Connected to Polymarket market WebSocket.")
+
                     await self._subscribe(ws)
                     backoff = 1.0
 
                     async for raw_message in ws:
                         if not self._running:
                             break
+
                         await self._handle_raw_message(raw_message)
 
             except asyncio.CancelledError:
                 logger.info("WebSocket client task cancelled.")
                 raise
+
             except Exception as exc:
                 logger.exception("WebSocket error: %s. Reconnecting...", exc)
                 await asyncio.sleep(backoff)
                 backoff = min(backoff * 2, 60.0)
 
     async def stop(self) -> None:
+        """Stop the WebSocket loop safely."""
         self._running = False
 
     async def _subscribe(self, ws) -> None:
+        """Subscribe to Polymarket market-data channel."""
         payload = {
             "asset_ids": self.asset_ids,
             "type": "market",
         }
+
         await ws.send(json.dumps(payload))
         logger.info("Subscribed to %d asset_ids.", len(self.asset_ids))
 
     async def _handle_raw_message(self, raw_message: str) -> None:
+        """Parse raw WebSocket message and route it."""
         try:
             message = json.loads(raw_message)
         except json.JSONDecodeError:
-            logger.warning("Invalid JSON message: %s", raw_message)
+            logger.warning("Invalid JSON message: %s", raw_message[:500])
             return
+
+        # Debug temporal
+        logger.debug("Raw message: %s", str(message)[:500])
 
         if isinstance(message, list):
             for item in message:
                 await self._handle_message(item)
-        else:
+        elif isinstance(message, dict):
             await self._handle_message(message)
+        else:
+            logger.debug("Unknown message type: %s", type(message))
 
     async def _handle_message(self, message: dict) -> None:
+        """Handle one decoded WebSocket event."""
         event_type = message.get("event_type")
-        asset_id = message.get("asset_id")
-
-        if not asset_id and "market" not in message:
-            return
 
         if event_type == "book":
+            asset_id = message.get("asset_id")
+
+            if asset_id is None:
+                logger.warning("Book message without asset_id: %s", message)
+                return
+
             book = self.books.setdefault(asset_id, OrderBook(asset_id=asset_id))
             book.update_from_snapshot(message)
             await self._emit(book)
 
         elif event_type == "price_change":
-            if not asset_id:
+            asset_id = message.get("asset_id")
+
+            if asset_id is None:
+                logger.warning("Price change without asset_id: %s", message)
                 return
-            
+
             book = self.books.setdefault(asset_id, OrderBook(asset_id=asset_id))
-            for change in message.get("price_changes", []):
-                book.apply_price_change(change)
+            book.apply_price_change(message)
             await self._emit(book)
 
         elif event_type in {"last_trade_price", "best_bid_ask"}:
             logger.debug("Market event: %s | %s", event_type, message)
+
         else:
             logger.debug("Unhandled event_type=%s message=%s", event_type, message)
 
     async def _emit(self, book: OrderBook) -> None:
+        """Send updated book to strategy callback."""
         if self.on_book_update is not None:
             await self.on_book_update(book)
