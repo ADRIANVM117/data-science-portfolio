@@ -111,12 +111,12 @@ class QuantTradingEngine:
 
                 # SIGNAL ENGINE
                 signals = [ generate_signal(f) for f in tradable_features ]
-                print("\nSignal Diagnostics:")
-                for s in signals[:10]:
-                    print(f"Asset {s.asset_id[:10]} | "
-                      f"Signal={s.signal.value} | "
-                      f"Edge={s.microprice_edge:.5f} | "
-                      f"Imbalance={s.imbalance:.4f}")
+                # print("\nSignal Diagnostics:")
+                # for s in signals[:10]:
+                #     print(f"Asset {s.asset_id[:10]} | "
+                #       f"Signal={s.signal.value} | "
+                #       f"Edge={s.microprice_edge:.5f} | "
+                #       f"Imbalance={s.imbalance:.4f}")
 
                 active_signals = [ s for s in signals if s.signal != SignalType.NEUTRAL ]
 
