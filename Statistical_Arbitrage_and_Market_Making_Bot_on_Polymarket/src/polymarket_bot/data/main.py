@@ -67,62 +67,75 @@ class QuantTradingEngine:
         while True:
             try:
                 await asyncio.sleep(interval_seconds)
-                tradable_features = self.state.tradable_features()
                 
+                tradable_features = self.state.tradable_features()
+
                 if not tradable_features:
                     logger.info("Monitor: aún no hay activos tradables.")
                     continue
 
-                print("\n" + "=" * 80)
+                print("\n" + "_" * 80)
                 print("TRADABLE MARKET MICROSTRUCTURE SNAPSHOT")
-                print("=" * 80)
+                print("_" * 80)
                 print("\nTop Tradable Spreads:")
                 for f in self.state.top_tradable_spreads(n=5):
                     print(
-                    f"Asset {f.asset_id[:10]} | "
-                    f"Spread={f.spread} | Mid={f.mid_price} | Depth={f.top_depth}")
-
+                        f"Asset {f.asset_id[:10]} | "
+                        f"Spread={f.spread} | "
+                        f"Mid={f.mid_price} | "
+                        f"Depth={f.top_depth}")
+                
                 print("\nTop Tradable Buy Imbalance:")
                 for f in self.state.top_tradable_buy_imbalance(n=5):
                     print(
-                    f"Asset {f.asset_id[:10]} | "
-                    f"Imbalance={f.book_imbalance:.4f} | "
-                    f"Microprice={f.microprice:.4f} | "
-                    f"Mid={f.mid_price}")
+                        f"Asset {f.asset_id[:10]} | "
+                        f"Imbalance={f.book_imbalance:.4f} | "
+                        f"Microprice={f.microprice:.4f} | "
+                        f"Mid={f.mid_price}")
 
                 print("\nTop Tradable Sell Imbalance:")
                 for f in self.state.top_tradable_sell_imbalance(n=5):
                     print(
-                    f"Asset {f.asset_id[:10]} | "
-                    f"Imbalance={f.book_imbalance:.4f} | "
-                    f"Microprice={f.microprice:.4f} | "
-                    f"Mid={f.mid_price}")
+                        f"Asset {f.asset_id[:10]} | "
+                        f"Imbalance={f.book_imbalance:.4f} | "
+                        f"Microprice={f.microprice:.4f} | "
+                        f"Mid={f.mid_price}")
 
                 print("\nTop Tradable Depth:")
                 for f in self.state.top_tradable_depth(n=5):
                     print(
-                    f"Asset {f.asset_id[:10]} | "
-                    f"Depth={f.top_depth} | "
-                    f"Spread={f.spread} | "
-                    f"Mid={f.mid_price}")
+                        f"Asset {f.asset_id[:10]} | "
+                        f"Depth={f.top_depth} | "
+                        f"Spread={f.spread} | "
+                        f"Mid={f.mid_price}")
+
+                # SIGNAL ENGINE
+                signals = [ generate_signal(f) for f in tradable_features ]
+                print("\nSignal Diagnostics:")
+                for s in signals[:10]:
+                    print(f"Asset {s.asset_id[:10]} | "
+                      f"Signal={s.signal.value} | "
+                      f"Edge={s.microprice_edge:.5f} | "
+                      f"Imbalance={s.imbalance:.4f}")
+
+                active_signals = [ s for s in signals if s.signal != SignalType.NEUTRAL ]
 
                 print("\nActive Signals:")
-                signals = [ generate_signal(f) for f in tradable_features]
 
-                active_signals = [s for s in signals if s.signal != SignalType.NEUTRAL]
-
-                if not active_signals: print("No active signals.")
+                if not active_signals:
+                    print("No active signals.")
                 else:
                     for s in active_signals[:10]:
                         print(
-                            f"Asset {s.asset_id[:10]} | "
-                            f"Signal={s.signal.value} | "
-                            f"Edge={s.microprice_edge:.4f} | "
-                            f"Imbalance={s.imbalance:.4f} | "
-                            f"Spread={s.spread} | "
-                            f"Depth={s.depth}")
+                        f"Asset {s.asset_id[:10]} | "
+                        f"Signal={s.signal.value} | "
+                        f"Edge={s.microprice_edge:.5f} | "
+                        f"Imbalance={s.imbalance:.4f} | "
+                        f"Spread={s.spread} | "
+                        f"Depth={s.depth}"
+                    )
 
-            except asyncio.CancelledError:
+            except asyncio.CancelledError: 
                 logger.info("Monitor de microestructura cancelado de forma segura.")
                 break
 

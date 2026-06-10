@@ -25,7 +25,7 @@ class MarketSignal:
 
 def generate_signal(
     features: BookFeatures,
-    min_edge: Decimal = Decimal("0.005"),
+    min_edge: Decimal = Decimal("0.002"),
     buy_imbalance_threshold: Decimal = Decimal("0.65"),
     sell_imbalance_threshold: Decimal = Decimal("0.35"),
 ) -> MarketSignal:
