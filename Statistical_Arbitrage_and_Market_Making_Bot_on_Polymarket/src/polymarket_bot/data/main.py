@@ -6,6 +6,7 @@ from market_discovery import get_top_market_tokens
 from features import compute_book_features
 from state_manager import MarketState
 from signal_engine import generate_signal, SignalType
+from signal_state import SignalState
 #Configuración de logs limpia y optimizada para producción
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 logger = logging.getLogger(__name__)
@@ -15,6 +16,7 @@ class QuantTradingEngine:
 
         self.asset_ids = asset_ids
         self.state = MarketState()
+        self.signal_state = SignalState()
         # Cola asíncrona intermedia para transferir snapshots del libro sin bloquear el WS
         self.queue: asyncio.Queue[OrderBook] = asyncio.Queue(maxsize=5000)
         self.client = PolymarketMarketDataClient(asset_ids=self.asset_ids, on_book_update=self._enqueue_book)
@@ -108,32 +110,30 @@ class QuantTradingEngine:
                         f"Depth={f.top_depth} | "
                         f"Spread={f.spread} | "
                         f"Mid={f.mid_price}")
-
-                # SIGNAL ENGINE
-                signals = [ generate_signal(f) for f in tradable_features ]
-                # print("\nSignal Diagnostics:")
-                # for s in signals[:10]:
-                #     print(f"Asset {s.asset_id[:10]} | "
-                #       f"Signal={s.signal.value} | "
-                #       f"Edge={s.microprice_edge:.5f} | "
-                #       f"Imbalance={s.imbalance:.4f}")
-
-                active_signals = [ s for s in signals if s.signal != SignalType.NEUTRAL ]
-
-                print("\nActive Signals:")
-
-                if not active_signals:
-                    print("No active signals.")
+                    
+                # SIGNAL ENGINE + SIGNAL STATE
+                signals = [generate_signal(f) for f in tradable_features]
+                for signal in signals:
+                    self.signal_state.update(signal)
+                active_trackers = self.signal_state.active_trackers(min_consecutive_count=2)
+                print("\nPersistent Signals:")
+                if not active_trackers:
+                    print("No persistent signals.")
                 else:
-                    for s in active_signals[:10]:
-                        print(
-                        f"Asset {s.asset_id[:10]} | "
-                        f"Signal={s.signal.value} | "
-                        f"Edge={s.microprice_edge:.5f} | "
-                        f"Imbalance={s.imbalance:.4f} | "
-                        f"Spread={s.spread} | "
-                        f"Depth={s.depth}"
-                    )
+                    for tracker in active_trackers[:10]:
+                        s = tracker.last_signal
+                        if s is None:
+                            continue
+                        
+                        print(f"Asset {tracker.asset_id[:10]} | "
+                              f"Signal={tracker.current_signal.value} | "
+                              f"Count={tracker.consecutive_count} | "
+                              f"Age={tracker.age_seconds:.1f}s | "
+                              f"Edge={s.microprice_edge:.5f} | "
+                              f"Imbalance={s.imbalance:.4f} | "
+                              f"Spread={s.spread} | "
+                              f"Depth={s.depth}")
+
 
             except asyncio.CancelledError: 
                 logger.info("Monitor de microestructura cancelado de forma segura.")
@@ -167,11 +167,8 @@ async def main():
     # Token YES de un mercado con alto volumen y trading constante
     
     mercados_activos = get_top_market_tokens(limit=20)
-    
-
 
     engine = QuantTradingEngine(asset_ids=mercados_activos)
-
     
     try:
         await engine.start()
