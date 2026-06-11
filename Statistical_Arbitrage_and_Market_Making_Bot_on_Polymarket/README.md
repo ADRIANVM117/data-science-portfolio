@@ -27,7 +27,6 @@ using real-time Polymarket order book data.
 ## <b> Current infrastructure </b>
 
 
-## Current Infrastructure
 
 The current version of the project focuses on building the real-time research infrastructure required to study prediction market microstructure and develop future statistical arbitrage and market making strategies.
 
