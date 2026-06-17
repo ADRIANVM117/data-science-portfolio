@@ -7,6 +7,7 @@ from features import compute_book_features
 from state_manager import MarketState
 from signal_engine import generate_signal, SignalType
 from signal_state import SignalState
+from signal_recorder import SignalRecorder
 #Configuración de logs limpia y optimizada para producción
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 logger = logging.getLogger(__name__)
@@ -17,6 +18,7 @@ class QuantTradingEngine:
         self.asset_ids = asset_ids
         self.state = MarketState()
         self.signal_state = SignalState()
+        self.signal_recorder = SignalRecorder()
         # Cola asíncrona intermedia para transferir snapshots del libro sin bloquear el WS
         self.queue: asyncio.Queue[OrderBook] = asyncio.Queue(maxsize=5000)
         self.client = PolymarketMarketDataClient(asset_ids=self.asset_ids, on_book_update=self._enqueue_book)
@@ -133,6 +135,7 @@ class QuantTradingEngine:
                               f"Imbalance={s.imbalance:.4f} | "
                               f"Spread={s.spread} | "
                               f"Depth={s.depth}")
+                        self.signal_recorder.record(tracker)
 
 
             except asyncio.CancelledError: 
