@@ -8,6 +8,8 @@ from state_manager import MarketState
 from signal_engine import generate_signal, SignalType
 from signal_state import SignalState
 from signal_recorder import SignalRecorder
+from market_snapshot_recorder import MarketSnapshotRecorder
+
 #Configuración de logs limpia y optimizada para producción
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 logger = logging.getLogger(__name__)
@@ -19,6 +21,7 @@ class QuantTradingEngine:
         self.state = MarketState()
         self.signal_state = SignalState()
         self.signal_recorder = SignalRecorder()
+        self.snapshot_recorder = MarketSnapshotRecorder()
         # Cola asíncrona intermedia para transferir snapshots del libro sin bloquear el WS
         self.queue: asyncio.Queue[OrderBook] = asyncio.Queue(maxsize=5000)
         self.client = PolymarketMarketDataClient(asset_ids=self.asset_ids, on_book_update=self._enqueue_book)
@@ -73,6 +76,8 @@ class QuantTradingEngine:
                 await asyncio.sleep(interval_seconds)
                 
                 tradable_features = self.state.tradable_features()
+                for features in tradable_features:
+                    self.snapshot_recorder.record(features)
 
                 if not tradable_features:
                     logger.info("Monitor: aún no hay activos tradables.")
