@@ -5,3 +5,13 @@ SolidBack_Quant/data/
 *.parquet
 __pycache__/
 .ipynb_checkpoints/
+
+# datasets
+data/
+**/data/
+
+# parquet files
+*.parquet
+
+# opcional
+*.csv
