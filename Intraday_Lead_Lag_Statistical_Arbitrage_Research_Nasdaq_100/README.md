@@ -63,9 +63,9 @@ For every stock,
 
 1-minute log returns are computed as
 
-\[
+$
 r_t=\ln\left(\frac{P_t}{P_{t-1}}\right)
-\]
+$
 
 using synchronized intraday prices.
 
@@ -75,15 +75,13 @@ Only regular trading hours are considered.
 
 ## 3. Cross-Correlation Analysis
 
-For every candidate pair \((A,B)\),
+For every candidate pair $(A,B)$,
 
 directional cross-correlations are computed at several time lags.
 
 The primary analysis focuses on
 
-\[
-lag = 1\;minute
-\]
+$lag = 1\;minute $
 
 because preliminary empirical analysis showed that most directional dependence disappears rapidly after the first minute.
 
@@ -91,15 +89,11 @@ Two asymmetric correlations are computed:
 
 Forward direction
 
-\[
-Corr(r_A(t),r_B(t+1))
-\]
+$ Corr(r_A(t),r_B(t+1)) $
 
 Reverse direction
 
-\[
-Corr(r_B(t),r_A(t+1))
-\]
+$ Corr(r_B(t),r_A(t+1)) $
 
 Unlike ordinary correlation,
 
@@ -111,36 +105,25 @@ cross-correlation allows information propagation through time to be measured.
 
 A custom directional metric called the **Lead Score** is defined as
 
-\[
-LeadScore(A,B)=
-Corr(r_A(t),r_B(t+1))
--
-Corr(r_B(t),r_A(t+1))
-\]
+$  LeadScore(A,B)= Corr(r_A(t),r_B(t+1)) - Corr(r_B(t),r_A(+1)) $
 
 Interpretation
 
 If
 
-\[
-LeadScore>0
-\]
+$ LeadScore>0 $
 
 stock **A** tends to lead stock **B**.
 
 If
 
-\[
-LeadScore<0
-\]
+$ LeadScore<0 $
 
 stock **B** tends to lead stock **A**.
 
 If
 
-\[
-LeadScore\approx0
-\]
+$ LeadScore\approx0 $
 
 no meaningful directional relationship is detected.
 
@@ -164,22 +147,20 @@ For every candidate pair:
 - A Lead Score is recomputed after every permutation.
 - This generates the empirical null distribution
 
-\[
-LeadScore_{null}
-\]
+$ LeadScore_{null} $
 
 representing the Lead Scores expected under no directional dependence.
 
 The empirical p-value is computed as
 
-\[
+$ 
 p=
 P\left(
 |LeadScore_{null}|
 \ge
 |LeadScore_{observed}|
 \right)
-\]
+$
 
 Pairs satisfying
 
@@ -198,13 +179,13 @@ For every statistically significant pair,
 
 the empirical leader is defined as
 
-\[
+$
 Leader=
 \begin{cases}
 A,& LeadScore>0\\
 B,& LeadScore<0
 \end{cases}
-\]
+$
 
 The corresponding follower is assigned automatically.
 
