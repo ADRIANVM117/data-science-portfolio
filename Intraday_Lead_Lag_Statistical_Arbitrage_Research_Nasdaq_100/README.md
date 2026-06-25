@@ -63,9 +63,7 @@ For every stock,
 
 1-minute log returns are computed as
 
-$
-r_t=\ln\left(\frac{P_t}{P_{t-1}}\right)
-$
+$ r_t=\ln\left(\frac{P_t}{P_{t-1}}\right) $
 
 using synchronized intraday prices.
 
