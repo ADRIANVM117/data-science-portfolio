@@ -1,14 +1,19 @@
-# <b >Prediction of daily stock end-of-day movements on the US market </b> 
-by <b> Capital Fund Management  (CFM) </b> in Challenge Data/ENS.
+# Prediction of Daily End-of-Day Stock Movements in the U.S. Market
 
-Para este proyecto, utilicé el dataset oficial del reto:
+<p align="center">
+  <strong>Capital Fund Management (CFM)</strong> &middot; Challenge Data / ENS
+</p>
 
-[![Challenge Data](imag/logo2.png)](https://challengedata.ens.fr/challenges/84)
+This project uses the official dataset from the Challenge Data / ENS competition, organized by Capital Fund Management (CFM).
 
+<p align="center">
+  <img src="imag/logo1.jpg" alt="Capital Fund Management" height="100" />
+  <img src="imag/logo2.jpg" alt="Challenge Data" height="100" />
+</p>
 
+---
 
-
-### <b> Challenge goals </b>
+## Challenge Goals
 
 The goal is to estimate the main direction that will occur during the last two hours of trading session, given the preceding history of the day. 
 
