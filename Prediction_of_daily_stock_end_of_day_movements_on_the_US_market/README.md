@@ -30,20 +30,20 @@ clear increasing of price.
 
 - We provide input price evolutions (returns), with a granularity of 5 minutes, which leads to 53 values (4.5 hours) per day per equity
 
-- As price movements are really small on such time windows, we give basis points (bps), so $ \frac{P_{t+5_{min} - P_t}}{P_t} * 10^{4} $
+- As price movements are very small over these time windows, we use basis points (bps): $\frac{P_{t+5\,\mathrm{min}} - P_t}{P_t} \times 10^4$.
 
 we given the rows: 
 - 'ID' The unique input identifier 
 -  'day' the day identifier (not unique inside dataset(s))
 - 'equity', the equity identifier (not unique inside dataset(s))
-- 'r0'. $ \frac{P_{09:35} - P_{09:30}}{P_{09:30}} * 10^4 $ <b> The returns of the first 5 min </b>
-- 'r1'. $ \frac{P_{09:40} - P_{09:35}}{P_{09:35}} * 10^4 $ <b> The returns of the next 5 min </b>
-- $ ... $
-- 'r52'. $ \frac{P_{14:00} - P_{13:55}}{P_{13:55}} * 10^4 $ <b> The last returns </b>
+- 'r0': $\frac{P_{09{:}35} - P_{09{:}30}}{P_{09{:}30}} \times 10^4$ <b>The return over the first 5 minutes</b>
+- 'r1': $\frac{P_{09{:}40} - P_{09{:}35}}{P_{09{:}35}} \times 10^4$ <b>The return over the next 5 minutes</b>
+- $\ldots$
+- 'r52': $\frac{P_{14{:}00} - P_{13{:}55}}{P_{13{:}55}} \times 10^4$ <b>The final return</b>
 
 To reduce the prediction task difficulty, we limit the prediction to the classification of the final returns, in 3 categories, limited by  ±25, so output is:
 
-- -1 if $ \frac{P_{16PM} - P_{14PM} }{P_{14PM}} * 10^4 $  is below -25bps; 
+- -1 if $\frac{P_{16\,\mathrm{PM}} - P_{14\,\mathrm{PM}}}{P_{14\,\mathrm{PM}}} \times 10^4$ is below -25 bps;
 - 0 if this ratio is between -25 and 25bps; 
 - +1 if greater than 25 bps
 
