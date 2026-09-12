@@ -1,0 +1,16 @@
+record_type,variant,fold,baseline_accuracy,accuracy,accuracy_delta_vs_exp000,balanced_accuracy,recall_class_-1,recall_class_1,accuracy_above_baseline,balanced_accuracy_above_one_third,recall_negative_positive,recall_positive_positive,all_fold_conditions_met,n_joint_folds,all_four_accuracy_above_baseline,all_four_balanced_accuracy_above_one_third,all_four_recall_negative_positive,all_four_recall_positive_positive,mean_joint_accuracy_delta_vs_exp000,mean_joint_accuracy_delta_positive,promising
+fold,M1,1,0.4041169451073986,0.4041169451073986,0.0,0.3333333333333333,0.0,0.0,False,False,False,False,False,,,,,,,,
+fold,M1,2,0.4017043084440737,0.4017043084440737,0.0,0.3333333333333333,0.0,0.0,False,False,False,False,False,,,,,,,,
+fold,M1,3,0.4268206039076376,0.42682060390763765,0.0,0.3333333333333333,0.0,0.0,False,False,False,False,False,,,,,,,,
+fold,M1,4,0.4168046357615894,0.4168046357615894,0.0,0.3333333333333333,0.0,0.0,False,False,False,False,False,,,,,,,,
+fold,M2,1,0.4041169451073986,0.40429594272076375,0.00017899761336515052,0.3337407201541358,0.002403320952589032,0.0,True,True,True,False,False,,,,,,,,
+fold,M2,2,0.4017043084440737,0.4022406292831178,0.0005363208390441465,0.33423125530475617,0.005215646940822468,0.0,True,True,True,False,False,,,,,,,,
+fold,M2,3,0.4268206039076376,0.42711663706335107,0.000296033155713471,0.33370244552261097,0.0013847675568743817,0.0,True,True,True,False,False,,,,,,,,
+fold,M2,4,0.4168046357615894,0.4170411542100284,0.00023651844843902703,0.3337683832222065,0.0030075187969924814,0.0,True,True,True,False,False,,,,,,,,
+fold,M3,1,0.4041169451073986,0.40155131264916466,-0.002565632458233935,0.3349243107501981,0.034301944505134366,0.0,False,True,True,False,False,,,,,,,,
+fold,M3,2,0.4017043084440737,0.4002741195399559,-0.0014301889041177795,0.3352396726603876,0.034102306920762285,0.001582591493570722,False,True,True,True,False,,,,,,,,
+fold,M3,3,0.4268206039076376,0.42628774422735344,-0.000532859680284159,0.33644263329236374,0.03461918892185954,0.0006485084306095979,False,True,True,True,False,,,,,,,,
+fold,M3,4,0.4168046357615894,0.4160359508041627,-0.0007686849574266574,0.33518363057394923,0.02951127819548872,0.00044023772837332157,False,True,True,True,False,,,,,,,,
+aggregate,M1,all,,,,,,,,,,,,4.0,False,False,False,False,0.0,False,False
+aggregate,M2,all,,,,,,,,,,,,4.0,True,True,True,False,0.00031196751414044877,True,False
+aggregate,M3,all,,,,,,,,,,,,4.0,False,True,True,False,-0.0013243415000156328,False,False

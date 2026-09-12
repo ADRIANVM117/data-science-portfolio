@@ -127,3 +127,16 @@ Before declaring completion:
 - summarize files changed;
 - report assumptions and unresolved issues;
 - distinguish observed results from interpretation.
+
+## Research context
+
+Before substantial research work:
+
+1. Read `README.md` and this file.
+2. Read `docs/METHODOLOGY.md` for the current methodological state.
+3. Read the recent relevant entries in `docs/RESEARCH_LOG.md`.
+4. Read the active experiment contract in `experiments/`.
+
+Treat these repository documents as the persistent source of truth.
+Do not rely on previous chat/session context when it conflicts with
+the repository.

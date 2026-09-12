@@ -1,0 +1,168 @@
+{
+  "labels": [
+    0,
+    1
+  ],
+  "matrices": {
+    "model_fold_1_temporal_oos": [
+      [
+        18346,
+        0
+      ],
+      [
+        21462,
+        0
+      ]
+    ],
+    "baseline_fold_1_temporal_oos": [
+      [
+        18346,
+        0
+      ],
+      [
+        21462,
+        0
+      ]
+    ],
+    "model_fold_1_joint_oos": [
+      [
+        4577,
+        0
+      ],
+      [
+        5410,
+        0
+      ]
+    ],
+    "baseline_fold_1_joint_oos": [
+      [
+        4577,
+        0
+      ],
+      [
+        5410,
+        0
+      ]
+    ],
+    "model_fold_2_temporal_oos": [
+      [
+        19673,
+        0
+      ],
+      [
+        19805,
+        0
+      ]
+    ],
+    "baseline_fold_2_temporal_oos": [
+      [
+        19673,
+        0
+      ],
+      [
+        19805,
+        0
+      ]
+    ],
+    "model_fold_2_joint_oos": [
+      [
+        4985,
+        0
+      ],
+      [
+        5055,
+        0
+      ]
+    ],
+    "baseline_fold_2_joint_oos": [
+      [
+        4985,
+        0
+      ],
+      [
+        5055,
+        0
+      ]
+    ],
+    "model_fold_3_temporal_oos": [
+      [
+        20130,
+        0
+      ],
+      [
+        18287,
+        0
+      ]
+    ],
+    "baseline_fold_3_temporal_oos": [
+      [
+        20130,
+        0
+      ],
+      [
+        18287,
+        0
+      ]
+    ],
+    "model_fold_3_joint_oos": [
+      [
+        5055,
+        0
+      ],
+      [
+        4626,
+        0
+      ]
+    ],
+    "baseline_fold_3_joint_oos": [
+      [
+        5055,
+        0
+      ],
+      [
+        4626,
+        0
+      ]
+    ],
+    "model_fold_4_temporal_oos": [
+      [
+        21169,
+        1
+      ],
+      [
+        17937,
+        3
+      ]
+    ],
+    "baseline_fold_4_temporal_oos": [
+      [
+        21170,
+        0
+      ],
+      [
+        17940,
+        0
+      ]
+    ],
+    "model_fold_4_joint_oos": [
+      [
+        5319,
+        1
+      ],
+      [
+        4543,
+        0
+      ]
+    ],
+    "baseline_fold_4_joint_oos": [
+      [
+        5320,
+        0
+      ],
+      [
+        4543,
+        0
+      ]
+    ]
+  }
+}

@@ -1,7 +1,13 @@
 # EXP_000 — Validation Baseline
 
-**Status:** Protocol specification. No model, preprocessing experiment, or
-competition-test evaluation has been run under this contract.
+
+## Status
+
+Completed.
+
+The protocol was specified before execution. The majority-class baseline
+has now been executed using training data only. The competition test
+was not accessed.
 
 ## Research question
 
@@ -98,3 +104,19 @@ The 503 labelled training days cannot exactly reproduce deployment against an
 approximately 505-day period and a wholly new equity universe. Joint OOS is an
 internal proxy designed to stress temporal and cross-sectional generalization
 simultaneously.
+
+## Results
+
+EXP_000 completed successfully across all four folds.
+
+Majority-class baseline:
+- Temporal OOS accuracy: 0.4147 ± 0.0092
+- Joint OOS accuracy: 0.4124 ± 0.0117
+
+The majority class selected from `fit_f` was class `0` in all four folds.
+
+These results establish the OOS baseline under the frozen validation
+protocol. They do not constitute evidence of predictive signal.
+
+Detailed fold-level results are stored in:
+`experiments/results/`.

@@ -1,0 +1,7 @@
+record_type,fold,roc_auc,balanced_accuracy,recall_negative,recall_positive,balanced_accuracy_delta_vs_baseline,roc_auc_above_one_half,balanced_accuracy_above_one_half,recall_negative_positive,recall_positive_positive,all_fold_conditions_met,n_joint_folds,all_four_roc_auc_above_one_half,mean_joint_roc_auc,mean_joint_roc_auc_above_one_half,promising_oos_sign_discrimination,all_four_fixed_threshold_conditions_met,mean_joint_balanced_accuracy_delta_vs_baseline,mean_joint_balanced_accuracy_delta_positive,fixed_threshold_sign_classification_evidence
+fold,1,0.4999661370421989,0.49994953874087955,0.9993445488311121,0.00055452865064695,-5.0461259120448965e-05,False,False,True,True,False,,,,,,,,,
+fold,2,0.5093096698602236,0.4986650356608897,0.9500501504513541,0.04727992087042532,-0.0013349643391102894,True,False,True,True,False,,,,,,,,,
+fold,3,0.49591525215709775,0.4944600317390674,0.9469831849653808,0.041936878512753996,-0.005539968260932615,False,False,True,True,False,,,,,,,,,
+fold,4,0.4926261628647891,0.500399399886465,0.9966165413533835,0.004182258419546555,0.0003993998864649795,False,True,True,True,True,,,,,,,,,
+aggregate_primary,all,,,,,,,,,,,4.0,False,0.4994543054810774,False,False,,,,
+aggregate_secondary,all,,,,,,,,,,,4.0,,,,,False,-0.0016314984931745935,False,False
