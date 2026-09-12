@@ -1,0 +1,248 @@
+{
+  "labels": [
+    0,
+    1
+  ],
+  "matrices": {
+    "A_mask_fold_1_temporal_oos": [
+      [
+        17545,
+        801
+      ],
+      [
+        20604,
+        858
+      ]
+    ],
+    "baseline_fold_1_temporal_oos": [
+      [
+        18346,
+        0
+      ],
+      [
+        21462,
+        0
+      ]
+    ],
+    "B_path_mask_fold_1_temporal_oos": [
+      [
+        12148,
+        6198
+      ],
+      [
+        14030,
+        7432
+      ]
+    ],
+    "A_mask_fold_1_joint_oos": [
+      [
+        4404,
+        173
+      ],
+      [
+        5213,
+        197
+      ]
+    ],
+    "baseline_fold_1_joint_oos": [
+      [
+        4577,
+        0
+      ],
+      [
+        5410,
+        0
+      ]
+    ],
+    "B_path_mask_fold_1_joint_oos": [
+      [
+        2964,
+        1613
+      ],
+      [
+        3536,
+        1874
+      ]
+    ],
+    "A_mask_fold_2_temporal_oos": [
+      [
+        18648,
+        1025
+      ],
+      [
+        18794,
+        1011
+      ]
+    ],
+    "baseline_fold_2_temporal_oos": [
+      [
+        19673,
+        0
+      ],
+      [
+        19805,
+        0
+      ]
+    ],
+    "B_path_mask_fold_2_temporal_oos": [
+      [
+        11521,
+        8152
+      ],
+      [
+        12152,
+        7653
+      ]
+    ],
+    "A_mask_fold_2_joint_oos": [
+      [
+        4779,
+        206
+      ],
+      [
+        4877,
+        178
+      ]
+    ],
+    "baseline_fold_2_joint_oos": [
+      [
+        4985,
+        0
+      ],
+      [
+        5055,
+        0
+      ]
+    ],
+    "B_path_mask_fold_2_joint_oos": [
+      [
+        2841,
+        2144
+      ],
+      [
+        2995,
+        2060
+      ]
+    ],
+    "A_mask_fold_3_temporal_oos": [
+      [
+        19060,
+        1070
+      ],
+      [
+        17271,
+        1016
+      ]
+    ],
+    "baseline_fold_3_temporal_oos": [
+      [
+        20130,
+        0
+      ],
+      [
+        18287,
+        0
+      ]
+    ],
+    "B_path_mask_fold_3_temporal_oos": [
+      [
+        11769,
+        8361
+      ],
+      [
+        11049,
+        7238
+      ]
+    ],
+    "A_mask_fold_3_joint_oos": [
+      [
+        4855,
+        200
+      ],
+      [
+        4417,
+        209
+      ]
+    ],
+    "baseline_fold_3_joint_oos": [
+      [
+        5055,
+        0
+      ],
+      [
+        4626,
+        0
+      ]
+    ],
+    "B_path_mask_fold_3_joint_oos": [
+      [
+        2837,
+        2218
+      ],
+      [
+        2714,
+        1912
+      ]
+    ],
+    "A_mask_fold_4_temporal_oos": [
+      [
+        20156,
+        1014
+      ],
+      [
+        17114,
+        826
+      ]
+    ],
+    "baseline_fold_4_temporal_oos": [
+      [
+        21170,
+        0
+      ],
+      [
+        17940,
+        0
+      ]
+    ],
+    "B_path_mask_fold_4_temporal_oos": [
+      [
+        12710,
+        8460
+      ],
+      [
+        10941,
+        6999
+      ]
+    ],
+    "A_mask_fold_4_joint_oos": [
+      [
+        5111,
+        209
+      ],
+      [
+        4382,
+        161
+      ]
+    ],
+    "baseline_fold_4_joint_oos": [
+      [
+        5320,
+        0
+      ],
+      [
+        4543,
+        0
+      ]
+    ],
+    "B_path_mask_fold_4_joint_oos": [
+      [
+        3205,
+        2115
+      ],
+      [
+        2746,
+        1797
+      ]
+    ]
+  }
+}

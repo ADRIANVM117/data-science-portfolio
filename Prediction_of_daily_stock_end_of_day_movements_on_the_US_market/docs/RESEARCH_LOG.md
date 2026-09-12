@@ -310,3 +310,60 @@ under the frozen protocol.
 This does not establish that the full path contains no sign information, that
 nonlinear interactions or sequential dynamics contain no sign information, or
 that RNNs or boosting cannot work.
+
+
+## 2026-09-11 — EXP_006 Nonlinear Conditional Positional Path Signal
+
+Protocol:
+EXP_006 reused the oracle-directional evaluable population and the exact
+EXP_005 A_mask/B_path_mask representations, but replaced Logistic Regression
+with the frozen HistGradientBoostingClassifier. The competition test was not
+accessed.
+
+Integrity:
+All frozen integrity assertions passed. Scikit-learn version was `1.6.1`, the
+exact frozen HGB parameters were used, and `early_stopping=False`. The
+fit-derived majority sign was negative in all four folds. All 53 fit medians
+were finite; preprocessing was fit-only, OOS preprocessing was transform-only,
+masks remained binary and unscaled, and A/B retained identical rows.
+
+Joint OOS result:
+- A_mask ROC-AUC by fold: `0.498276`, `0.497753`, `0.509464`, `0.497879`.
+  Mean `0.500843`; sample standard deviation `0.005752`.
+- B_path_mask ROC-AUC by fold: `0.492204`, `0.488405`, `0.481283`,
+  `0.500209`. Mean `0.490525`; sample standard deviation `0.007885`.
+- B_path_mask minus A_mask ROC-AUC deltas: `-0.006072`, `-0.009348`,
+  `-0.028182`, `+0.002330`. Mean `-0.010318`; sample standard deviation
+  `0.012885`.
+- B_path_mask mean Balanced Accuracy: `0.492994`; Accuracy: `0.492568`.
+- B_path_mask mean recall negative: `0.595291`; mean recall positive:
+  `0.390696`.
+- B_path_mask mean delta Balanced Accuracy versus majority: `-0.007006`;
+  mean delta Accuracy: `-0.011521`.
+
+Pre-specified verdicts:
+- PRIMARY nonlinear incremental positional-return OOS discrimination: FAIL.
+- SECONDARY fixed-threshold classification: FAIL.
+
+Temporal OOS diagnostic:
+A_mask mean ROC-AUC `0.500360`; B_path_mask mean ROC-AUC `0.491904`.
+
+Interpretation boundary:
+EXP_006 found no OOS evidence under the frozen criterion that positional
+return values add conditional sign discrimination beyond positional
+availability through the fixed HistGradientBoosting representation. The
+nonlinear/interacting learner did not recover the conditional sign signal that
+was absent under the EXP_005 linear-additive learner.
+
+Combined EXP_003 through EXP_006 observation:
+- Cumulative observed return did not discriminate conditional sign OOS.
+- Directional sign dominance did not discriminate conditional sign OOS.
+- Preserving all 53 positions under Logistic Regression did not establish
+  conditional sign discrimination.
+- Fixed nonlinear tree interactions over the same positional representation
+  also did not establish conditional sign discrimination.
+
+This does not establish that no conditional sign information exists, that
+nonlinear information cannot exist under any model, that temporal ordering
+contains no information, that sequence models or RNNs cannot work, or that the
+challenge is impossible.

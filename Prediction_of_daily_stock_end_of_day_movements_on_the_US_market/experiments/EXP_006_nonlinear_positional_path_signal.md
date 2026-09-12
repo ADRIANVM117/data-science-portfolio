@@ -2,7 +2,7 @@
 
 ## Status
 
-Frozen, not yet executed.
+Completed.
 
 ## Scientific question
 
@@ -190,6 +190,45 @@ Mean Joint delta Balanced Accuracy versus the fit-derived majority baseline
 must also be strictly positive. Primary and secondary criteria are
 independent. Accuracy and delta Accuracy are diagnostics.
 
+## Executed results
+
+All frozen integrity assertions passed. The competition test was not accessed.
+The fit-derived majority sign was negative in all four folds. Scikit-learn was
+version `1.6.1`; exact frozen HGB parameters were used, with
+`early_stopping=False`. All 53 fit medians were finite, preprocessing was
+fit-only, OOS preprocessing was transform-only, masks remained binary and
+unscaled, and A_mask/B_path_mask used identical retained rows.
+
+### Joint OOS
+
+| Fold | A_mask ROC-AUC | B_path_mask ROC-AUC | B_path_mask - A_mask |
+|---|---:|---:|---:|
+| 1 | 0.498276 | 0.492204 | -0.006072 |
+| 2 | 0.497753 | 0.488405 | -0.009348 |
+| 3 | 0.509464 | 0.481283 | -0.028182 |
+| 4 | 0.497879 | 0.500209 | +0.002330 |
+
+- A_mask mean ROC-AUC: `0.500843`; sample standard deviation: `0.005752`.
+- B_path_mask mean ROC-AUC: `0.490525`; sample standard deviation: `0.007885`.
+- Mean B_path_mask minus A_mask ROC-AUC: `-0.010318`; sample standard
+  deviation: `0.012885`.
+- B_path_mask mean Balanced Accuracy: `0.492994`.
+- B_path_mask mean Accuracy: `0.492568`.
+- B_path_mask mean recall negative: `0.595291`; mean recall positive:
+  `0.390696`.
+- B_path_mask mean delta Balanced Accuracy versus majority: `-0.007006`.
+- B_path_mask mean delta Accuracy versus majority: `-0.011521`.
+
+Pre-specified verdicts:
+
+- PRIMARY nonlinear incremental positional-return OOS discrimination: **FAIL**.
+- SECONDARY fixed-threshold classification: **FAIL**.
+
+### Temporal OOS diagnostic
+
+- A_mask mean ROC-AUC: `0.500360`.
+- B_path_mask mean ROC-AUC: `0.491904`.
+
 ## Role of EXP_005
 
 The A_mask-versus-B_path_mask comparison is the primary within-experiment
@@ -251,3 +290,19 @@ EXP_006 tests a fixed nonlinear tabular learner's ability to exploit
 thresholds and interactions among temporally positioned returns and masks. It
 does not test whether explicitly modeling chronological/sequential dynamics
 adds predictive information.
+
+## Interpretation boundary after execution
+
+EXP_006 found no OOS evidence under the frozen criterion that positional
+return values add conditional sign discrimination beyond positional
+availability through the fixed HistGradientBoosting representation. The
+nonlinear/interacting learner did not recover the conditional sign signal that
+was absent under the EXP_005 linear-additive learner.
+
+Together, EXP_003 through EXP_006 found that cumulative observed return,
+directional sign dominance, all 53 positions under Logistic Regression, and
+the same positional representation under fixed nonlinear tree interactions did
+not establish conditional sign discrimination. This does not establish that no
+conditional sign information exists, that nonlinear information under any
+model cannot exist, that temporal ordering contains no information, that
+sequence models or RNNs cannot work, or that the challenge is impossible.
