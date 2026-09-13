@@ -1,0 +1,6 @@
+record_type,fold,delta_p_minus_c_validation
+fold,1,0.0003194481807938798
+fold,2,0.0022932294601760717
+fold,3,0.0008506399932231012
+aggregate_mean,all,0.0011544392113976842
+aggregate_std_ddof_1,all,0.001021358707250408

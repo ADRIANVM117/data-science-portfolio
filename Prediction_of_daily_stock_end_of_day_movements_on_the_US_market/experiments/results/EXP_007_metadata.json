@@ -1,0 +1,166 @@
+{
+  "experiment": "EXP_007",
+  "python": "3.13.2",
+  "numpy": "2.2.3",
+  "pytorch": "2.12.0+cpu",
+  "device": "cpu",
+  "deterministic_algorithms": true,
+  "cpu_threads": 1,
+  "interop_threads": 1,
+  "model_seed": 20260908,
+  "batch_order_seed": 20260909,
+  "epoch_seed_formula": "20260909 + 1000 * fold_number + epoch_number",
+  "n_epochs": 10,
+  "batch_size": 512,
+  "n_trainable_parameters": 977,
+  "permutation": [
+    13,
+    44,
+    24,
+    4,
+    37,
+    23,
+    17,
+    50,
+    12,
+    6,
+    46,
+    7,
+    32,
+    5,
+    2,
+    33,
+    21,
+    40,
+    41,
+    51,
+    35,
+    11,
+    18,
+    3,
+    16,
+    49,
+    42,
+    30,
+    31,
+    14,
+    19,
+    20,
+    15,
+    48,
+    45,
+    47,
+    27,
+    39,
+    29,
+    9,
+    43,
+    10,
+    1,
+    25,
+    22,
+    28,
+    26,
+    8,
+    34,
+    38,
+    36,
+    0,
+    52
+  ],
+  "permutation_diagnostics": {
+    "length": 53,
+    "n_unique": 53,
+    "is_identity": false,
+    "n_fixed_points": 1,
+    "n_adjacent_original_pairs": 3,
+    "longest_original_order_run": 2
+  },
+  "competition_test_accessed": false,
+  "runtime_seconds": 6869.885032100021,
+  "integrity_checks": {
+    "global": {
+      "frozen_permutation": true,
+      "competition_test_accessed": false,
+      "all_integrity_assertions_passed": true
+    },
+    "folds": {
+      "1": {
+        "fit_medians_finite": true,
+        "paired_initialization": true,
+        "identical_minibatch_schedule": true,
+        "n_epochs": 10,
+        "n_trainable_parameters": 977,
+        "subsets": {
+          "temporal_oos": {
+            "identical_rows_and_targets": true,
+            "both_sign_classes_present": true,
+            "real_permuted_pairing": true
+          },
+          "joint_oos": {
+            "identical_rows_and_targets": true,
+            "both_sign_classes_present": true,
+            "real_permuted_pairing": true
+          }
+        }
+      },
+      "2": {
+        "fit_medians_finite": true,
+        "paired_initialization": true,
+        "identical_minibatch_schedule": true,
+        "n_epochs": 10,
+        "n_trainable_parameters": 977,
+        "subsets": {
+          "temporal_oos": {
+            "identical_rows_and_targets": true,
+            "both_sign_classes_present": true,
+            "real_permuted_pairing": true
+          },
+          "joint_oos": {
+            "identical_rows_and_targets": true,
+            "both_sign_classes_present": true,
+            "real_permuted_pairing": true
+          }
+        }
+      },
+      "3": {
+        "fit_medians_finite": true,
+        "paired_initialization": true,
+        "identical_minibatch_schedule": true,
+        "n_epochs": 10,
+        "n_trainable_parameters": 977,
+        "subsets": {
+          "temporal_oos": {
+            "identical_rows_and_targets": true,
+            "both_sign_classes_present": true,
+            "real_permuted_pairing": true
+          },
+          "joint_oos": {
+            "identical_rows_and_targets": true,
+            "both_sign_classes_present": true,
+            "real_permuted_pairing": true
+          }
+        }
+      },
+      "4": {
+        "fit_medians_finite": true,
+        "paired_initialization": true,
+        "identical_minibatch_schedule": true,
+        "n_epochs": 10,
+        "n_trainable_parameters": 977,
+        "subsets": {
+          "temporal_oos": {
+            "identical_rows_and_targets": true,
+            "both_sign_classes_present": true,
+            "real_permuted_pairing": true
+          },
+          "joint_oos": {
+            "identical_rows_and_targets": true,
+            "both_sign_classes_present": true,
+            "real_permuted_pairing": true
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "experiment": "EXP_008",
+  "return_window": [
+    "r41",
+    "r42",
+    "r43",
+    "r44",
+    "r45",
+    "r46",
+    "r47",
+    "r48",
+    "r49",
+    "r50",
+    "r51",
+    "r52"
+  ],
+  "python": "3.13.2",
+  "numpy": "2.2.3",
+  "pandas": "2.3.1",
+  "scikit_learn": "1.6.1",
+  "training_data_only": true
+}

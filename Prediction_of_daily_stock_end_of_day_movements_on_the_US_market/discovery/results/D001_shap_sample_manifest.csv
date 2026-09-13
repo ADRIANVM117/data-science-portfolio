@@ -1,0 +1,4 @@
+fold,validation_rows,global_shap_rows,global_shap_seed,interaction_shap_rows,interaction_shap_seed
+1,50231,2000,20260909,500,20261909
+2,50910,2000,20260910,500,20261910
+3,50043,2000,20260911,500,20261911

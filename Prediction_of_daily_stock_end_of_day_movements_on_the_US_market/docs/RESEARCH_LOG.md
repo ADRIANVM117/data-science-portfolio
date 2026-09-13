@@ -367,3 +367,108 @@ This does not establish that no conditional sign information exists, that
 nonlinear information cannot exist under any model, that temporal ordering
 contains no information, that sequence models or RNNs cannot work, or that the
 challenge is impossible.
+
+
+## 2026-09-11 — EXP_007 Sequential Chronology Signal
+
+Protocol:
+EXP_007 used the same oracle-known directional/evaluable population and frozen
+EXP_000 validation protocol as EXP_003 through EXP_006. It compared the same
+53 fit-preprocessed return/missingness pairs under their natural chronological
+order (Real) against one frozen global artificial ordering (Permuted) using a
+paired, deterministic one-layer GRU. The competition test was not accessed.
+
+Scientific question:
+Among oracle-known directional/evaluable observations, does presenting the
+same 53 return/missingness pairs in their natural chronological order provide
+incremental Joint OOS sign discrimination to the frozen GRU relative to one
+fixed artificial global ordering?
+
+Integrity:
+All four folds completed and all frozen runtime assertions passed. Real and
+Permuted used identical retained rows, labels, initial states, and minibatch
+orders. All fit medians were finite; OOS preprocessing was transform-only; and
+both sign classes were present in every evaluated subset.
+
+Joint OOS result:
+- Fold 1: Real AUC `0.516058`, Permuted AUC `0.491894`, delta `+0.024164`.
+- Fold 2: Real AUC `0.490858`, Permuted AUC `0.497683`, delta `-0.006825`.
+- Fold 3: Real AUC `0.511161`, Permuted AUC `0.503669`, delta `+0.007493`.
+- Fold 4: Real AUC `0.473412`, Permuted AUC `0.496952`, delta `-0.023540`.
+- Mean Real AUC: `0.497872`; sample standard deviation: `0.019620`.
+- Mean Permuted AUC: `0.497549`; sample standard deviation: `0.004824`.
+- Mean delta AUC: `+0.000323`; sample standard deviation: `0.020333`.
+
+Pre-specified verdicts:
+- PRIMARY OOS chronological-organization evidence: FAIL. Real AUC was not
+  above `0.50` in all folds, mean Real AUC was not above `0.50`, and the paired
+  delta was not positive in all folds. Only mean delta AUC was positive.
+- SECONDARY fixed-threshold classification: FAIL. Mean Joint Balanced Accuracy
+  was `0.496540`, Accuracy `0.495585`, recall negative `0.641334`, recall
+  positive `0.351746`, and delta Balanced Accuracy versus majority
+  `-0.003460`.
+
+Temporal OOS diagnostic:
+Mean Real AUC `0.502139`, Mean Permuted AUC `0.497690`, and mean delta AUC
+`+0.004449`.
+
+Training diagnostic:
+Full-fit BCE declined from epoch 1 to epoch 10 for both conditions in every
+fold. Real full-fit ROC-AUC at epoch 10 ranged approximately from `0.5295` to
+`0.5355`; there was no evidence of gross optimization failure. These fit-only
+diagnostics did not translate into stable Joint OOS sign discrimination and
+did not alter the frozen experiment.
+
+Conclusion boundary:
+EXP_007 found no consistent Joint OOS evidence that presenting the 53
+return/missingness pairs in their natural chronological organization provides
+incremental conditional-sign discrimination to the frozen GRU relative to the
+pre-specified artificial global ordering. Real-sequence performance varied
+materially across folds and averaged approximately chance. The paired
+chronology advantage was positive in two folds and negative in two folds, with
+mean delta AUC approximately zero.
+
+This does not prove that chronological information is absent from intraday
+returns, that sequence models cannot predict conditional sign, or that GRU is
+an inappropriate architecture. It does not justify interpreting fold variation
+as regime dependence, tuning the GRU, changing epochs, trying additional
+seeds, replacing it with an LSTM or Transformer under EXP_007, or making any
+claim about final ternary competition performance.
+
+Research-program synthesis, EXP_002 through EXP_007:
+- EXP_002 produced consistent OOS evidence that missingness contains
+  information for Neutral versus Directional discrimination.
+- EXP_003 through EXP_007 have not produced consistent OOS evidence for
+  conditional sign discrimination using cumulative return, global sign
+  dominance, positional linear relationships, positional nonlinear tree
+  interactions, or the frozen sequential chronology test.
+- This is an empirical asymmetry in the research program, not a general claim
+  that magnitude/activity is predictable while direction is impossible.
+
+
+## 2026-09-12 — Post-EXP_009 Program-Level Research Protocol
+
+EXP_009 completed with PRIMARY FAIL. After EXP_009, the project adopted a
+prospective Discovery/Confirmation protocol. Candidate B was selected from a
+target-blind structural panel audit, not from predictive performance:
+
+```text
+Discovery:              days 0-352 x E_dev
+Internal Confirmation:  days 353-502
+```
+
+Internal Confirmation is one frozen three-block expanding procedure:
+
+```text
+0-352 -> 353-402
+0-402 -> 403-452
+0-452 -> 453-502
+```
+
+`E_holdout` is reserved from Discovery. Competition-test data remain locked.
+Future SHAP work is exploratory and hypothesis-generating only, not
+confirmatory evidence. This governance change addresses program-level
+researcher-selection risk created by repeated OOS exposure across EXP_000-009,
+even where individual experiments were leakage-safe. The Internal
+Confirmation Zone is prospective after EXP_009 and is not historically
+pristine.

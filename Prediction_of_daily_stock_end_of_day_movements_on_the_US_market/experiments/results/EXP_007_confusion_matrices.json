@@ -1,0 +1,248 @@
+{
+  "labels": [
+    0,
+    1
+  ],
+  "matrices": {
+    "real_fold_1_temporal_oos": [
+      [
+        13611,
+        4735
+      ],
+      [
+        15189,
+        6273
+      ]
+    ],
+    "permuted_fold_1_temporal_oos": [
+      [
+        15909,
+        2437
+      ],
+      [
+        18260,
+        3202
+      ]
+    ],
+    "baseline_fold_1_temporal_oos": [
+      [
+        18346,
+        0
+      ],
+      [
+        21462,
+        0
+      ]
+    ],
+    "real_fold_1_joint_oos": [
+      [
+        3346,
+        1231
+      ],
+      [
+        3869,
+        1541
+      ]
+    ],
+    "permuted_fold_1_joint_oos": [
+      [
+        3982,
+        595
+      ],
+      [
+        4604,
+        806
+      ]
+    ],
+    "baseline_fold_1_joint_oos": [
+      [
+        4577,
+        0
+      ],
+      [
+        5410,
+        0
+      ]
+    ],
+    "real_fold_2_temporal_oos": [
+      [
+        11975,
+        7698
+      ],
+      [
+        12201,
+        7604
+      ]
+    ],
+    "permuted_fold_2_temporal_oos": [
+      [
+        15248,
+        4425
+      ],
+      [
+        15179,
+        4626
+      ]
+    ],
+    "baseline_fold_2_temporal_oos": [
+      [
+        19673,
+        0
+      ],
+      [
+        19805,
+        0
+      ]
+    ],
+    "real_fold_2_joint_oos": [
+      [
+        3014,
+        1971
+      ],
+      [
+        3122,
+        1933
+      ]
+    ],
+    "permuted_fold_2_joint_oos": [
+      [
+        3847,
+        1138
+      ],
+      [
+        3865,
+        1190
+      ]
+    ],
+    "baseline_fold_2_joint_oos": [
+      [
+        4985,
+        0
+      ],
+      [
+        5055,
+        0
+      ]
+    ],
+    "real_fold_3_temporal_oos": [
+      [
+        12613,
+        7517
+      ],
+      [
+        11144,
+        7143
+      ]
+    ],
+    "permuted_fold_3_temporal_oos": [
+      [
+        12162,
+        7968
+      ],
+      [
+        11061,
+        7226
+      ]
+    ],
+    "baseline_fold_3_temporal_oos": [
+      [
+        20130,
+        0
+      ],
+      [
+        18287,
+        0
+      ]
+    ],
+    "real_fold_3_joint_oos": [
+      [
+        3126,
+        1929
+      ],
+      [
+        2768,
+        1858
+      ]
+    ],
+    "permuted_fold_3_joint_oos": [
+      [
+        3006,
+        2049
+      ],
+      [
+        2709,
+        1917
+      ]
+    ],
+    "baseline_fold_3_joint_oos": [
+      [
+        5055,
+        0
+      ],
+      [
+        4626,
+        0
+      ]
+    ],
+    "real_fold_4_temporal_oos": [
+      [
+        13247,
+        7923
+      ],
+      [
+        11821,
+        6119
+      ]
+    ],
+    "permuted_fold_4_temporal_oos": [
+      [
+        14810,
+        6360
+      ],
+      [
+        12660,
+        5280
+      ]
+    ],
+    "baseline_fold_4_temporal_oos": [
+      [
+        21170,
+        0
+      ],
+      [
+        17940,
+        0
+      ]
+    ],
+    "real_fold_4_joint_oos": [
+      [
+        3252,
+        2068
+      ],
+      [
+        3007,
+        1536
+      ]
+    ],
+    "permuted_fold_4_joint_oos": [
+      [
+        3750,
+        1570
+      ],
+      [
+        3229,
+        1314
+      ]
+    ],
+    "baseline_fold_4_joint_oos": [
+      [
+        5320,
+        0
+      ],
+      [
+        4543,
+        0
+      ]
+    ]
+  }
+}
