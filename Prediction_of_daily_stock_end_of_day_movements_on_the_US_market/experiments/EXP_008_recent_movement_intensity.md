@@ -2,7 +2,25 @@
 
 ## Status
 
-Frozen. Not implemented or executed.
+Completed (execution-status reconciliation recorded after execution).
+
+## Execution-status reconciliation
+
+The scientific specification below was frozen before execution and is retained
+unchanged. A subsequent documentation review verified the authoritative
+`experiments/results/EXP_008_*` artifacts: the fold manifest, fit-only
+preprocessing parameters, metrics, incremental-AUC record, Joint decision,
+summary, confusion matrices, and metadata. Those artifacts show that EXP_008
+was implemented and executed once using training data only; the competition
+test was not accessed.
+
+The historical Joint OOS primary result was a PASS. Condition B ROC-AUC was
+`0.680477`, `0.686750`, `0.690781`, and `0.698219` in folds 1--4, while the
+corresponding B-minus-C intensity AUC deltas were `+0.076415`, `+0.102034`,
+`+0.094798`, and `+0.099619`. The mean B ROC-AUC was `0.689057` and the mean
+incremental intensity AUC was `+0.093217`. This status addendum reconciles
+documentation only; it does not retrospectively alter the frozen scientific
+contract or historical result artifacts.
 
 ## Scientific question
 

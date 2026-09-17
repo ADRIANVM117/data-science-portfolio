@@ -1,0 +1,7 @@
+{
+  "n_discovery_folds": 3,
+  "delta_log_loss_positive_all_three": true,
+  "mean_delta_log_loss": 0.02619499338576407,
+  "mean_delta_log_loss_positive": true,
+  "screen_met": true
+}

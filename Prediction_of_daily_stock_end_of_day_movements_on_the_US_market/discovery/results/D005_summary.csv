@@ -1,0 +1,2 @@
+n_discovery_folds,auc_above_one_half_all_three,mean_validation_auc,sample_std_validation_auc,descriptive_candidate_screen_met
+3,False,0.5258502393499892,0.024490433787795664,False

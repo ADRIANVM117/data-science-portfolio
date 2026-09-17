@@ -1,0 +1,8 @@
+{
+  "experiment": "D005",
+  "scope": "physical Discovery days 0-352 x E_dev",
+  "gate": "exact D004, p_D > p_D_star",
+  "competition_test_accessed": false,
+  "protected_days_353_502_accessed": false,
+  "e_holdout_accessed": false
+}

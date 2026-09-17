@@ -135,6 +135,13 @@ Competition-test data remain inaccessible during Discovery and Internal
 Confirmation. No lockbox-opening rule is defined here. Opening it requires a
 separate future Human + Sol authorization and a frozen final-stage protocol.
 
+### Frozen Internal Confirmation candidate
+
+`CONF_001_recent_intensity_confirmation.md` is completed. It was the first
+post-EXP-009 Internal Confirmation candidate and used the pre-specified
+three-block procedure above. It must not be described as a pristine or
+previously unobserved holdout.
+
 ### Distinct research risks
 
 - **Data leakage:** future or unavailable information enters training,

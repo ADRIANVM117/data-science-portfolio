@@ -1,0 +1,7 @@
+fold,subset,n_directional_before_evaluability,n_all_nan_directional_excluded,n_evaluable_directional_retained,n_negative_before_evaluability,n_positive_before_evaluability,n_negative_after_evaluability,n_positive_after_evaluability
+1,fit,160718,2,160716,83572,77146,83571,77145
+1,validation,38835,0,38835,18539,20296,18539,20296
+2,fit,199553,2,199551,102111,97442,102110,97441
+2,validation,39472,2,39470,21230,18242,21230,18240
+3,fit,239025,4,239021,123341,115684,123340,115681
+3,validation,39808,0,39808,18346,21462,18346,21462

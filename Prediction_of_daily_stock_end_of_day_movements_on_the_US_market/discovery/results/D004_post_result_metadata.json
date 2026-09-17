@@ -1,0 +1,10 @@
+{
+  "diagnostic": "post_D004_descriptive",
+  "reproduced_frozen_predictions": true,
+  "alternative_threshold_tested": false,
+  "calibration_method_fitted": false,
+  "sign_model_fitted": false,
+  "days": "0-352",
+  "equity_partition": "E_dev",
+  "competition_test_accessed": false
+}

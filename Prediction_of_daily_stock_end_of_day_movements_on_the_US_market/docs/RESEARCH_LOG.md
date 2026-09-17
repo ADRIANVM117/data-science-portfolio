@@ -472,3 +472,263 @@ researcher-selection risk created by repeated OOS exposure across EXP_000-009,
 even where individual experiments were leakage-safe. The Internal
 Confirmation Zone is prospective after EXP_009 and is not historically
 pristine.
+
+## 2026-09-14 — EXP_008 documentation reconciliation and CONF_001 freeze
+
+The authoritative `EXP_008_*` result artifacts were verified. EXP_008 was
+executed once on training data only after its scientific contract had been
+frozen; its former “not implemented or executed” status was a documentation
+error and has been reconciled without changing its specification or results.
+The historical Joint OOS B-minus-C recent-intensity AUC deltas were positive
+in all four folds (`+0.076415`, `+0.102034`, `+0.094798`, `+0.099619`), with
+mean `+0.093217`.
+
+`CONF_001_recent_intensity_confirmation.md` was frozen before execution. It
+carries the documented lineage `EXP_002 -> EXP_008 -> EXP_009 -> D001 ->
+D001 SHAP -> D002 -> CONF_001`. It is an Internal Confirmation candidate
+under the post-EXP-009 governance protocol, not a pristine holdout and not a
+competition lockbox.
+
+## 2026-09-14 — CONF_001 Recent Movement Intensity Internal Confirmation
+
+CONF_001 was executed once after its contract was frozen, using the
+post-EXP-009 three-block Internal Confirmation procedure. It retained the
+full EXP_002 / EXP_008 Neutral-versus-Directional population and compared
+`C=[missing_ratio, q]` against `B=[missing_ratio, q, I_recent_z]` with
+Fit-only median imputation and scaling of intensity. The zone is not
+historically pristine; the competition test remained unaccessed.
+
+Joint Confirmation results were:
+
+| Block | AUC(C) | AUC(B) | B minus C |
+|---:|---:|---:|---:|
+| 1 | 0.584716 | 0.686750 | +0.102034 |
+| 2 | 0.595982 | 0.690781 | +0.094798 |
+| 3 | 0.598600 | 0.698219 | +0.099619 |
+
+The mean Joint incremental AUC was `+0.098817` with sample standard
+deviation `0.003684`. Every frozen Joint block delta was strictly positive;
+therefore **CONFIRMATION CRITERION SATISFIED**. The historical EXP_008 mean
+Joint B-minus-C delta was `+0.093217`; effect magnitude remains separate from
+the recurrence criterion.
+
+Temporal AUC deltas were `+0.095721`, `+0.089183`, and `+0.095656` for blocks
+1--3 and are diagnostic only. No scientific adaptation occurred between
+blocks. This result supports only the frozen full-population linear claim of
+recurrent positive Joint Internal-Confirmation discrimination beyond global
+missingness and complete recent-window unavailability; it does not establish
+causality, an economic mechanism, sign predictability, or final ternary-task
+utility.
+
+## 2026-09-14 — Discovery session close after D005
+
+### D004 — Hierarchical Recent-Intensity Ternary Decision
+
+D004 converted the frozen recent-intensity Neutral-versus-Directional model
+into a hierarchical ternary hard-class decision. Fit-only directional priors
+supplied the deliberately unresolved sign branch. Relative to the Fit-majority
+ternary baseline, Discovery Validation accuracy improved in every frozen fold:
+candidate accuracy mean/sample SD was `0.442910` / `0.015200`, baseline was
+`0.412121` / `0.007931`, and the mean delta was `+0.030789` / `0.009842`.
+
+The Fit directional prior favored `-1` in all three folds. Consequently, D004
+never predicted `+1`; this was a property of the frozen no-sign-alpha rule,
+not conditional-sign evidence. D004 establishes only Discovery-level decision
+value from the N-v-D gate under that fixed hierarchy, not sign alpha.
+
+### Post-D004 routed-population diagnosis
+
+The exact D004 positive accuracy deltas decomposed into routed true `-1` rows
+minus routed true `0` rows in every fold:
+
+| Fold | Routed | True −1 | True 0 | True +1 | Net gain | Delta accuracy |
+| ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| 1 | 17,500 | 6,311 | 4,172 | 7,017 | +2,139 | +0.031911 |
+| 2 | 15,431 | 6,299 | 3,618 | 5,514 | +2,681 | +0.040021 |
+| 3 | 17,066 | 5,541 | 4,174 | 7,351 | +1,367 | +0.020434 |
+
+Positive decision contribution was not confined to an extreme `p_D` tail:
+fixed positive-margin regions near the frozen boundary also contributed
+positively in all folds. This diagnosis concerns the ternary routing decision;
+it is not evidence that the gate discriminates `-1` from `+1`.
+
+### Gated-sign structural feasibility audit
+
+The target-free reconstruction of the frozen D004 gate left a structurally
+broad potential conditional-sign population. Eligible Validation rows were
+`13,328`, `11,813`, and `12,892` in folds 1–3, respectively—approximately
+30%–34% of the original directional Validation population. Coverage was
+`49 days / 1,278 equities`, `50 / 1,205`, and `49 / 1,294`.
+
+`G` is feature-derived. Conditioning on `G=1` can induce selection effects,
+so any gated-sign result is Discovery-only and cannot automatically be called
+a high-intensity sign regime.
+
+### D005 — Gated Positional Path Conditional-Sign Signal
+
+D005 deliberately changed only the population through the independently
+frozen D004 gate. It reused EXP_005's own 106-column positional path (53
+Fit-preprocessed positional returns plus 53 original masks) and fixed Logistic
+Regression. Validation sign ROC-AUCs were `0.547320`, `0.499176`, and
+`0.531055`; mean/sample SD was `0.525850` / `0.024490`.
+
+The frozen Discovery screen required AUC strictly above `0.50` in all three
+folds. Fold 2 did not meet it, so
+`DESCRIPTIVE_CANDIDATE_SCREEN_MET = NO`. Threshold-0.5 secondary diagnostics
+were descriptive only: accuracy was `0.509679`, `0.515449`, and `0.494803`;
+Balanced Accuracy was `0.522245`, `0.502406`, and `0.518672`; negative/
+positive recalls were `0.759468/0.285022`, `0.698682/0.306130`, and
+`0.688684/0.348660`. They do not rescue the failed primary screen.
+
+The correct bounded conclusion is: the frozen D004 gate did not make the
+previously specified positional own-path Logistic Regression consistently OOS
+discriminative for conditional sign. This does not mean sign is impossible or
+inherently unpredictable, that high intensity destroys sign information, that
+Fold 2 is a reversal, that EXP_005 was wrong, or that D005 confirms absence
+of sign alpha.
+
+### Program-level empirical synthesis
+
+Recent movement intensity has produced strong and relatively stable
+Neutral-versus-Directional discrimination, with Discovery-level ternary
+decision value in D004. In contrast, no frozen conditional-sign hypothesis
+tested so far has produced consistent OOS discrimination. The tested families
+include cumulative observed return; sign dominance/persistence; positional own
+path with linear Logistic Regression; nonlinear positional tree interactions;
+sequence chronology with a GRU; contemporaneous cross-sectional relative path;
+and the D004-gated positional own path.
+
+This is empirical evidence about these frozen hypotheses, not proof that sign
+information does not exist.
+
+### Governance and current state
+
+- Discovery remains adaptive and hypothesis-generating; D005 arose after D004
+  and is not confirmation.
+- CONF_001 satisfied its frozen internal criterion, but reused observations
+  historically exposed through EXP_008; it is not independent statistical
+  replication.
+- Days `353–502` are not program-level pristine because of EXP_000–009
+  exposure. `E_holdout` has not been used in current Discovery.
+- The competition test remains the untouched lockbox; it has not been opened,
+  and no decision has been made to spend it.
+- `RECENT_MOVEMENT_INTENSITY`: strong historical/Discovery evidence for
+  Neutral-versus-Directional ranking.
+- `TERNARY_DECISION`: D004 shows positive Discovery OOS decision value under
+  the frozen hierarchical no-sign-alpha rule.
+- `CONDITIONAL_SIGN`: no consistently successful frozen OOS hypothesis so far.
+- `CALIBRATION`: descriptive imperfections in `p_D` are known; no
+  recalibration experiment is authorized.
+- `LOCKBOX`: untouched and reserved.
+
+### Next Human + Sol decision
+
+Determine which scientific question now deserves additional Discovery degrees
+of freedom before any new experiment is frozen. Unresolved possibilities—not
+an authorized queue—include a fundamentally different conditional-sign
+information source, deeper study of the robust N-v-D intensity signal,
+probability calibration/decision architecture, and when the system is mature
+enough to justify spending the competition lockbox.
+
+Today's session is closed after D005 interpretation: no D006, additional
+target-conditioned diagnostic, model execution, or protected-data access was
+authorized by this documentation step.
+
+## 2026-09-15 — D006 Ternary Tail Intensity × Magnitude-Allocation Interaction
+
+D006 completed once on the physical Discovery partition only. All integrity
+assertions passed; days `353–502`, `E_holdout`, and the competition test were
+untouched. No post-result adaptation, alternate directional allocation,
+interaction, window, model, threshold, preprocessing, or metric was tried.
+
+The frozen directional-allocation hypothesis failed: C0/C1 mean MacroTailAUC
+was `0.606022` / `0.603691`; C1-minus-C0 fold deltas were `-0.003255`,
+`-0.005768`, and `+0.002029`, with mean `-0.002331`. The frozen interaction
+hypothesis also failed: C2 mean MacroTailAUC was `0.603488`; C2-minus-C1 fold
+deltas were `-0.001131`, `-0.000170`, and `+0.000694`, with mean `-0.000202`.
+The pre-specified probability-based orientation was continuation in folds 1
+and 3 and opposite in fold 2, therefore overall unstable; Fold 2 is not
+evidence for a reversal hypothesis.
+
+The bounded result is that, under the frozen recent-window intensity,
+directional squared-magnitude-allocation, and simple multinomial interaction
+representations, no consistent Discovery OOS evidence showed that directional
+magnitude allocation adds to intensity or that its effect depends on
+intensity. It does not say that direction is unpredictable.
+
+Separately, C0 MacroTailAUCs were `0.611054`, `0.604537`, and `0.602475`
+(mean `0.606022`), with both negative- and positive-tail AUCs above `0.50` in
+all folds. This is descriptive evidence that established intensity/availability
+contains tail or large-movement-risk information, not directional alpha. C0's
+hard argmax `+1` recall was zero in all folds, a property of that frozen model
+and decision rule rather than evidence that positive-tail outcomes are
+inherently unpredictable.
+
+### Program-level synthesis after D006
+
+- Recent movement intensity has repeatedly shown useful information for
+  Neutral-versus-Directional and tail-risk discrimination.
+- D004 showed Discovery-level ternary decision value from the intensity gate.
+- Tested directional hypotheses have not produced consistent frozen OOS
+  evidence: cumulative return, sign dominance, positional path under Logistic
+  Regression, positional path under fixed HGB, GRU chronology,
+  cross-sectional relative path, gated positional path, and signed magnitude
+  allocation with its intensity interaction.
+- This does not establish that sign or direction is impossible to predict.
+- It does establish that continued ad-hoc variation of own-path directional
+  summaries would create substantial feature-shopping risk.
+
+No D007 is authorized. The next step is a Human + Sol program-level scientific
+review before any new Discovery experiment.
+
+## 2026-09-16 — D007 Raw Positional Returns Beyond Missingness
+
+D007 is completed, Discovery-only, with PRIMARY SCREEN PASS. The first attempt
+was a technical execution failure with no scientific result: a fixed
+`atol=1e-12` row-sum assertion rejected valid float32 XGBoost probabilities at
+machine-epsilon scale before result generation. No predictive result was
+inspected. Human + Sol approved a dtype-aware assertion-only repair, which
+passed required tests; model, features, folds, seed, metrics, and screen were
+unchanged. The subsequent authorized rerun is the first scientifically
+interpretable D007 execution. Scikit-learn emitted documented float32
+probability-row-sum warnings during log-loss calculation; no adaptation was
+made and execution completed.
+
+The scientific question was whether raw `r0...r52` add consistent ternary
+probability information beyond `m0...m52` under the same fixed XGBoost learner.
+Validation log-loss deltas `log_loss(M)-log_loss(R+M)` were `+0.029247`,
+`+0.023477`, and `+0.025861`; mean `+0.026195`, sample SD `0.002899`. Mean
+log loss was `1.035615` for M and `1.009420` for R+M. Every delta was strictly
+positive, so the frozen primary screen passed.
+
+The bounded conclusion is: the frozen D007 probe provides evidence of
+consistent incremental Discovery OOS ternary probability information from raw
+return values beyond missingness under this fixed XGBoost learner. This does
+not establish economic alpha, directional alpha, deployability, competition
+improvement, lockbox generalization, causal mechanism, or material usefulness
+under a post-hoc threshold.
+
+Secondary diagnostics are descriptive only: mean MacroTailAUC `0.566113 ->
+0.618777`, AUC -1 `0.563384 -> 0.607790`, AUC +1 `0.568841 -> 0.629764`,
+Accuracy `0.413778 -> 0.464439`, Macro-F1 `0.224811 -> 0.410687`, and Balanced
+Accuracy `0.339889 -> 0.426883`. Both tail AUCs improved in every fold; mean
+recalls -1/0/+1 were `0.050036/0.967384/0.002248` for M and
+`0.322349/0.750523/0.207777` for R+M. These were not primary-screen criteria.
+
+Program interpretation: missingness alone retains predictive information, but
+D007 establishes that raw observed return values add consistent incremental
+ternary probability information beyond it under this frozen flexible learner.
+Earlier directional failures therefore should not be summarized as evidence
+that the raw path lacks directional or tail-specific information; a more
+defensible statement is that the hand-crafted or restricted representations
+then tested did not consistently extract it. D007 does not establish a stable
+directional mechanism or identify relevant positions, signs, thresholds,
+interactions, or missingness-return combinations.
+
+No SHAP, feature-importance inspection, tuning, alternate learner, or
+post-result feature engineering has been performed. D007 is closed and frozen;
+no D008 is authorized. The next step is a Human + Sol design review for a
+bounded post-D007 model-interpretation phase that may generate future
+hypotheses but cannot improve or revalidate D007 on the same folds. The run
+used only physical Discovery `days 0–352 × E_dev`; days `353–502`, `E_holdout`,
+and competition-test data remain untouched.

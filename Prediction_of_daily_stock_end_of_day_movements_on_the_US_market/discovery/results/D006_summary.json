@@ -1,0 +1,22 @@
+{
+  "C1_allocation": {
+    "n_discovery_folds": 3,
+    "auc_above_one_half_all_three": true,
+    "delta_positive_all_three": false,
+    "mean_auc": 0.6036905212038435,
+    "mean_delta": -0.0023314267785949547,
+    "mean_delta_positive": false,
+    "screen_met": false
+  },
+  "C2_interaction": {
+    "n_discovery_folds": 3,
+    "auc_above_one_half_all_three": true,
+    "delta_positive_all_three": false,
+    "mean_auc": 0.6034880915451766,
+    "mean_delta": -0.00020242965866686577,
+    "mean_delta_positive": false,
+    "screen_met": false
+  },
+  "C1_orientation": "unstable",
+  "C2_orientation": "unstable"
+}

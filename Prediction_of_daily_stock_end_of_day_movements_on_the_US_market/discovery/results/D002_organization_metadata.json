@@ -1,0 +1,13 @@
+{
+  "candidate": "D002",
+  "analysis": "one_authorized_descriptive_paired_local_organization_pass",
+  "matching_artifact_sha256": "668365e7291acc8cdd77921fee6346b3a529e48b1dcfa2bf3399f31cd9b3f84a",
+  "matching_quality_artifact_sha256": "d79da1599b3c26390b0c9352f72e26711479e899b508ccc7ad14f1ea2d98efb9",
+  "pair_count": 125961,
+  "matching_recomputed": false,
+  "caliper_applied": false,
+  "predictive_model_trained": false,
+  "internal_confirmation_accessed": false,
+  "e_holdout_accessed": false,
+  "competition_test_accessed": false
+}

@@ -1,0 +1,10 @@
+{
+  "audit": "GATED_SIGN_STRUCTURAL_AUDIT",
+  "target_free_gate_with_respect_to_validation_sign": true,
+  "conditional_sign_model_fitted": false,
+  "conditional_sign_predictive_metric_evaluated": false,
+  "alternative_gate_or_threshold_tested": false,
+  "days": "0-352",
+  "equity_partition": "E_dev",
+  "competition_test_accessed": false
+}

@@ -1,0 +1,188 @@
+{
+  "labels": [
+    0,
+    1
+  ],
+  "matrices": {
+    "baseline_block_1_temporal_confirmation": [
+      [
+        0,
+        27474
+      ],
+      [
+        0,
+        39479
+      ]
+    ],
+    "C_block_1_temporal_confirmation": [
+      [
+        7439,
+        20035
+      ],
+      [
+        3572,
+        35907
+      ]
+    ],
+    "B_block_1_temporal_confirmation": [
+      [
+        7195,
+        20279
+      ],
+      [
+        3371,
+        36108
+      ]
+    ],
+    "baseline_block_1_joint_confirmation": [
+      [
+        0,
+        6741
+      ],
+      [
+        0,
+        10040
+      ]
+    ],
+    "C_block_1_joint_confirmation": [
+      [
+        1589,
+        5152
+      ],
+      [
+        692,
+        9348
+      ]
+    ],
+    "B_block_1_joint_confirmation": [
+      [
+        1521,
+        5220
+      ],
+      [
+        647,
+        9393
+      ]
+    ],
+    "baseline_block_2_temporal_confirmation": [
+      [
+        0,
+        28551
+      ],
+      [
+        0,
+        38417
+      ]
+    ],
+    "C_block_2_temporal_confirmation": [
+      [
+        7189,
+        21362
+      ],
+      [
+        3438,
+        34979
+      ]
+    ],
+    "B_block_2_temporal_confirmation": [
+      [
+        7508,
+        21043
+      ],
+      [
+        3217,
+        35200
+      ]
+    ],
+    "baseline_block_2_joint_confirmation": [
+      [
+        0,
+        7209
+      ],
+      [
+        0,
+        9681
+      ]
+    ],
+    "C_block_2_joint_confirmation": [
+      [
+        1599,
+        5610
+      ],
+      [
+        715,
+        8966
+      ]
+    ],
+    "B_block_2_joint_confirmation": [
+      [
+        1661,
+        5548
+      ],
+      [
+        638,
+        9043
+      ]
+    ],
+    "baseline_block_3_temporal_confirmation": [
+      [
+        0,
+        27995
+      ],
+      [
+        0,
+        39110
+      ]
+    ],
+    "C_block_3_temporal_confirmation": [
+      [
+        7000,
+        20995
+      ],
+      [
+        3290,
+        35820
+      ]
+    ],
+    "B_block_3_temporal_confirmation": [
+      [
+        7208,
+        20787
+      ],
+      [
+        3092,
+        36018
+      ]
+    ],
+    "baseline_block_3_joint_confirmation": [
+      [
+        0,
+        7049
+      ],
+      [
+        0,
+        9863
+      ]
+    ],
+    "C_block_3_joint_confirmation": [
+      [
+        1543,
+        5506
+      ],
+      [
+        662,
+        9201
+      ]
+    ],
+    "B_block_3_joint_confirmation": [
+      [
+        1605,
+        5444
+      ],
+      [
+        617,
+        9246
+      ]
+    ]
+  }
+}

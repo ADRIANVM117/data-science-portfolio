@@ -1,0 +1,11 @@
+{
+  "discovery": "D003",
+  "physical_input_only": true,
+  "days": "0-352",
+  "equity_partition": "E_dev",
+  "python": "3.13.2",
+  "numpy": "2.2.3",
+  "pandas": "2.3.1",
+  "scikit_learn": "1.6.1",
+  "competition_test_accessed": false
+}

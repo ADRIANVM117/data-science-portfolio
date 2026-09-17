@@ -1,0 +1,68 @@
+{
+  "labels": [
+    0,
+    1
+  ],
+  "matrices": {
+    "D005_path_mask_fold_1_validation": [
+      [
+        4793,
+        1518
+      ],
+      [
+        5017,
+        2000
+      ]
+    ],
+    "fit_majority_sign_baseline_fold_1_validation": [
+      [
+        6311,
+        0
+      ],
+      [
+        7017,
+        0
+      ]
+    ],
+    "D005_path_mask_fold_2_validation": [
+      [
+        4401,
+        1898
+      ],
+      [
+        3826,
+        1688
+      ]
+    ],
+    "fit_majority_sign_baseline_fold_2_validation": [
+      [
+        6299,
+        0
+      ],
+      [
+        5514,
+        0
+      ]
+    ],
+    "D005_path_mask_fold_3_validation": [
+      [
+        3816,
+        1725
+      ],
+      [
+        4788,
+        2563
+      ]
+    ],
+    "fit_majority_sign_baseline_fold_3_validation": [
+      [
+        5541,
+        0
+      ],
+      [
+        7351,
+        0
+      ]
+    ]
+  }
+}
