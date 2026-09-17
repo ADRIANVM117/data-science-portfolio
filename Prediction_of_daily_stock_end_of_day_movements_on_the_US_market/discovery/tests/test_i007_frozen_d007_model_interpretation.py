@@ -13,10 +13,11 @@ sys.path.insert(0, str(PROJECT_ROOT))
 from discovery.d007_raw_path_masks_ternary_xgboost import (  # noqa: E402
     RM_COLUMNS, build_d007_representations, encode_ternary_target, make_d007_classifier,
 )
+import discovery.run_i007_frozen_d007_model_interpretation as i007_runner  # noqa: E402
 from discovery.i007_frozen_d007_model_interpretation import (  # noqa: E402
     GLOBAL_SHAP_SAMPLE_MAX, OUTPUT_LABELS, RECONSTRUCTION_LOG_LOSS_ATOL,
     SHAP_ADDITIVITY_ATOL, SHAP_ADDITIVITY_RTOL, TOP_K, additivity_record,
-    allocation_by_fold, assert_reconstruction_matches, deterministic_validation_positions,
+    allocation_by_fold, assert_reconstruction_matches, attach_cross_fold_feature_summary, deterministic_validation_positions,
     explain_and_validate_additivity, expected_d007_r_plus_m_log_loss,
     orientation_diagnostics, rank_stability, sampled_validation_matrix, stable_raw_features,
 )
@@ -102,6 +103,31 @@ def test_allocation_rank_stability_and_top10_membership() -> None:
     assert all(feature.startswith("r") for feature in selected)
 
 
+def test_cross_fold_summary_join_uses_feature_output_identity_not_summary_statistics() -> None:
+    rng = np.random.default_rng(91)
+    allocation = pd.concat([allocation_by_fold(rng.normal(size=(12, 106, 3)), fold=fold) for fold in (1, 2, 3)], ignore_index=True)
+    ranked, _, _ = rank_stability(allocation)
+    summary = ranked.groupby(["output_index", "output_label", "feature"], as_index=False).agg(
+        mean_abs_shap_macro=("mean_abs_shap", "mean"), median_rank=("rank_within_fold", "median"),
+        min_rank=("rank_within_fold", "min"), max_rank=("rank_within_fold", "max"),
+        top10_membership_count=("top10_membership_count", "max"), stable_top10=("stable_top10", "max"),
+    )
+    assert "median_rank" not in ranked.columns and "min_rank" not in ranked.columns and "max_rank" not in ranked.columns
+    try:
+        ranked.merge(summary, on=["output_index", "output_label", "feature", "median_rank"], how="left")
+    except KeyError as error:
+        assert "median_rank" in str(error)
+    else:
+        raise AssertionError("The pre-repair invalid statistic-key merge must reproduce KeyError.")
+    merged = attach_cross_fold_feature_summary(ranked, summary)
+    assert len(merged) == len(ranked) == 3 * 3 * 106
+    assert np.array_equal(merged[["fold", "output_index", "output_label", "feature"]].to_numpy(), ranked[["fold", "output_index", "output_label", "feature"]].to_numpy())
+    assert np.array_equal(merged["top10_membership_count"].to_numpy(), ranked["top10_membership_count"].to_numpy())
+    assert np.array_equal(merged["stable_top10"].to_numpy(), ranked["stable_top10"].to_numpy())
+    assert stable_raw_features(merged, output_label=-1) == stable_raw_features(summary, output_label=-1)
+    assert stable_raw_features(merged, output_label=1) == stable_raw_features(summary, output_label=1)
+
+
 def test_observed_only_orientation_uses_same_output_and_equal_count_bins() -> None:
     _, matrix, features = fitted_synthetic_model()
     sample, manifest = sampled_validation_matrix(matrix, features, fold=1)
@@ -115,11 +141,40 @@ def test_observed_only_orientation_uses_same_output_and_equal_count_bins() -> No
     assert_raises(lambda: orientation_diagnostics(sample, values, manifest, fold=1, output_label=-1, features=("m0",)), "raw returns only")
 
 
-def test_runner_is_inert_and_excludes_interactions_and_protected_sources() -> None:
+def test_runner_is_inert_and_lifecycle_guard_never_mixes_incomplete_artifacts() -> None:
     source = (PROJECT_ROOT / "discovery" / "run_i007_frozen_d007_model_interpretation.py").read_text(encoding="utf-8")
     assert "shap_interaction" not in source and "input_test" not in source and "output_test" not in source
     assert "if __name__ == \"__main__\":" in source
-    assert not any((PROJECT_ROOT / "discovery" / "results").glob("I007A_*"))
+
+    class Candidate:
+        def __init__(self, owner, name): self.owner, self.name = owner, name
+        def exists(self): return self.name in self.owner.existing
+        def unlink(self): self.owner.existing.remove(self.name)
+
+    class ResultsFixture:
+        def __init__(self, existing=()): self.existing = set(existing)
+        def __truediv__(self, name): return Candidate(self, name)
+
+    original = i007_runner.RESULTS_DIR
+    try:
+        fixture = ResultsFixture()
+        i007_runner.RESULTS_DIR = fixture
+        assert i007_runner.i007a_artifact_state()[0] == "fresh"
+        fixture.existing.add(i007_runner.ARTIFACT_NAMES[0])
+        assert i007_runner.i007a_artifact_state()[0] == "incomplete"
+        try:
+            i007_runner.assert_fresh_artifacts()
+        except FileExistsError as error:
+            assert "incomplete" in str(error)
+        else:
+            raise AssertionError("Incomplete I007A artifacts must block a rerun.")
+        i007_runner.cleanup_incomplete_artifacts()
+        assert i007_runner.i007a_artifact_state()[0] == "fresh"
+        i007_runner.RESULTS_DIR = ResultsFixture(i007_runner.ARTIFACT_NAMES)
+        assert i007_runner.i007a_artifact_state()[0] == "complete"
+        assert_raises(i007_runner.cleanup_incomplete_artifacts, "only for an incomplete")
+    finally:
+        i007_runner.RESULTS_DIR = original
 
 
 if __name__ == "__main__":
@@ -128,8 +183,9 @@ if __name__ == "__main__":
         test_sample_manifest_and_schema_are_target_free,
         test_synthetic_multiclass_shap_shape_and_raw_margin_additivity,
         test_allocation_rank_stability_and_top10_membership,
+        test_cross_fold_summary_join_uses_feature_output_identity_not_summary_statistics,
         test_observed_only_orientation_uses_same_output_and_equal_count_bins,
-        test_runner_is_inert_and_excludes_interactions_and_protected_sources,
+        test_runner_is_inert_and_lifecycle_guard_never_mixes_incomplete_artifacts,
     )
     result = unittest.TextTestRunner(verbosity=2).run(unittest.TestSuite(unittest.FunctionTestCase(test) for test in tests))
     raise SystemExit(not result.wasSuccessful())

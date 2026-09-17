@@ -27,6 +27,7 @@ from discovery.i007_frozen_d007_model_interpretation import (  # noqa: E402
     SHAP_ADDITIVITY_RTOL,
     additivity_record,
     allocation_by_fold,
+    attach_cross_fold_feature_summary,
     assert_reconstruction_matches,
     deterministic_validation_positions,
     explain_and_validate_additivity,
@@ -49,10 +50,43 @@ ARTIFACT_NAMES = (
 )
 
 
-def assert_fresh_artifacts() -> None:
+def i007a_artifact_state() -> tuple[str, list[str]]:
+    """Classify I007A artifact lifecycle without changing any artifact."""
     existing = [name for name in ARTIFACT_NAMES if (RESULTS_DIR / name).exists()]
-    if existing:
-        raise FileExistsError(f"I007A refuses to overwrite result artifacts: {existing}")
+    if not existing:
+        return "fresh", existing
+    if set(existing) == set(ARTIFACT_NAMES):
+        return "complete", existing
+    return "incomplete", existing
+
+
+def assert_fresh_artifacts() -> None:
+    """Block all reruns unless a separately authorized cleanup has occurred."""
+    state, existing = i007a_artifact_state()
+    if state == "incomplete":
+        raise FileExistsError(
+            "I007A found an incomplete failed-run artifact set; explicit authorized "
+            "cleanup_incomplete_artifacts() is required before any rerun. "
+            f"Existing artifacts: {existing}"
+        )
+    if state == "complete":
+        raise FileExistsError(f"I007A refuses to overwrite completed result artifacts: {existing}")
+
+
+def cleanup_incomplete_artifacts() -> None:
+    """Explicit deterministic cleanup for a separately authorized failed-run rerun.
+
+    This function is deliberately never called by ``main``. It may remove only
+    known I007A artifacts after a Human + Sol rerun/cleanup authorization;
+    D007 artifacts are outside this lifecycle entirely.
+    """
+    state, existing = i007a_artifact_state()
+    if state != "incomplete":
+        raise AssertionError("I007A cleanup is permitted only for an incomplete artifact set.")
+    for name in existing:
+        (RESULTS_DIR / name).unlink()
+    if i007a_artifact_state()[0] != "fresh":
+        raise AssertionError("I007A incomplete-artifact cleanup did not leave a fresh state.")
 
 
 def main() -> None:
@@ -111,7 +145,7 @@ def main() -> None:
     pd.concat(sample_tables, ignore_index=True).to_csv(RESULTS_DIR / "I007A_sample_manifest.csv", index=False)
     pd.DataFrame(additivity_tables).to_csv(RESULTS_DIR / "I007A_additivity.csv", index=False)
     allocation.to_csv(RESULTS_DIR / "I007A_allocation.csv", index=False)
-    ranked.merge(summary, on=["output_index", "output_label", "feature", "median_rank", "min_rank", "max_rank", "top10_membership_count", "stable_top10"], how="left").to_csv(RESULTS_DIR / "I007A_feature_stability.csv", index=False)
+    attach_cross_fold_feature_summary(ranked, summary).to_csv(RESULTS_DIR / "I007A_feature_stability.csv", index=False)
     rank_correlations.to_csv(RESULTS_DIR / "I007A_rank_correlations.csv", index=False)
     top10.to_csv(RESULTS_DIR / "I007A_top10.csv", index=False)
     correlation_table = pd.concat(orientation_correlations, ignore_index=True) if orientation_correlations else pd.DataFrame(

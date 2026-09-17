@@ -16,6 +16,7 @@ from discovery.d007_raw_path_masks_ternary_xgboost import (  # noqa: E402
     build_d007_representations, encode_ternary_target, evaluate_d007_probabilities,
     evaluate_majority_baseline, make_d007_classifier, primary_screen, ternary_probabilities,
 )
+import discovery.run_d007_raw_path_masks_ternary_xgboost as d007_runner  # noqa: E402
 from src.exp001_missingness import RETURN_COLUMNS  # noqa: E402
 
 
@@ -97,10 +98,34 @@ def test_screen_majority_and_boundary_reuse() -> None:
     assert_raises(lambda: validate_discovery_features(bad), "outside")
 
 
-def test_runner_has_no_protected_references_or_artifacts() -> None:
+def test_runner_has_no_protected_references_and_preexecution_artifact_guard() -> None:
+    """D007 artifacts are expected after closure; overwrite protection is pre-execution only."""
     source = (PROJECT_ROOT / "discovery" / "run_d007_raw_path_masks_ternary_xgboost.py").read_text(encoding="utf-8")
     assert "input_test" not in source and "output_test" not in source and "full-training" not in source
-    assert not any((PROJECT_ROOT / "discovery" / "results").glob("D007_*"))
+    # The former assertion that the repository lacks D007_* artifacts was a
+    # pre-execution lifecycle guard. D007 is closed, so valid artifacts must
+    # persist. Verify the guard itself in isolation without touching them.
+    class Candidate:
+        def __init__(self, exists: bool): self._exists = exists
+        def exists(self) -> bool: return self._exists
+
+    class ResultsDirectoryFixture:
+        def __init__(self, exists: bool): self._exists = exists
+        def __truediv__(self, _name: str) -> Candidate: return Candidate(self._exists)
+
+    original_results_dir = d007_runner.RESULTS_DIR
+    try:
+        d007_runner.RESULTS_DIR = ResultsDirectoryFixture(False)
+        d007_runner.assert_fresh_artifacts()
+        d007_runner.RESULTS_DIR = ResultsDirectoryFixture(True)
+        try:
+            d007_runner.assert_fresh_artifacts()
+        except FileExistsError:
+            pass
+        else:
+            raise AssertionError("D007 pre-execution artifact overwrite guard must fail closed.")
+    finally:
+        d007_runner.RESULTS_DIR = original_results_dir
 
 
 if __name__ == "__main__":
@@ -110,7 +135,7 @@ if __name__ == "__main__":
         test_xgboost_encoding_probability_and_metrics,
         test_probability_coherence_is_dtype_aware_but_still_fails_closed,
         test_screen_majority_and_boundary_reuse,
-        test_runner_has_no_protected_references_or_artifacts,
+        test_runner_has_no_protected_references_and_preexecution_artifact_guard,
     )
     result = unittest.TextTestRunner(verbosity=2).run(unittest.TestSuite(unittest.FunctionTestCase(test) for test in tests))
     raise SystemExit(not result.wasSuccessful())

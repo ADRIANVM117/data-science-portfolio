@@ -34,6 +34,7 @@ GLOBAL_SHAP_SEED = 20260908
 N_OUTPUTS = 3
 TOP_K = 10
 OUTPUT_LABELS = (-1, 0, 1)
+CROSS_FOLD_FEATURE_IDENTITY = ("output_index", "output_label", "feature")
 
 
 def expected_d007_r_plus_m_log_loss(metrics: pd.DataFrame) -> dict[int, float]:
@@ -210,6 +211,35 @@ def rank_stability(allocation: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame
     if ranked[["top10_membership_count", "stable_top10"]].isna().any().any():
         raise AssertionError("I007A Top-10 stability did not align to fold rankings.")
     return ranked.sort_values(["output_index", "fold", "rank_within_fold", "feature"]), pd.DataFrame(correlations), pd.DataFrame(top_records)
+
+
+def attach_cross_fold_feature_summary(ranked: pd.DataFrame, summary: pd.DataFrame) -> pd.DataFrame:
+    """Attach cross-fold statistics to fold rows via feature/output identity only.
+
+    ``median_rank``, ``min_rank``, and ``max_rank`` describe an entity after
+    aggregation and are intentionally payload columns, never merge keys.
+    """
+    ranked_required = {"fold", *CROSS_FOLD_FEATURE_IDENTITY, "rank_within_fold", "top10_membership_count", "stable_top10"}
+    summary_required = {*CROSS_FOLD_FEATURE_IDENTITY, "mean_abs_shap_macro", "median_rank", "min_rank", "max_rank"}
+    if not ranked_required.issubset(ranked.columns) or not summary_required.issubset(summary.columns):
+        raise AssertionError("I007A feature-stability schemas lack required identity or statistic columns.")
+    payload = summary.loc[:, [*CROSS_FOLD_FEATURE_IDENTITY, "mean_abs_shap_macro", "median_rank", "min_rank", "max_rank"]]
+    if payload.duplicated(list(CROSS_FOLD_FEATURE_IDENTITY)).any():
+        raise AssertionError("I007A cross-fold summary must have one row per output/feature identity.")
+    result = ranked.merge(payload, on=list(CROSS_FOLD_FEATURE_IDENTITY), how="left", validate="many_to_one")
+    if len(result) != len(ranked) or result[["mean_abs_shap_macro", "median_rank", "min_rank", "max_rank"]].isna().any().any():
+        raise AssertionError("I007A cross-fold feature summary did not join one-to-one by feature/output identity.")
+    if not np.array_equal(
+        result.loc[:, list(CROSS_FOLD_FEATURE_IDENTITY)].to_numpy(),
+        ranked.loc[:, list(CROSS_FOLD_FEATURE_IDENTITY)].to_numpy(),
+    ):
+        raise AssertionError("I007A feature/output identity changed during summary attachment.")
+    if not np.array_equal(
+        result[["top10_membership_count", "stable_top10"]].to_numpy(),
+        ranked[["top10_membership_count", "stable_top10"]].to_numpy(),
+    ):
+        raise AssertionError("I007A Top-10 membership changed during summary attachment.")
+    return result
 
 
 def stable_raw_features(rank_summary: pd.DataFrame, *, output_label: int) -> tuple[str, ...]:

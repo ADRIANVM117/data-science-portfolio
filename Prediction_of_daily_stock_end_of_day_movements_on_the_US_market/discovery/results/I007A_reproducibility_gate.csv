@@ -1,0 +1,4 @@
+fold,persisted_r_plus_m_log_loss,reconstructed_r_plus_m_log_loss,absolute_difference,tolerance_atol,passed
+1,0.9998903497609296,0.9998903497609295,1.1102230246251565e-16,1e-08,True
+2,1.021697951975157,1.021697951975157,0.0,1e-08,True
+3,1.0066705838782537,1.0066705838782537,0.0,1e-08,True

@@ -1,0 +1,4 @@
+fold,n_rows,n_features,n_outputs,max_abs_difference,rtol,atol,passed
+1,2000,106,3,1.3156677596271038e-06,1e-05,1e-05,True
+2,2000,106,3,1.2066084309481084e-06,1e-05,1e-05,True
+3,2000,106,3,1.0592630133032799e-06,1e-05,1e-05,True
