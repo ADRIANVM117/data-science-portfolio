@@ -732,3 +732,110 @@ bounded post-D007 model-interpretation phase that may generate future
 hypotheses but cannot improve or revalidate D007 on the same folds. The run
 used only physical Discovery `days 0–352 × E_dev`; days `353–502`, `E_holdout`,
 and competition-test data remain untouched.
+
+## 2026-09-16 — I007A Frozen D007 Main-Effect Interpretation
+
+I007A completed as a bounded descriptive interpretation of the successful
+D007 `R+M` model, using physical Discovery only. Deterministic reconstruction
+of all three D007 models passed the frozen log-loss gate and raw-margin
+TreeSHAP additivity passed. No interactions, refitting for improvement,
+predictive re-evaluation, protected-region access, or competition-test access
+occurred.
+
+Across every output and fold, TreeSHAP main-effect allocation was entirely to
+raw returns (`R_share=1.0`, `M_share=0.0`). This must not be read as
+missingness being irrelevant: raw returns retain native `NaN`s, and XGBoost can
+encode observed versus unavailable values through native missing routing.
+Explicit masks may therefore be redundant conditional on native-NaN raw
+features. Attribution allocation is not a unique-information decomposition.
+
+Attribution rankings were highly stable. Stable Top-10 sets were
+`{-1: r33, r46, r48, r52}`, `{0: r1, r44, r46, r47, r48, r49, r50, r51, r52}`,
+and `{+1: r24, r50, r51, r52}`; only `r52` overlapped the two tail sets.
+Limited frozen same-output orientation tables showed a consistent Spearman
+sign across folds for each eligible stable tail feature, while magnitude
+stability varied. These facts do not establish individual incremental signal,
+causal relevance, an economic mechanism, or deployable directional alpha.
+
+### Program-level synthesis through I007A
+
+- D007 produced consistent Discovery OOS incremental ternary probability
+  information from raw returns beyond masks under its fixed XGBoost learner.
+- I007A found highly stable positional main-effect attributions across folds;
+  late positions recurred especially for the neutral output.
+- EXP_003--EXP_007 failures do not show that the raw path contains no
+  information: they show that their frozen hand-crafted or restricted
+  representations and learners did not consistently extract it, whereas D007
+  did under a flexible raw-path learner.
+- I007A does not resolve whether the D007 result is explained by established
+  intensity/availability, incremental raw positional values, nonlinear
+  combinations, or native-NaN routing. These remain competing explanations.
+
+The prospective question is whether raw positional paths provide consistent
+Discovery OOS ternary predictive information beyond an appropriately frozen
+control for established recent-intensity/availability structure. Its precise
+control remains undecided. No D008, interaction analysis, or new model is
+authorized by this documentation entry.
+
+## 2026-09-20 — D008 Raw Path Beyond Availability + Established Recent Intensity
+
+D008 is completed, Discovery-only, with PRIMARY SCREEN PASS. It compared
+`C=[m0,...,m52,I_recent_z]` against
+`P=[m0,...,m52,I_recent_z,r0,...,r52]`: full positional availability and exact
+fit-only EXP_008 recent intensity were shared, while untouched native-NaN raw
+returns were added only to P. `q`, `missing_ratio`, SHAP-selected features, and
+other engineered summaries were excluded.
+
+The one authorized execution completed all three frozen Discovery folds with
+exit status `0` in approximately `406.35` seconds. All nine artifacts
+persisted and the frozen contract SHA-256 remained unchanged. Five sklearn
+probability-row-sum warnings occurred during log-loss calculation; there was
+no error, adaptation, repair, or rerun. The preprocessing artifact omits
+Validation raw-`I_recent` NaN counts; this is a reporting omission only, and
+no post-run computation was authorized. Protected boundaries remained intact.
+
+Fold log-loss deltas `log_loss(C)-log_loss(P)` were
+`+0.0035748973537543804`, `+0.0007623862799182035`, and
+`+0.0029766777333486427`; mean `+0.002437987122340409`, sample SD
+`0.001481619153461506`. Because every delta and the mean were strictly
+positive, the frozen primary screen passed. The bounded conclusion is that,
+under the frozen XGBoost learner, raw positional returns provided consistent
+incremental Discovery OOS ternary predictive utility beyond the shared
+full-positional-availability plus established-recent-intensity control. The
+residual improvement is modest in magnitude.
+
+Secondary metrics remain descriptive. Tail-ranking moved only slightly
+(MacroTailAUC `0.619066 -> 0.619871`), while hard multiclass allocation changed
+more visibly: `+1` recall was `0.011209 -> 0.198979` and `-1` recall was
+`0.490856 -> 0.360556`. This is compatible with residual raw-path information
+affecting ternary probability allocation; it is not evidence that a
+directional/sign mechanism has been isolated.
+
+### Program-level synthesis after D008
+
+- Availability/missingness has reproducible Neutral-versus-Directional
+  information.
+- EXP_008 established recent movement intensity as a strong N-v-D
+  representation.
+- Multiple restricted or hand-crafted sign/path representations failed under
+  their frozen contracts.
+- D007 showed incremental ternary information from raw returns plus masks
+  beyond masks alone under fixed XGBoost; I007A showed stable model-specific
+  positional attribution structure without identifying the mechanism.
+- D008 showed that explicit recent-intensity control greatly reduced, but did
+  not eliminate, the incremental raw-path advantage under the frozen XGBoost
+  comparison.
+
+The remaining object is a smaller but consistent residual raw-path
+contribution beyond full availability plus established intensity. It may
+reflect residual nonlinear directional/class-allocation structure, other
+magnitude/path-shape information, native-NaN routing with duplicated
+availability, finite-sample/model-capacity effects, or unresolved
+interactions. These are competing explanations, not conclusions.
+
+The prospective question is whether the residual D008 improvement primarily
+reflects changes in tail-event detection or probability allocation among
+directional classes once availability and recent intensity are controlled. No
+diagnostic design is frozen, no D009 is authorized, and no new training, SHAP,
+interaction analysis, alternate control, feature selection, or tuning is
+authorized.

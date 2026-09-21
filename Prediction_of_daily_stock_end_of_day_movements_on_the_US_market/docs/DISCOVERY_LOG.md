@@ -749,3 +749,77 @@ engineering has been performed. No D008 is authorized. The next authorized
 action is Human + Sol design review for a bounded interpretation phase of the
 already-fitted frozen R+M models. Only physical Discovery was used; days
 `353–502`, `E_holdout`, and competition-test data remain untouched.
+
+## 2026-09-16 — I007A Frozen D007 Main-Effect Interpretation
+
+I007A completed as a bounded, descriptive interpretation of the already frozen
+D007 `R+M` XGBoost models. It used only physical Discovery and deterministic
+2,000-row Validation samples per fold. Exact deterministic reconstruction
+passed in every fold (Validation log-loss differences at or below `1.11e-16`),
+as did raw-margin TreeSHAP additivity. No interaction SHAP, model change,
+predictive re-evaluation, protected-region access, or competition-test access
+occurred.
+
+Main-effect TreeSHAP allocated `R_share=1.0` and `M_share=0.0` for every
+output and fold. This means explicit masks received no main-effect attribution
+in the fitted `R+M` model; it does not make missingness irrelevant because raw
+returns retain native `NaN` values and can encode availability through native
+missing-value routing. The shares are not unique-information shares.
+
+Feature-attribution rankings were highly stable across Discovery folds. The
+stable Top-10 raw-return intersections were `{-1: r33, r46, r48, r52}`,
+`{0: r1, r44, r46, r47, r48, r49, r50, r51, r52}`, and
+`{+1: r24, r50, r51, r52}`. Only `r52` was stable for both tail outputs.
+Frozen same-output orientation summaries had consistent signs across folds
+for all eligible stable tail features, though magnitudes varied, especially
+for `r50` and `r51`. These are fitted-model main-effect attribution facts, not
+standalone-feature evidence, causal findings, economic mechanisms, or
+directional alpha.
+
+I007A leaves competing explanations unresolved: D007 may primarily reflect
+established intensity/availability, raw values may add beyond it, nonlinear
+combinations may be essential, and native-NaN routing may account for some raw
+attribution. No interaction analysis was performed. Any next Discovery
+question requires separate Human + Sol design and freezing; no D008 is
+authorized.
+
+## 2026-09-20 — D008 Raw Path Beyond Availability + Established Recent Intensity
+
+D008 completed one authorized physical-Discovery execution with PRIMARY SCREEN
+PASS. The command `python discovery/run_d008_raw_path_beyond_availability_intensity.py`
+exited `0` after approximately `406.35` seconds. All three frozen folds and
+all nine artifacts completed; the contract SHA-256 was unchanged. Five
+scikit-learn probability-row-sum warnings occurred during log-loss calculation,
+with no error, adaptation, repair, or rerun. Days `353–502`, `E_holdout`, and
+competition-test data were untouched. The missing Validation raw-`I_recent`
+NaN counts in the preprocessing artifact are a reporting omission only; no
+post-run calculation was authorized.
+
+D008 compared `C=[m0,...,m52,I_recent_z]` (54 predictors) with
+`P=[m0,...,m52,I_recent_z,r0,...,r52]` (107 predictors). `M` is full positional
+availability, `I_recent_z` is the exact fit-only EXP_008 intensity transform,
+and `R` retains untouched raw returns with native NaNs. `q`, `missing_ratio`,
+SHAP-selected features, and other engineered summaries were absent.
+
+Validation log-loss deltas `C-P` were `+0.0035748973537543804`,
+`+0.0007623862799182035`, and `+0.0029766777333486427`; the mean was
+`+0.002437987122340409` with sample SD `0.001481619153461506`. All were
+strictly positive, so the frozen primary screen passed. Under the frozen
+XGBoost learner, raw positional returns provided consistent incremental
+Discovery OOS ternary predictive utility beyond the shared full-positional-
+availability plus established-recent-intensity control. The residual
+improvement is modest in magnitude.
+
+Secondary descriptive means showed only small tail-ranking changes
+(MacroTailAUC `0.619066 -> 0.619871`), while hard multiclass behavior changed
+more visibly: `+1` recall moved `0.011209 -> 0.198979` and `-1` recall moved
+`0.490856 -> 0.360556`. This is compatible with changes in ternary probability
+allocation, not isolated directional/sign evidence.
+
+D007's `M+R` versus `M` mean log-loss improvement was approximately
+`+0.026195`; D008's stricter intensity-controlled residual was
+`+0.002437987122340409`. This comparison is descriptive and is not an
+information, variance, signal, or causal decomposition. Remaining competing
+explanations include residual nonlinear class-allocation/path-shape structure,
+native-NaN routing with duplicated availability, finite-sample/model-capacity
+effects, and unresolved interactions. No D009 is authorized.

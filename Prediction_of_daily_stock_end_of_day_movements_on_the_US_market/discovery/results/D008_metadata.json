@@ -1,0 +1,21 @@
+{
+  "experiment": "D008",
+  "scope": "physical Discovery days 0-352 x E_dev",
+  "return_window": [
+    "r41",
+    "r42",
+    "r43",
+    "r44",
+    "r45",
+    "r46",
+    "r47",
+    "r48",
+    "r49",
+    "r50",
+    "r51",
+    "r52"
+  ],
+  "xgboost": "3.4.1",
+  "python": "3.13.2",
+  "competition_test_accessed": false
+}
