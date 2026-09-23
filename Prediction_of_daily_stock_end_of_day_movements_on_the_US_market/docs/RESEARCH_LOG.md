@@ -839,3 +839,33 @@ directional classes once availability and recent intensity are controlled. No
 diagnostic design is frozen, no D009 is authorized, and no new training, SHAP,
 interaction analysis, alternate control, feature selection, or tuning is
 authorized.
+
+## 2026-09-20 — I008A D008 probability-allocation interpretation
+
+I008A completed one frozen descriptive reconstruction of D008. All six C/P
+reproductions passed their `atol=1e-8`, `rtol=0` gates, and the row-level gain
+identity reproduced frozen D008 log-loss deltas to numerical precision. The
+diagnostic did not support the provisional simple directional-allocation
+explanation: signed `delta_q_plus` means were positive, negative, positive;
+true `-1` gain was negative in all folds; and true `+1` gain was small and
+sign-inconsistent.
+
+The clearest consistent class-specific component of D008's residual
+improvement occurred on true neutral observations: their mean gains were
+positive in all three folds and their mean directional probability-mass change
+was negative in all three folds. This is a descriptive behavior of frozen P
+relative to frozen C, not sign alpha, a neutral model, causal evidence, or an
+economic mechanism. The raw path still produces heterogeneous probability
+adjustments beyond full availability plus established recent intensity, but
+their predictive/economic structure remains unresolved.
+
+### Program-level synthesis through I008A
+
+- Missingness/availability has reproducible Neutral-versus-Directional information.
+- EXP_008 established recent movement intensity as a strong N-v-D signal.
+- Restricted handcrafted sign/path representations repeatedly failed their frozen consistency screens.
+- D007 established substantial incremental ternary probability information from raw returns beyond masks under frozen XGBoost; I007A supplied model-specific positional attribution without identifying mechanism.
+- D008 showed that explicit recent-intensity control substantially reduced, but did not eliminate, the raw-path incremental advantage.
+- I008A shows that the remaining D008 residual must not be summarized as a clean directional-allocation or sign effect; its clearest stable realized gain occurs on true neutral rows.
+
+This does not establish that sign information is absent, that neutral prediction is solved, or that any result is tradable or competition-valid. No D009 or further adaptive Discovery search is authorized. Human + Sol program-level review is required before the next research action.

@@ -136,21 +136,23 @@ def test_frozen_learner_probability_order_folds_counts_and_screen() -> None:
 def test_runner_is_protected_and_artifact_guard_is_preexecution_only() -> None:
     source = (PROJECT_ROOT / "discovery" / "run_d008_raw_path_beyond_availability_intensity.py").read_text(encoding="utf-8")
     assert "input_test" not in source and "output_test" not in source and "full-training" not in source
-    assert not any((d008_runner.RESULTS_DIR / name).exists() for name in d008_runner.ARTIFACT_NAMES)
+    # Artifact absence is a pre-execution lifecycle guard, not a permanent
+    # repository invariant: D008 is closed and its valid artifacts must persist.
+    # Exercise the runner guard against isolated synthetic directory states.
 
     class Candidate:
         def __init__(self, exists: bool): self._exists = exists
         def exists(self) -> bool: return self._exists
 
     class ResultsDirectoryFixture:
-        def __init__(self, exists: bool): self._exists = exists
-        def __truediv__(self, _name: str) -> Candidate: return Candidate(self._exists)
+        def __init__(self, existing_names: set[str]): self._existing_names = existing_names
+        def __truediv__(self, name: str) -> Candidate: return Candidate(name in self._existing_names)
 
     original = d008_runner.RESULTS_DIR
     try:
-        d008_runner.RESULTS_DIR = ResultsDirectoryFixture(False)
+        d008_runner.RESULTS_DIR = ResultsDirectoryFixture(set())
         d008_runner.assert_fresh_artifacts()
-        d008_runner.RESULTS_DIR = ResultsDirectoryFixture(True)
+        d008_runner.RESULTS_DIR = ResultsDirectoryFixture({d008_runner.ARTIFACT_NAMES[0]})
         try:
             d008_runner.assert_fresh_artifacts()
         except FileExistsError:

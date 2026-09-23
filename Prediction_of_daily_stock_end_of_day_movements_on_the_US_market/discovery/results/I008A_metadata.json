@@ -1,0 +1,47 @@
+{
+  "interpretation": "I008A frozen D008 probability-allocation diagnostic",
+  "scope": "physical Discovery days 0-352 x E_dev",
+  "model_reconstructed": "D008 C and P, three folds each",
+  "artifact_names": [
+    "I008A_reproduction_gate.csv",
+    "I008A_probability_movement.csv",
+    "I008A_realized_class_gain.csv",
+    "I008A_prediction_transitions.csv",
+    "I008A_metadata.json"
+  ],
+  "reproduction_gate": {
+    "log_loss_atol": 1e-08,
+    "rtol": 0.0,
+    "all_six_required": true
+  },
+  "gain_conservation": {
+    "atol": 1e-10,
+    "rtol": 0.0
+  },
+  "folds": [
+    {
+      "fold": 1,
+      "reconstructed_delta_log_loss": 0.0035748973537543804,
+      "gain_conservation_atol": 1e-10
+    },
+    {
+      "fold": 2,
+      "reconstructed_delta_log_loss": 0.0007623862799182035,
+      "gain_conservation_atol": 1e-10
+    },
+    {
+      "fold": 3,
+      "reconstructed_delta_log_loss": 0.0029766777333486427,
+      "gain_conservation_atol": 1e-10
+    }
+  ],
+  "python": "3.13.2",
+  "numpy": "2.2.3",
+  "pandas": "2.3.1",
+  "scikit_learn": "1.6.1",
+  "xgboost": "3.4.1",
+  "internal_confirmation_accessed": false,
+  "e_holdout_accessed": false,
+  "competition_test_accessed": false,
+  "runtime_seconds": 505.6745423999382
+}

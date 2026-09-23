@@ -823,3 +823,36 @@ information, variance, signal, or causal decomposition. Remaining competing
 explanations include residual nonlinear class-allocation/path-shape structure,
 native-NaN routing with duplicated availability, finite-sample/model-capacity
 effects, and unresolved interactions. No D009 is authorized.
+
+## 2026-09-20 — I008A Frozen D008 Probability-Allocation Diagnostic
+
+I008A completed as a descriptive interpretation of D008, not a new predictive
+experiment. The single authorized run reconstructed all six C/P models in
+`505.6745423999382` seconds. Every gate passed at `atol=1e-8`, `rtol=0`;
+classes, schemas, aligned IDs/order, fit-only preprocessing, and dtype-aware
+float32 probability checks passed. The row-level gain identity reproduced D008
+C-minus-P log-loss deltas within `4.70e-16`. D008 hashes were unchanged. No
+warning or error was emitted or persisted; the long-running execution interface
+did not expose a separate numeric exit code. The runtime maximum row-sum
+deviation was checked but not persisted separately.
+
+Signed Level-1 mean changes were small, whereas absolute row-level probability
+changes were larger. Mean `delta_q_plus` signs were positive, negative,
+positive across folds, so there is no supported simple global shift toward one
+directional class.
+
+The central Level-2 result was stable on true neutral rows: mean realized gain
+was positive in all folds (`+0.0095425683`, `+0.0097018878`, `+0.0098942572`)
+and mean directional mass change was negative (`-0.0039389919`,
+`-0.0050008077`, `-0.0031451687`). True `-1` gain was negative in all folds;
+true `+1` gain was small and sign-inconsistent. Therefore the provisional
+simple directional-allocation explanation for D008's residual was not
+supported consistently. This describes heterogeneous frozen-model probability
+movement and stable neutral-row realized gain, not sign alpha, a neutral
+signal, causality, or an economic mechanism.
+
+The `C=-1 -> P=+1` transition counts were `7806`, `8329`, and `8324`; they do
+not establish consistently improved `+1` probability quality. Full fixed
+transition tables persist in the I008A artifact. No new computation, model
+reconstruction, SHAP, interactions, protected access, or next Discovery
+experiment occurred.
