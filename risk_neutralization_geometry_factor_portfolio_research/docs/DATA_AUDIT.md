@@ -1022,6 +1022,91 @@ The documentation inspected contains no field definition or zero-value rule that
 
 **Consequence.** `MISSING_OBSERVATION` remains a distinct, non-imputed state. No policy is frozen for a present zero-volume row: it must not yet be automatically counted as valid, mapped to `DollarVolume = 0`, included in the median, or counted toward `n_valid`.
 
+### 16.9 Liquidity Representation Closure -- Zero-Volume Policy
+
+**Status:** completed 2026-09-30. This section supersedes the unresolved
+zero-volume-policy status in Sections 16.6--16.8 only. It does not alter the
+Size result in Section 17, choose a Size or Liquidity threshold, or construct
+`U_t0`, `X_char`, weights, `F_risk`, a projection, or a backtest.
+
+**Provider clarification.** Alpha Vantage Support supplied the following
+direct responses; their wording is preserved exactly:
+
+| Question to support | Exact provider answer |
+| --- | --- |
+| "If TIME_SERIES_DAILY_ADJUSTED returns a daily row with valid OHLC prices and volume = 0, can I always interpret 0 as zero recorded trading volume, and never as missing/unavailable volume data?" | "Yes, you can always interpret 0 as zero traded trading volume" |
+| "If volume data is missing/unavailable for a trading day, how does TIME_SERIES_DAILY_ADJUSTED represent it?" | "The volume field will be 'null'" |
+
+The clarification resolves the semantic ambiguity from Section 16.8. Its
+meaning is consistent with the prior raw observations of positive-price rows
+with `volume = 0` (OXM, QSOL, and CETH), but those raw examples alone did not
+establish that semantic. The provider statement defines its field behavior; it
+does not endorse the project's aggregation or history methodology.
+
+**Frozen zero-volume policy.** The following is the project's methodological
+decision derived from the provider clarification and existing audit:
+
+| Returned daily-row state | Classification | Dollar-volume treatment | `n_valid` |
+| --- | --- | --- | --- |
+| Valid raw price fields and `volume = 0` | `VALID_ZERO_VOLUME` | `RawClose * 0 = 0` | Counts as valid. |
+| `volume = null` | `MISSING_VOLUME` | Missing; never converted to zero. | Does not count. |
+| Expected XNYS session with no returned row | `MISSING_OBSERVATION` | Missing; never imputed. | Does not count. |
+| Present row with another invalid required input | `INVALID_OBSERVATION` | Missing for this representation. | Does not count. |
+
+Thus `volume = 0 != volume = null`: a valid observed zero enters the median
+as zero dollar activity, whereas null and absent observations remain missing
+and reduce `n_valid`.
+
+**Frozen history policy.** For the 60 eligible XNYS sessions strictly before
+`t0 = 2026-09-25 13:30 UTC`:
+
+| Status | Exact rule | Representation |
+| --- | --- | --- |
+| `FULL_HISTORY` | `n_valid = 60` | Median of 60 valid observations. |
+| `PARTIAL_HISTORY` | `20 <= n_valid < 60` | Median of valid observations, retained with `n_valid` and status. |
+| `UNKNOWN` | `n_valid < 20` | No Liquidity representation. |
+
+`PARTIAL_HISTORY` remains lower-evidence than `FULL_HISTORY`; the
+20-observation minimum is unchanged. The 13 earlier partial cases had leading
+history gaps and continuous recent suffixes, which remains the empirical basis
+for retaining that labelled state.
+
+**Frozen Liquidity representation.** The economic object is recent typical
+dollar trading activity before the decision time for coarse investibility, not
+depth, spread, impact, execution cost, or intraday liquidity. For each valid
+observation in the 60-session window:
+
+\[
+\mathrm{DollarVolume}_{i,s}=\mathrm{RawClose}_{i,s}\times\mathrm{Volume}_{i,s}.
+\]
+
+For `FULL_HISTORY` or `PARTIAL_HISTORY`:
+
+\[
+\mathrm{MedianDollarVolume}_{60\,\mathrm{Sessions},i,t_0}
+=\operatorname{median}\{\mathrm{DollarVolume}_{i,s}:s\in W_{60}(t_0),\
+\;\text{observation valid}\}.
+\]
+
+The prior stress evidence still applies: median suppresses isolated spikes,
+the 60-session measure intentionally reacts slowly to sustained changes, and
+partial observations retain their explicit lower history depth.
+
+**Remaining limitations.** This is coarse investibility liquidity, not an
+execution model; the median intentionally suppresses isolated spikes; the
+60-session median intentionally lags recent regime changes; and
+`PARTIAL_HISTORY` is not equivalent to `FULL_HISTORY`. The clarification does
+not prove security eligibility, tradability, or execution capacity. No
+Liquidity threshold, percentile/rank cutoff, or universe size is selected.
+
+**Closure assessment:** zero semantics are resolved; valid zeros can enter as
+`DollarVolume = 0`; `null` remains missing; the 60-session median remains
+coherent for this stated object; and no blocker remains for the representation
+itself. Threshold selection, candidate eligibility, and Size coverage remain
+separate Stage 2 issues.
+
+**LIQUIDITY REPRESENTATION — FROZEN**
+
 ## 17. Contemporary Size Measurement Scale-Up and Cross-Section Audit
 
 **Status:** completed 2026-09-30 for the frozen contemporary point only. This is a measurement-coverage audit, not a Size-gate decision. It does not construct \(U_{t_0}\) and does not modify the frozen definition:
