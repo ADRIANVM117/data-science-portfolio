@@ -1,2 +1,3 @@
 .env
 data/raw/
+tests/__pycache__/
