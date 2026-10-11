@@ -1,0 +1,18 @@
+{
+  "candidate_records": 156,
+  "catalog_sha256": "2829b95703a44d2052764a8e8a3dc4fdef661387f8372d06356a6094227205b1",
+  "completed": 156,
+  "connect_timeout_seconds": 8,
+  "failed": 0,
+  "finished_at_utc": "2026-10-11T04:27:44.992532+00:00",
+  "max_attempts": 3,
+  "max_operation_seconds": 45,
+  "minimum_interval_seconds": 12.0,
+  "read_timeout_seconds": 15,
+  "report": "provider_symbol_evidence.jsonl",
+  "requests_serial": true,
+  "resumed_at_utc": "2026-10-11T04:14:18.467177+00:00",
+  "started_at_utc": "2026-10-11T03:38:15.365656+00:00",
+  "status": "COMPLETED",
+  "updated_at_utc": "2026-10-11T04:27:44.989757+00:00"
+}

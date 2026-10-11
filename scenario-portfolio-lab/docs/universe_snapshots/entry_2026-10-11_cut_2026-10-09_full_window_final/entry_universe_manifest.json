@@ -1,0 +1,2228 @@
+{
+  "counts": {
+    "equities": 100,
+    "etfs": 38,
+    "included": 138,
+    "out_of_scope_pending": 50,
+    "structural_exclusions": 14
+  },
+  "decision": "Approved entry universe; not an eligible universe or economic portfolio selection.",
+  "entries": [
+    {
+      "asset_class": "equity",
+      "bytes": "850903",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0001",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\AA.json",
+      "provider_symbol": "AA",
+      "sha256": "f788f8a55741b883e55ac09a1054772b55174f88528f6942d7fb7f391225844c",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "AA"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "1773092",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0002",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\AAL.json",
+      "provider_symbol": "AAL",
+      "sha256": "91b99a809522fc1c006c1dd3de8db426a624c527aaa6ee5454db7a6a0ea6b7d5",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "AAL"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "2323295",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0003",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\AAPL.json",
+      "provider_symbol": "AAPL",
+      "sha256": "4a2923a203245d360fd176746836c894e76d69ca63676c894d0a684256f0f7f8",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "AAPL"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "1181162",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0004",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\ABBV.json",
+      "provider_symbol": "ABBV",
+      "sha256": "ac138560dd0c1378171173d24725222020f460ac3e5fd44c651814e21b38c9c1",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "ABBV"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "486016",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0005",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\ABNB.json",
+      "provider_symbol": "ABNB",
+      "sha256": "fcd44858fc198378369c4acb6b71e6cee6a551432e3b161594ca75ee0290cb71",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "ABNB"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "472695",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0008",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\AFRM.json",
+      "provider_symbol": "AFRM",
+      "sha256": "595e46560bd5093436e85290185184fae1b235aa8c3a74912f0a4003aefe4c99",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "AFRM"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "1567842",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0009",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\AGNC.json",
+      "provider_symbol": "AGNC",
+      "sha256": "8d898de8151586befd8041845d4fef531e0c86f33090a7bcdf3b24a129f5f2c4",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "AGNC"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "2308589",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0013",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\AMAT.json",
+      "provider_symbol": "AMAT",
+      "sha256": "1fba63292903d075fb5a48a1fbc8578dbb025c32ab64de26ffb0b18b57a8367f",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "AMAT"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "2210194",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0014",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\AMD.json",
+      "provider_symbol": "AMD",
+      "sha256": "e064b0fdbad1a37fc5fe7c57eee8ead8c0a8b12ff110a413742b33869f760ba0",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "AMD"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "2188864",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0015",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\AMX.json",
+      "provider_symbol": "AMX",
+      "sha256": "692ba2b43ac60cf7e3a67cbc3ffb00ed1e4698c25077dd8781136751aeabb1fa",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "AMX"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "2259586",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0016",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\AMZN.json",
+      "provider_symbol": "AMZN",
+      "sha256": "299b5f5e540cc198c8485d257bdb2b5107997d6a13d3fbb0cd188d769c39205e",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "AMZN"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "1478449",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0018",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\AVGO.json",
+      "provider_symbol": "AVGO",
+      "sha256": "cc9187cf1ae9cfba98108b5932d0dbe2ebf8f7734058c8f6369e4cc1c4e9f1cc",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "AVGO"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "2305512",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0019",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\AXP.json",
+      "provider_symbol": "AXP",
+      "sha256": "086af4c2afccb18e80753acc81c53c11b8893ff7fd0d0f4f9e3edc404e16cc2c",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "AXP"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "2291762",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0020",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\BA.json",
+      "provider_symbol": "BA",
+      "sha256": "a1e50582b1523c4fbc6654f5a4d4a2c4647c0225b3f6bb7a26d77f6600bad644",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "BA"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "1037663",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0021",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\BABA.json",
+      "provider_symbol": "BABA",
+      "sha256": "796bfc4e83ef7075062a4fd1b786568e0c0f13d6a03d71ff482f6b32bbb17238",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "BABA"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "2303028",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0022",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\BAC.json",
+      "provider_symbol": "BAC",
+      "sha256": "a60c5da2515367d6aba720f264ebb45110678c247820918928c7cfc3fb00c519",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "BAC"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "2300212",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0025",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\BMY.json",
+      "provider_symbol": "BMY",
+      "sha256": "0cc3059cdc3684774ea07f9916a4b70c6e555152fb943eaf766fe773ceedbea4",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "BMY"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "2302139",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0028",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\C.json",
+      "provider_symbol": "C",
+      "sha256": "82d32524a5bd4ba11e2607ad7576089d1c06bdab1a8f7bbaf9f3516dba49b4aa",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "C"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "2307055",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0029",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\CAT.json",
+      "provider_symbol": "CAT",
+      "sha256": "0fb6e6c97e0dd21fcbf2cd0a7e974b9116c4a18bfb973bf57136d1c1b64fe599",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "CAT"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "2298679",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0030",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\CCL.json",
+      "provider_symbol": "CCL",
+      "sha256": "5fef3dafc6a8b73a72ac06826e821c1d90e582a2aac5ef47e8d2a6055177e3fe",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "CCL"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "2269701",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0033",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\CLF.json",
+      "provider_symbol": "CLF",
+      "sha256": "1b73df64cebcc9963932e36b3ca16910b93d4d96e734b325f34b70e843f6cd9e",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "CLF"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "2310974",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0034",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\COST.json",
+      "provider_symbol": "COST",
+      "sha256": "2122ca5c4bf2650ec74c42a39e34872e6170a8888b3b07234f66a97c09d2e4e7",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "COST"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "1913968",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0036",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\CRM.json",
+      "provider_symbol": "CRM",
+      "sha256": "16134f5562b4565cdf06dc298be4625083b15c728ec415bb73bdf7723cdcb232",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "CRM"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "2307001",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0037",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\CSCO.json",
+      "provider_symbol": "CSCO",
+      "sha256": "03b6f5a2a233b806a29fae5acd38626449fbc871df758a0b46d9e986cb229a4e",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "CSCO"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "2298745",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0039",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\CVS.json",
+      "provider_symbol": "CVS",
+      "sha256": "db3176f4e29285e838b8c9ce9476ca0bc8d32ca0eaee6b7ba3e62a940673fca2",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "CVS"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "2311031",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0040",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\CVX.json",
+      "provider_symbol": "CVX",
+      "sha256": "43e141cf8685ddf7e692806b64cf3b4953260ca354fb83c4aacc6af05039662f",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "CVX"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "1657135",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0041",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\DAL.json",
+      "provider_symbol": "DAL",
+      "sha256": "c9d06c7cbc7510a3e663afbb1f5169bf55e1c4788b91af1f6205806ed3d226f9",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "DAL"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "2308088",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0042",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\DIS.json",
+      "provider_symbol": "DIS",
+      "sha256": "3910044f6dec3cf829e05496019163cff59bd450b9ba3c594a01c5137eba4eea",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "DIS"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "2297168",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0043",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\DVN.json",
+      "provider_symbol": "DVN",
+      "sha256": "b550c9019eb416f4351d69acd724bde8343428f357041403bcfb44c84cadb77e",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "DVN"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "946810",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0045",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\ETSY.json",
+      "provider_symbol": "ETSY",
+      "sha256": "beb7d597f8b46c1a47561256ff427046a72a99a31cf6e007d164dcb0b153323f",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "ETSY"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "2293713",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0046",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\F.json",
+      "provider_symbol": "F",
+      "sha256": "845c2c7038a57eaa8df6f87f9417a285e98064f867aac11b276055fbb4e44397",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "F"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "1199121",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0047",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\FANG.json",
+      "provider_symbol": "FANG",
+      "sha256": "431521f11a7719d36334d3448e09645514c5a9fde288ae36c8e5cb4039024fdc",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "FANG"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "2300073",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0048",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\FCX.json",
+      "provider_symbol": "FCX",
+      "sha256": "7b142d3ffb2169c996eca7175e423785ddae4d1df05c304d5fe0540733df7ee0",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "FCX"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "2311347",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0049",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\FDX.json",
+      "provider_symbol": "FDX",
+      "sha256": "3ba1b8689568207701ea21559745a8cef107f681796e09b0489ae4ab90318e3d",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "FDX"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "1645019",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0053",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\FSLR.json",
+      "provider_symbol": "FSLR",
+      "sha256": "70e2f1e614006b6ed482008664d41cbaf78d645111b0708d33e4a9e693570af2",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "FSLR"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "730480",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0054",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\FUBO.json",
+      "provider_symbol": "FUBO",
+      "sha256": "72dd7b8c6e165ff18918b3eb5d5f37952b594f180426f1952315f9d905d91a36",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "FUBO"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "2305069",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0059",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\GE.json",
+      "provider_symbol": "GE",
+      "sha256": "9143c7fec56adca7782fdf5a320acfc59af1ed7342ab4093be201524dec48b7f",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "GE"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "1358165",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0063",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\GM.json",
+      "provider_symbol": "GM",
+      "sha256": "986a725c25d6a8fe1418d8c480c974fa4245fc746ef2e02e6950832c055f16b0",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "GM"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "2078801",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0064",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\GME.json",
+      "provider_symbol": "GME",
+      "sha256": "0d126371e346fd5d90d13cf079b9c82eb7e82d92ecbdd5e8d08e49a85fd70ec9",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "GME"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "2301576",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0066",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\B.json",
+      "provider_symbol": "B",
+      "sha256": "adeb8a6ba3ba28f5d63699649ebca4858e8c7e493135cb21263ce399ae545a5d",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "B"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "1917803",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0067",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\GOOGL.json",
+      "provider_symbol": "GOOGL",
+      "sha256": "172e9b6ecf7d589cceb001c03e5b5715f17f8d70e1c76dd08fad8a69d2653319",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "GOOGL"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "2311351",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0069",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\HD.json",
+      "provider_symbol": "HD",
+      "sha256": "fc8ba087a315819e91ee090482db1844f97af8848fdf7ab32d2f607347cca985",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "HD"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "2300493",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0070",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\INTC.json",
+      "provider_symbol": "INTC",
+      "sha256": "6cd646a7595ef06345c99b109a39dc3ccc6bf61f02fc683f5720c0ffaa6fa979",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "INTC"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "2310236",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0071",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\JNJ.json",
+      "provider_symbol": "JNJ",
+      "sha256": "df96a2fd8056effc549b289670c25685eb15130607f463d27fa3e31ae29b6cda",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "JNJ"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "2310678",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0072",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\JPM.json",
+      "provider_symbol": "JPM",
+      "sha256": "a4dfa9cf2689a13d8b032ab9f00623c918565fa5753fbeb1b39e435ef73a49cc",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "JPM"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "2301684",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0074",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\KO.json",
+      "provider_symbol": "KO",
+      "sha256": "a288d767e11bacef56233654147c3ac2c480c9862736f7991c0cb5e359156339",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "KO"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "2289552",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0075",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\KOF.json",
+      "provider_symbol": "KOF",
+      "sha256": "96e03a34dd1fd25697272152622c69f243ab95074af0019ac102eaa2f03bcb2a",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "KOF"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "501769",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0078",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\LCID.json",
+      "provider_symbol": "LCID",
+      "sha256": "83566a3393f463672d93a97a94050f1917b0f69e935fc28c00a5fd6f0de66197",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "LCID"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "2305089",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0080",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\LLY.json",
+      "provider_symbol": "LLY",
+      "sha256": "19f6e846ce0e77f0cd601ff262bfad5159531437ab6c6555a7486d5a90de992c",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "LLY"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "2296507",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0081",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\LUV.json",
+      "provider_symbol": "LUV",
+      "sha256": "d5790a03a0d090afb516bb43d935f71e7903bd6a6d4d828115738865deab91cd",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "LUV"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "1860633",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0082",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\LVS.json",
+      "provider_symbol": "LVS",
+      "sha256": "e49b2ca7282a8935ae79edcd4cfc4a2d3f140b9057cca740a262d76233781956",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "LVS"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "1754033",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0083",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\MA.json",
+      "provider_symbol": "MA",
+      "sha256": "a7eb77c23619eeadc6239fc384fd0cc83edaf55e1b554337733cb81142f30d2a",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "MA"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "1179037",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0084",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\MARA.json",
+      "provider_symbol": "MARA",
+      "sha256": "7beed1de190c7baa7046a45d329350c02c6cc620ee23128f3a5b40b1807426c7",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "MARA"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "2308849",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0085",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\MCD.json",
+      "provider_symbol": "MCD",
+      "sha256": "e3e2ea87eae0a876c29dfa6f65da0c0bf9bde5d30105edc5b58881401f95876c",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "MCD"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "1625508",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0087",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\MELI.json",
+      "provider_symbol": "MELI",
+      "sha256": "e996ca4faaa6b4a1e6132ceaac5115aa79c8f9c7b49bf07d6ef8fcf6151aa12a",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "MELI"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "1242217",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0088",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\META.json",
+      "provider_symbol": "META",
+      "sha256": "5d24ce7b2ffc6aa16ce11938dc8635de3839df0ce81b51b37ac10376e58db874",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "META"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "2303388",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0090",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\MRK.json",
+      "provider_symbol": "MRK",
+      "sha256": "4f671b7e2f1570d6eedc84d7890c351c8e495749023fb7a726cb679b83eb5384",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "MRK"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "648852",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0091",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\MRNA.json",
+      "provider_symbol": "MRNA",
+      "sha256": "4d17a336bd8fc352c414c77f87a1887f3bc33e4d43ad47a7cc2093f650e36a8e",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "MRNA"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "2314181",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0093",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\MSFT.json",
+      "provider_symbol": "MSFT",
+      "sha256": "b845f945229d38a8217ded5610d5177d4a57220a1cda1b8374952f4fb0fc90b6",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "MSFT"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "2298652",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0094",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\MU.json",
+      "provider_symbol": "MU",
+      "sha256": "4c788516bbc2625e283639033342711eeec0f93f4dfe1d2c17329292b97eadb3",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "MU"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "1129331",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0095",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\NCLH.json",
+      "provider_symbol": "NCLH",
+      "sha256": "a8599c29aef077fd203d0d7e444aa86bf708ac0c835d098dc5186569aa3ca50b",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "NCLH"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "2069560",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0096",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\NFLX.json",
+      "provider_symbol": "NFLX",
+      "sha256": "136a9e50ea681aeeee6932574259d32bdbb3ffa38c127b6dad62ddcc73e82b8e",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "NFLX"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "2300765",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0097",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\NKE.json",
+      "provider_symbol": "NKE",
+      "sha256": "c585311e4684c6a280464bccf690e19ecddbf40e6aeb14c52df18cd840529d7e",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "NKE"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "395450",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0098",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\NU.json",
+      "provider_symbol": "NU",
+      "sha256": "df01de1e88f5c8ff78e43068a8f558a33c1e3ffe56b2440f741e075210fc061b",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "NU"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "2210558",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0099",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\NVAX.json",
+      "provider_symbol": "NVAX",
+      "sha256": "def0ac75d091192a27e805283dcf4def9baa110849bad54fea1c33bf1dc66744",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "NVAX"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "2314874",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0100",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\NVDA.json",
+      "provider_symbol": "NVDA",
+      "sha256": "c32bc5f4378f0e7f461c8e2033fcbc1815c9537c8566d1de6431014b11716dbf",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "NVDA"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "2306828",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0103",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\ORCL.json",
+      "provider_symbol": "ORCL",
+      "sha256": "e164f54c11592d56a0b3b912ead5bf648a956cb1ec165f3ea099380b664efe57",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "ORCL"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "2298398",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0104",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\OXY.json",
+      "provider_symbol": "OXY",
+      "sha256": "7f9ec80d35fb34a63484ba92a1d907263dad269bbc3486887148e3eefdb039e6",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "OXY"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "2307946",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0107",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\PEP.json",
+      "provider_symbol": "PEP",
+      "sha256": "ba42d3deb3d4e657a22b80e9d9924ca2fa973aa38877f9ec1d92efccad5374f7",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "PEP"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "2304304",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0108",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\PFE.json",
+      "provider_symbol": "PFE",
+      "sha256": "49c584f4e9b6f65a45b184bb9eede9495d7019d4a6ea8f303552a16590ae0139",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "PFE"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "2306182",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0109",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\PG.json",
+      "provider_symbol": "PG",
+      "sha256": "e6494f535274e860ca91071f754a6b6df1727a03d729f3bfe67514ba3feb017a",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "PG"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "615871",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0111",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\PINS.json",
+      "provider_symbol": "PINS",
+      "sha256": "a7c44eca00344608d68390133903b1b39b2bededc625b04fc5ba0a734d34703b",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "PINS"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "497484",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0112",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\PLTR.json",
+      "provider_symbol": "PLTR",
+      "sha256": "bc660f9e9d686b49020797d44b105d9534b89dfc4c4ddd1a5bb4b0c5b939cb9f",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "PLTR"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "962203",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0113",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\PYPL.json",
+      "provider_symbol": "PYPL",
+      "sha256": "69d8969e6cecbeabfabe7f606de9a94df85e3c7065bca235d5c23e68e46af611",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "PYPL"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "2308258",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0115",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\QCOM.json",
+      "provider_symbol": "QCOM",
+      "sha256": "23264b8d9a2959effb1774df907e447ab32fbd7c820faa8e2c365e731c16cf11",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "QCOM"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "2293930",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0116",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\R.json",
+      "provider_symbol": "R",
+      "sha256": "af7146dc6fd12d7f127a36aba8b1f7c8e53fc67db8c54d0c752fed843f7000ca",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "R"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "2300715",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0117",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\RCL.json",
+      "provider_symbol": "RCL",
+      "sha256": "4f2b902f6e6733dab57270601321c4f69f9e5dcbf03212811ecc31d01a8e5358",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "RCL"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "1969819",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0118",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\RIOT.json",
+      "provider_symbol": "RIOT",
+      "sha256": "09f815e97fb1eb88b1630841c8f12fd085e203dff6610c366571c78cba4161c6",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "RIOT"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "404881",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0119",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\RIVN.json",
+      "provider_symbol": "RIVN",
+      "sha256": "ec11039da748b52fe9caa290265cc5e7468ec1acb65414e8a79c32cc0656210c",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "RIVN"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "2300003",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0120",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\SBUX.json",
+      "provider_symbol": "SBUX",
+      "sha256": "c5056451741802a500eb6d94ebc7cccc0a4fe03dac0563adf6da7bbab9d26a7d",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "SBUX"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "950820",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0121",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\SHOP.json",
+      "provider_symbol": "SHOP",
+      "sha256": "c33135e1076dccbad39abbdee7bf2b70da30c4bce94df00f285d5fe5f964cfb2",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "SHOP"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "479668",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0123",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\SOFI.json",
+      "provider_symbol": "SOFI",
+      "sha256": "74de33bb38dd30dd2a98863c5617332a864167668bae084b98b74c06239dd5c4",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "SOFI"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "745059",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0124",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\SPCE.json",
+      "provider_symbol": "SPCE",
+      "sha256": "0349d7b130ce86b90531903784a31a5ea04bc16c294f1ab63c70f76741e83913",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "SPCE"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "2302876",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0125",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\T.json",
+      "provider_symbol": "T",
+      "sha256": "94bbcc345238cc3ceaa053e056ab595098975d82237c07f98c90d6f45d751da3",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "T"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "2303303",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0127",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\TGT.json",
+      "provider_symbol": "TGT",
+      "sha256": "03ffdc8cb5bbac4a26a96cb9614173ca93273ef1803de97cd3afe876c4241a6f",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "TGT"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "2307741",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0129",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\TMO.json",
+      "provider_symbol": "TMO",
+      "sha256": "50c1ebacd4f1c67c42dc01e44e003df593d71f1f6b79e774f9e10468968ff61e",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "TMO"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "1384475",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0130",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\TSLA.json",
+      "provider_symbol": "TSLA",
+      "sha256": "1fd4ef087fa7bf3446285e2ec8025b27329a877f2c5eff6fcf21c3ebdf8d2146",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "TSLA"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "2298293",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0131",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\TSM.json",
+      "provider_symbol": "TSM",
+      "sha256": "9b2d8b1391037cb1735e8bbc7d6bfa3f4a41c0640012759a234e751d3ab56531",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "TSM"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "1758712",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0132",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\TX.json",
+      "provider_symbol": "TX",
+      "sha256": "732e411196d3e79fdc23504e330f7e9f98ab627fb4ec15a566e30a546eb19093",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "TX"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "1706501",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0133",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\UAL.json",
+      "provider_symbol": "UAL",
+      "sha256": "a07db8f1236e4a76f0a76153c5aa1da6c8b61f4bbbca096af22f962eed788f03",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "UAL"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "611576",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0134",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\UBER.json",
+      "provider_symbol": "UBER",
+      "sha256": "898fbaa697a301be6e76210ff8f4ee23ba29a9f62354e7f786179bc81efb8150",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "UBER"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "2308999",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0135",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\UNH.json",
+      "provider_symbol": "UNH",
+      "sha256": "f998d549568fca4c054c3da1de69c49997d5ff9c0c0ba4248922483183d8621b",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "UNH"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "479241",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0136",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\UPST.json",
+      "provider_symbol": "UPST",
+      "sha256": "1f27b2ac7b5358efdc3f8a1de6be8973e9597090c0e3a2f3b92c1868a8fd917d",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "UPST"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "1596657",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0137",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\V.json",
+      "provider_symbol": "V",
+      "sha256": "f70371b09496b4eff184d091f8ae58c71837f8f751225710fa6e61d66cd639c4",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "V"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "2303150",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0140",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\VZ.json",
+      "provider_symbol": "VZ",
+      "sha256": "051258901e911fd8072c824d457e0f49c6cfeb6910f6a0e47ad531cb3731fc42",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "VZ"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "2302282",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0142",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\WFC.json",
+      "provider_symbol": "WFC",
+      "sha256": "54c7cfcda59c8a5026ab18cf3e5e44b43b1b16043d171eebaec3f5bec9f3da6d",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "WFC"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "2307084",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0143",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\WMT.json",
+      "provider_symbol": "WMT",
+      "sha256": "05a04a1eb69397f68cf1d04f553a87b7a8fe2a0829e0f3f8cc988a1ac74ed24b",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "WMT"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "2306313",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0144",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\XOM.json",
+      "provider_symbol": "XOM",
+      "sha256": "ac4817b9fe36bc0631af82b96323cff0530b027c36025b52448930f6d87867ed",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "XOM"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "897507",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0145",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\XYZ.json",
+      "provider_symbol": "XYZ",
+      "sha256": "35446427c6f953a84972fd9767f342f67e1ccdb3d763ee8f1d691ed1a179be40",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "XYZ"
+    },
+    {
+      "asset_class": "equity",
+      "bytes": "618132",
+      "evidence": {
+        "etf_structure": "",
+        "identity": "https://www.sec.gov/files/company_tickers_exchange.json",
+        "listing": "https://www.sec.gov/files/company_tickers_exchange.json"
+      },
+      "instrument_id": "U0146",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\raw\\ZM.json",
+      "provider_symbol": "ZM",
+      "sha256": "b1d0652dba7731dd5b4f04c0d95ac5d7c1bd48138dca48556545cdc2699f9395",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_equities_2026-10-11\\capture_manifest.json",
+      "symbol": "ZM"
+    },
+    {
+      "asset_class": "etf",
+      "bytes": "1544378",
+      "evidence": {
+        "etf_structure": "https://www.ishares.com/uk/professionals/en/products/239601/ishares-msci-all-country-asia-ex-japan-etf",
+        "identity": "",
+        "listing": "https://www.ishares.com/uk/professionals/en/products/239601/ishares-msci-all-country-asia-ex-japan-etf"
+      },
+      "instrument_id": "U0147",
+      "listing_currency": "USD",
+      "path": "data\\raw\\cut_2026-10-09\\raw\\AAXJ.json",
+      "provider_symbol": "AAXJ",
+      "sha256": "131b93e3bfa9e76b4df46dbce786801979f8b4cee3897c132afbc9a60d7a6db7",
+      "source_manifest": "data\\raw\\cut_2026-10-09\\capture_manifest.json",
+      "symbol": "AAXJ"
+    },
+    {
+      "asset_class": "etf",
+      "bytes": "1582886",
+      "evidence": {
+        "etf_structure": "https://www.ishares.com/us/products/239600/ishares-msci-acwi-etf",
+        "identity": "https://www.ishares.com/us/products/239600/ishares-msci-acwi-etf",
+        "listing": "https://www.ishares.com/us/products/239600/ishares-msci-acwi-etf"
+      },
+      "instrument_id": "U0148",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_etf_primary_2026-10-11\\raw\\ACWI.json",
+      "provider_symbol": "ACWI",
+      "sha256": "23d0f0d5c6d08f738aabfc43479eb1e94571dcff8b63f6be70df156bd6c44455",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_etf_primary_2026-10-11\\capture_manifest.json",
+      "symbol": "ACWI"
+    },
+    {
+      "asset_class": "etf",
+      "bytes": "1647698",
+      "evidence": {
+        "etf_structure": "https://www.ssga.com/us/en/intermediary/etfs/spdr-bloomberg-1-3-month-t-bill-etf-bil",
+        "identity": "https://www.ssga.com/us/en/intermediary/etfs/spdr-bloomberg-1-3-month-t-bill-etf-bil",
+        "listing": "https://www.ssga.com/us/en/intermediary/etfs/spdr-bloomberg-1-3-month-t-bill-etf-bil"
+      },
+      "instrument_id": "U0150",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_etf_official_2026-10-11\\raw\\BIL.json",
+      "provider_symbol": "BIL",
+      "sha256": "52d3f812fb0636279ac0c11ddd03871268bb7c287fe8e218a7f63ae453deedbd",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_etf_official_2026-10-11\\capture_manifest.json",
+      "symbol": "BIL"
+    },
+    {
+      "asset_class": "etf",
+      "bytes": "857926",
+      "evidence": {
+        "etf_structure": "https://www.globalxetfs.com/funds/botz",
+        "identity": "https://www.globalxetfs.com/funds/botz",
+        "listing": "https://www.globalxetfs.com/funds/botz"
+      },
+      "instrument_id": "U0151",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_etf_official_2026-10-11\\raw\\BOTZ.json",
+      "provider_symbol": "BOTZ",
+      "sha256": "8b995d1a88a2a81c5a734c13da5a1c0a5f0120bdd9382d210251c0c0a6bd6cb5",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_etf_official_2026-10-11\\capture_manifest.json",
+      "symbol": "BOTZ"
+    },
+    {
+      "asset_class": "etf",
+      "bytes": "2319669",
+      "evidence": {
+        "etf_structure": "https://www.ssga.com/us/en/individual/etfs/state-street-spdr-dow-jones-industrial-average-etf-trust-dia",
+        "identity": "",
+        "listing": "https://www.ssga.com/us/en/individual/etfs/state-street-spdr-dow-jones-industrial-average-etf-trust-dia"
+      },
+      "instrument_id": "U0152",
+      "listing_currency": "USD",
+      "path": "data\\raw\\cut_2026-10-09\\raw\\DIA.json",
+      "provider_symbol": "DIA",
+      "sha256": "1eea28634175e495f4ed006ca4a4131636c970a95ad48b67361a677f9e563fb4",
+      "source_manifest": "data\\raw\\cut_2026-10-09\\capture_manifest.json",
+      "symbol": "DIA"
+    },
+    {
+      "asset_class": "etf",
+      "bytes": "2012850",
+      "evidence": {
+        "etf_structure": "https://www.ishares.com/us/products/239637/ishares-msci-emerging-markets-etf",
+        "identity": "https://www.ishares.com/us/products/239637/ishares-msci-emerging-markets-etf",
+        "listing": "https://www.ishares.com/us/products/239637/ishares-msci-emerging-markets-etf"
+      },
+      "instrument_id": "U0154",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_etf_official_2026-10-11\\raw\\EEM.json",
+      "provider_symbol": "EEM",
+      "sha256": "4960cfaeb45b52ee58412a1747ed5878e6b7b890df5e67e68cdfbd75de6660a7",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_etf_official_2026-10-11\\capture_manifest.json",
+      "symbol": "EEM"
+    },
+    {
+      "asset_class": "etf",
+      "bytes": "2239492",
+      "evidence": {
+        "etf_structure": "https://www.ishares.com/us/products/239612/ishares-msci-brazil-etf",
+        "identity": "https://www.ishares.com/us/products/239612/ishares-msci-brazil-etf",
+        "listing": "https://www.ishares.com/us/products/239612/ishares-msci-brazil-etf"
+      },
+      "instrument_id": "U0155",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_etf_official_2026-10-11\\raw\\EWZ.json",
+      "provider_symbol": "EWZ",
+      "sha256": "3437954f40353ee382f128df7f32439f3073b42bd0e200a763307162760e5713",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_etf_official_2026-10-11\\capture_manifest.json",
+      "symbol": "EWZ"
+    },
+    {
+      "asset_class": "etf",
+      "bytes": "1742578",
+      "evidence": {
+        "etf_structure": "https://www.vaneck.com/us/en/investments/gold-miners-etf-gdx/",
+        "identity": "https://www.vaneck.com/us/en/investments/gold-miners-etf-gdx/",
+        "listing": "https://www.vaneck.com/us/en/investments/gold-miners-etf-gdx/"
+      },
+      "instrument_id": "U0158",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_etf_official_2026-10-11\\raw\\GDX.json",
+      "provider_symbol": "GDX",
+      "sha256": "937d1e705a14710431f3192472cd24725bc9c19e90cb4aca8a32c115117b262a",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_etf_official_2026-10-11\\capture_manifest.json",
+      "symbol": "GDX"
+    },
+    {
+      "asset_class": "etf",
+      "bytes": "1823495",
+      "evidence": {
+        "etf_structure": "https://www.ssga.com/us/en/institutional/etfs/spdr-gold-shares-gld",
+        "identity": "",
+        "listing": "https://www.ssga.com/us/en/institutional/etfs/spdr-gold-shares-gld"
+      },
+      "instrument_id": "U0159",
+      "listing_currency": "USD",
+      "path": "data\\raw\\cut_2026-10-09\\raw\\GLD.json",
+      "provider_symbol": "GLD",
+      "sha256": "d97959033bc6e59cbc111d293bee4b04844f451a18550608707e91112d5b0f01",
+      "source_manifest": "data\\raw\\cut_2026-10-09\\capture_manifest.json",
+      "symbol": "GLD"
+    },
+    {
+      "asset_class": "etf",
+      "bytes": "1791406",
+      "evidence": {
+        "etf_structure": "https://www.ishares.com/us/products/239561/ishares-gold-trust",
+        "identity": "https://www.ishares.com/us/products/239561/ishares-gold-trust",
+        "listing": "https://www.ishares.com/us/products/239561/ishares-gold-trust"
+      },
+      "instrument_id": "U0160",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_etf_primary_2026-10-11\\raw\\IAU.json",
+      "provider_symbol": "IAU",
+      "sha256": "735283f4a93dcec16e580f575f04cc87eb47531960e10a6e6ed430bc30dd9abf",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_etf_primary_2026-10-11\\capture_manifest.json",
+      "symbol": "IAU"
+    },
+    {
+      "asset_class": "etf",
+      "bytes": "1551786",
+      "evidence": {
+        "etf_structure": "https://www.ishares.com/us/products/239738/ishares-global-clean-energy-etf",
+        "identity": "https://www.ishares.com/us/products/239738/ishares-global-clean-energy-etf",
+        "listing": "https://www.ishares.com/us/products/239738/ishares-global-clean-energy-etf"
+      },
+      "instrument_id": "U0161",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_etf_official_2026-10-11\\raw\\ICLN.json",
+      "provider_symbol": "ICLN",
+      "sha256": "2a6fa6fb9c67c2c10c63a1a0ced8afc92f937b0ada693e2e2f553a8d0e901d1b",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_etf_official_2026-10-11\\capture_manifest.json",
+      "symbol": "ICLN"
+    },
+    {
+      "asset_class": "etf",
+      "bytes": "1246516",
+      "evidence": {
+        "etf_structure": "https://www.ishares.com/us/products/239659/ishares-msci-india-etf",
+        "identity": "https://www.ishares.com/us/products/239659/ishares-msci-india-etf",
+        "listing": "https://www.ishares.com/us/products/239659/ishares-msci-india-etf"
+      },
+      "instrument_id": "U0162",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_etf_official_2026-10-11\\raw\\INDA.json",
+      "provider_symbol": "INDA",
+      "sha256": "fbaabcafa96b3e0002de24ee0e784df54c38f437ed5d98605971a49f1ca36519",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_etf_official_2026-10-11\\capture_manifest.json",
+      "symbol": "INDA"
+    },
+    {
+      "asset_class": "etf",
+      "bytes": "2271586",
+      "evidence": {
+        "etf_structure": "https://www.ishares.com/us/products/239726/ishares-core-sp-500-etf",
+        "identity": "https://www.ishares.com/us/products/239726/ishares-core-sp-500-etf",
+        "listing": "https://www.ishares.com/us/products/239726/ishares-core-sp-500-etf"
+      },
+      "instrument_id": "U0163",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_etf_official_2026-10-11\\raw\\IVV.json",
+      "provider_symbol": "IVV",
+      "sha256": "b97046b05bdb82962696c2e583ce4b4e75b7e66efb9d182987e9aad28c4f32f6",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_etf_official_2026-10-11\\capture_manifest.json",
+      "symbol": "IVV"
+    },
+    {
+      "asset_class": "etf",
+      "bytes": "1123854",
+      "evidence": {
+        "etf_structure": "https://kraneshares.com/kweb/",
+        "identity": "https://kraneshares.com/kweb/",
+        "listing": "https://kraneshares.com/kweb/"
+      },
+      "instrument_id": "U0164",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_etf_official_2026-10-11\\raw\\KWEB.json",
+      "provider_symbol": "KWEB",
+      "sha256": "5f5b44ce7a7204f17c03c65a0a10d064dca6ef64a659595280b5bc55d4dbc8af",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_etf_official_2026-10-11\\capture_manifest.json",
+      "symbol": "KWEB"
+    },
+    {
+      "asset_class": "etf",
+      "bytes": "1379157",
+      "evidence": {
+        "etf_structure": "https://www.globalxetfs.com/funds/lit",
+        "identity": "https://www.globalxetfs.com/funds/lit",
+        "listing": "https://www.globalxetfs.com/funds/lit"
+      },
+      "instrument_id": "U0165",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_etf_official_2026-10-11\\raw\\LIT.json",
+      "provider_symbol": "LIT",
+      "sha256": "28fa14579210316312d474169976b8b67178b2475467a2fcfe88771f41699ee7",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_etf_official_2026-10-11\\capture_manifest.json",
+      "symbol": "LIT"
+    },
+    {
+      "asset_class": "etf",
+      "bytes": "1322230",
+      "evidence": {
+        "etf_structure": "https://www.ishares.com/us/products/239619/ishares-msci-china-etf",
+        "identity": "https://www.ishares.com/us/products/239619/ishares-msci-china-etf",
+        "listing": "https://www.ishares.com/us/products/239619/ishares-msci-china-etf"
+      },
+      "instrument_id": "U0166",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_etf_official_2026-10-11\\raw\\MCHI.json",
+      "provider_symbol": "MCHI",
+      "sha256": "3984d608b2fc8671212eb62620a67df62010c5472d66a79da27bdf5e0bb86927",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_etf_official_2026-10-11\\capture_manifest.json",
+      "symbol": "MCHI"
+    },
+    {
+      "asset_class": "etf",
+      "bytes": "1670354",
+      "evidence": {
+        "etf_structure": "https://www.ftportfolios.com/Retail/Etf/EtfSummary.aspx?Ticker=QCLN",
+        "identity": "https://www.ftportfolios.com/Retail/Etf/EtfSummary.aspx?Ticker=QCLN",
+        "listing": "https://www.ftportfolios.com/Retail/Etf/EtfSummary.aspx?Ticker=QCLN"
+      },
+      "instrument_id": "U0169",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_etf_official_2026-10-11\\raw\\QCLN.json",
+      "provider_symbol": "QCLN",
+      "sha256": "b142e1ad9254bca364769c61bc6f2c9f1a6a04224a2a531fa9f499b79e349e4d",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_etf_official_2026-10-11\\capture_manifest.json",
+      "symbol": "QCLN"
+    },
+    {
+      "asset_class": "etf",
+      "bytes": "2318192",
+      "evidence": {
+        "etf_structure": "https://www.invesco.com/us/financial-products/etfs/product-detail?audienceType=investors&productId=QQQ&ticker=QQQ",
+        "identity": "https://www.invesco.com/us/financial-products/etfs/product-detail?audienceType=investors&productId=QQQ&ticker=QQQ",
+        "listing": "https://www.invesco.com/us/financial-products/etfs/product-detail?audienceType=investors&productId=QQQ&ticker=QQQ"
+      },
+      "instrument_id": "U0171",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_etf_primary_2026-10-11\\raw\\QQQ.json",
+      "provider_symbol": "QQQ",
+      "sha256": "10df7d3d762bb018b31ed2d5bae7dc41fc50ead82a4eee09786c570e37abecd6",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_etf_primary_2026-10-11\\capture_manifest.json",
+      "symbol": "QQQ"
+    },
+    {
+      "asset_class": "etf",
+      "bytes": "1699725",
+      "evidence": {
+        "etf_structure": "https://www.ishares.com/us/products/239466/ishares-short-treasury-bond-etf",
+        "identity": "https://www.ishares.com/us/products/239466/ishares-short-treasury-bond-etf",
+        "listing": "https://www.ishares.com/us/products/239466/ishares-short-treasury-bond-etf"
+      },
+      "instrument_id": "U0172",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_etf_official_2026-10-11\\raw\\SHV.json",
+      "provider_symbol": "SHV",
+      "sha256": "c130e466f9c266b780e8dd715910b13bad11edd47fd267b763b848837b2a7a90",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_etf_official_2026-10-11\\capture_manifest.json",
+      "symbol": "SHV"
+    },
+    {
+      "asset_class": "etf",
+      "bytes": "2060949",
+      "evidence": {
+        "etf_structure": "https://www.ishares.com/us/products/239452/ishares-1-3-year-treasury-bond-etf",
+        "identity": "https://www.ishares.com/us/products/239452/ishares-1-3-year-treasury-bond-etf",
+        "listing": "https://www.ishares.com/us/products/239452/ishares-1-3-year-treasury-bond-etf"
+      },
+      "instrument_id": "U0173",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_etf_official_2026-10-11\\raw\\SHY.json",
+      "provider_symbol": "SHY",
+      "sha256": "b89f8ddb372b7ff01de719afeb88ebb17c991288620d330db56e883355757450",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_etf_official_2026-10-11\\capture_manifest.json",
+      "symbol": "SHY"
+    },
+    {
+      "asset_class": "etf",
+      "bytes": "1689666",
+      "evidence": {
+        "etf_structure": "https://www.ishares.com/us/products/239855/ishares-silver-trust-fund",
+        "identity": "https://www.ishares.com/us/products/239855/ishares-silver-trust-fund",
+        "listing": "https://www.ishares.com/us/products/239855/ishares-silver-trust-fund"
+      },
+      "instrument_id": "U0174",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_etf_official_2026-10-11\\raw\\SLV.json",
+      "provider_symbol": "SLV",
+      "sha256": "80aad27eece0c97bb3244ceebd2f8967b96158cc506f6b9f3ea7229b2786253d",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_etf_official_2026-10-11\\capture_manifest.json",
+      "symbol": "SLV"
+    },
+    {
+      "asset_class": "etf",
+      "bytes": "2157047",
+      "evidence": {
+        "etf_structure": "https://www.ishares.com/us/products/239705/ishares-phlx-semiconductor-etf",
+        "identity": "https://www.ishares.com/us/products/239705/ishares-phlx-semiconductor-etf",
+        "listing": "https://www.ishares.com/us/products/239705/ishares-phlx-semiconductor-etf"
+      },
+      "instrument_id": "U0177",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_etf_official_2026-10-11\\raw\\SOXX.json",
+      "provider_symbol": "SOXX",
+      "sha256": "e972c0821d592e1de5e54e06e2eb092cf8cb4d9e7e3eb844313aea006c554331",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_etf_official_2026-10-11\\capture_manifest.json",
+      "symbol": "SOXX"
+    },
+    {
+      "asset_class": "etf",
+      "bytes": "2370499",
+      "evidence": {
+        "etf_structure": "https://www.ssga.com/us/en/institutional/etfs/state-street-spdr-sp-500-etf-trust-spy",
+        "identity": "https://www.ssga.com/us/en/institutional/etfs/state-street-spdr-sp-500-etf-trust-spy",
+        "listing": "https://www.ssga.com/us/en/institutional/etfs/state-street-spdr-sp-500-etf-trust-spy"
+      },
+      "instrument_id": "U0181",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_etf_official_2026-10-11\\raw\\SPY.json",
+      "provider_symbol": "SPY",
+      "sha256": "4413362b0180ddc1170202c6dad74dd3fa735592b255c0f0e876079263de1582",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_etf_official_2026-10-11\\capture_manifest.json",
+      "symbol": "SPY"
+    },
+    {
+      "asset_class": "etf",
+      "bytes": "1565935",
+      "evidence": {
+        "etf_structure": "https://www.invesco.com/us/financial-products/etfs/product-detail?audienceType=Investor&ticker=TAN",
+        "identity": "https://www.invesco.com/us/financial-products/etfs/product-detail?audienceType=Investor&ticker=TAN",
+        "listing": "https://www.invesco.com/us/financial-products/etfs/product-detail?audienceType=Investor&ticker=TAN"
+      },
+      "instrument_id": "U0183",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_etf_official_2026-10-11\\raw\\TAN.json",
+      "provider_symbol": "TAN",
+      "sha256": "59a7838b40cd047248a1367bbf3932ee77af8ef78755e80ca7c9092c5384cea3",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_etf_official_2026-10-11\\capture_manifest.json",
+      "symbol": "TAN"
+    },
+    {
+      "asset_class": "etf",
+      "bytes": "2078250",
+      "evidence": {
+        "etf_structure": "https://www.ishares.com/us/products/239454/ishares-20-year-treasury-bond-etf",
+        "identity": "https://www.ishares.com/us/products/239454/ishares-20-year-treasury-bond-etf",
+        "listing": "https://www.ishares.com/us/products/239454/ishares-20-year-treasury-bond-etf"
+      },
+      "instrument_id": "U0186",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_etf_official_2026-10-11\\raw\\TLT.json",
+      "provider_symbol": "TLT",
+      "sha256": "308420745629ab4a619aeea6677328a215b373afac23a2cbad334a2dbe42588a",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_etf_official_2026-10-11\\capture_manifest.json",
+      "symbol": "TLT"
+    },
+    {
+      "asset_class": "etf",
+      "bytes": "1690888",
+      "evidence": {
+        "etf_structure": "https://www.uscfinvestments.com/uso",
+        "identity": "https://www.uscfinvestments.com/uso",
+        "listing": "https://www.uscfinvestments.com/uso"
+      },
+      "instrument_id": "U0190",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_etf_official_2026-10-11\\raw\\USO.json",
+      "provider_symbol": "USO",
+      "sha256": "df8d2acb72cec0b94667aa1fa15869e6d28d891c8ceec4bb1c64feff1b9ce5ee",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_etf_official_2026-10-11\\capture_manifest.json",
+      "symbol": "USO"
+    },
+    {
+      "asset_class": "etf",
+      "bytes": "1642721",
+      "evidence": {
+        "etf_structure": "https://investor.vanguard.com/investment-products/etfs/profile/VEA",
+        "identity": "https://investor.vanguard.com/investment-products/etfs/profile/VEA",
+        "listing": "https://investor.vanguard.com/investment-products/etfs/profile/VEA"
+      },
+      "instrument_id": "U0191",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_etf_official_2026-10-11\\raw\\VEA.json",
+      "provider_symbol": "VEA",
+      "sha256": "0c761079e32a2c4d5223444b81d2b02f735a4101153c2f70b69b0fa84d55536c",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_etf_official_2026-10-11\\capture_manifest.json",
+      "symbol": "VEA"
+    },
+    {
+      "asset_class": "etf",
+      "bytes": "1943538",
+      "evidence": {
+        "etf_structure": "https://investor.vanguard.com/investment-products/etfs/profile/VGT",
+        "identity": "https://investor.vanguard.com/investment-products/etfs/profile/VGT",
+        "listing": "https://investor.vanguard.com/investment-products/etfs/profile/VGT"
+      },
+      "instrument_id": "U0192",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_etf_official_2026-10-11\\raw\\VGT.json",
+      "provider_symbol": "VGT",
+      "sha256": "baf38c6d5776c35e6406899a0a1990a9aa2705958662be02501cc9240317a8ec",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_etf_official_2026-10-11\\capture_manifest.json",
+      "symbol": "VGT"
+    },
+    {
+      "asset_class": "etf",
+      "bytes": "1879599",
+      "evidence": {
+        "etf_structure": "https://investor.vanguard.com/investment-products/etfs/profile/VNQ",
+        "identity": "https://investor.vanguard.com/investment-products/etfs/profile/VNQ",
+        "listing": "https://investor.vanguard.com/investment-products/etfs/profile/VNQ"
+      },
+      "instrument_id": "U0193",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_etf_official_2026-10-11\\raw\\VNQ.json",
+      "provider_symbol": "VNQ",
+      "sha256": "610d0dd4352a42af29065962139631dba672f198c8044a9e19b512f3e9906f85",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_etf_official_2026-10-11\\capture_manifest.json",
+      "symbol": "VNQ"
+    },
+    {
+      "asset_class": "etf",
+      "bytes": "1385896",
+      "evidence": {
+        "etf_structure": "https://investor.vanguard.com/investment-products/etfs/profile/VOO",
+        "identity": "https://investor.vanguard.com/investment-products/etfs/profile/VOO",
+        "listing": "https://investor.vanguard.com/investment-products/etfs/profile/VOO"
+      },
+      "instrument_id": "U0194",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_etf_official_2026-10-11\\raw\\VOO.json",
+      "provider_symbol": "VOO",
+      "sha256": "50276536cfba8b864845dd35fd605d3bbf0ee115399decd5b93aeb15d21a0217",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_etf_official_2026-10-11\\capture_manifest.json",
+      "symbol": "VOO"
+    },
+    {
+      "asset_class": "etf",
+      "bytes": "1562665",
+      "evidence": {
+        "etf_structure": "https://investor.vanguard.com/investment-products/etfs/profile/VT",
+        "identity": "https://investor.vanguard.com/investment-products/etfs/profile/VT",
+        "listing": "https://investor.vanguard.com/investment-products/etfs/profile/VT"
+      },
+      "instrument_id": "U0195",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_etf_official_2026-10-11\\raw\\VT.json",
+      "provider_symbol": "VT",
+      "sha256": "2d7995c557d5bf8dc2f1ca18fc6a2c21d3ae8d57efac60e5b6e0b3ce139bd332",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_etf_official_2026-10-11\\capture_manifest.json",
+      "symbol": "VT"
+    },
+    {
+      "asset_class": "etf",
+      "bytes": "2178432",
+      "evidence": {
+        "etf_structure": "https://investor.vanguard.com/investment-products/etfs/profile/VTI",
+        "identity": "https://investor.vanguard.com/investment-products/etfs/profile/VTI",
+        "listing": "https://investor.vanguard.com/investment-products/etfs/profile/VTI"
+      },
+      "instrument_id": "U0196",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_etf_official_2026-10-11\\raw\\VTI.json",
+      "provider_symbol": "VTI",
+      "sha256": "7e68e4e3fab71679d52e004005923d2e42a6125b3ae953205a91206350a80d97",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_etf_official_2026-10-11\\capture_manifest.json",
+      "symbol": "VTI"
+    },
+    {
+      "asset_class": "etf",
+      "bytes": "1846711",
+      "evidence": {
+        "etf_structure": "https://investor.vanguard.com/investment-products/etfs/profile/VWO",
+        "identity": "https://investor.vanguard.com/investment-products/etfs/profile/VWO",
+        "listing": "https://investor.vanguard.com/investment-products/etfs/profile/VWO"
+      },
+      "instrument_id": "U0197",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_etf_official_2026-10-11\\raw\\VWO.json",
+      "provider_symbol": "VWO",
+      "sha256": "3d9fc0fcb6493bd250e8dcb4ba8ee2a9e45824418ecc6315fa41009de28ccd3e",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_etf_official_2026-10-11\\capture_manifest.json",
+      "symbol": "VWO"
+    },
+    {
+      "asset_class": "etf",
+      "bytes": "1701070",
+      "evidence": {
+        "etf_structure": "https://investor.vanguard.com/investment-products/etfs/profile/VYM",
+        "identity": "https://investor.vanguard.com/investment-products/etfs/profile/VYM",
+        "listing": "https://investor.vanguard.com/investment-products/etfs/profile/VYM"
+      },
+      "instrument_id": "U0198",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_etf_official_2026-10-11\\raw\\VYM.json",
+      "provider_symbol": "VYM",
+      "sha256": "37301656d3607ddbba80f8c4f56caa876b6992b152ce8c9f59b39e13848467b0",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_etf_official_2026-10-11\\capture_manifest.json",
+      "symbol": "VYM"
+    },
+    {
+      "asset_class": "etf",
+      "bytes": "2301868",
+      "evidence": {
+        "etf_structure": "https://www.ssga.com/us/en/intermediary/etfs/state-street-energy-select-sector-spdr-etf-xle",
+        "identity": "https://www.ssga.com/us/en/intermediary/etfs/state-street-energy-select-sector-spdr-etf-xle",
+        "listing": "https://www.ssga.com/us/en/intermediary/etfs/state-street-energy-select-sector-spdr-etf-xle"
+      },
+      "instrument_id": "U0199",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_etf_official_2026-10-11\\raw\\XLE.json",
+      "provider_symbol": "XLE",
+      "sha256": "4befbdc3a08dbfcf8a7b714b5a31d93be76cef7c3aa42b47ca28a5cc19fc07a1",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_etf_official_2026-10-11\\capture_manifest.json",
+      "symbol": "XLE"
+    },
+    {
+      "asset_class": "etf",
+      "bytes": "2304116",
+      "evidence": {
+        "etf_structure": "https://www.ssga.com/us/en/intermediary/etfs/state-street-financial-select-sector-spdr-etf-xlf",
+        "identity": "",
+        "listing": "https://www.ssga.com/us/en/intermediary/etfs/state-street-financial-select-sector-spdr-etf-xlf"
+      },
+      "instrument_id": "U0200",
+      "listing_currency": "USD",
+      "path": "data\\raw\\cut_2026-10-09\\raw\\XLF.json",
+      "provider_symbol": "XLF",
+      "sha256": "91bc4b170b0f3c26077a1aec2bf4841be245b198413f0445053e3cfe0f9b6add",
+      "source_manifest": "data\\raw\\cut_2026-10-09\\capture_manifest.json",
+      "symbol": "XLF"
+    },
+    {
+      "asset_class": "etf",
+      "bytes": "2304403",
+      "evidence": {
+        "etf_structure": "https://www.ssga.com/us/en/intermediary/etfs/state-street-technology-select-sector-spdr-etf-xlk",
+        "identity": "https://www.ssga.com/us/en/intermediary/etfs/state-street-technology-select-sector-spdr-etf-xlk",
+        "listing": "https://www.ssga.com/us/en/intermediary/etfs/state-street-technology-select-sector-spdr-etf-xlk"
+      },
+      "instrument_id": "U0201",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_etf_official_2026-10-11\\raw\\XLK.json",
+      "provider_symbol": "XLK",
+      "sha256": "88e16f913b07f0d6059983ac54be09696f8e46a6f71d8f0033663fed1443b5ee",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_etf_official_2026-10-11\\capture_manifest.json",
+      "symbol": "XLK"
+    },
+    {
+      "asset_class": "etf",
+      "bytes": "2304145",
+      "evidence": {
+        "etf_structure": "https://www.ssga.com/us/en/intermediary/etfs/state-street-health-care-select-sector-spdr-etf-xlv",
+        "identity": "https://www.ssga.com/us/en/intermediary/etfs/state-street-health-care-select-sector-spdr-etf-xlv",
+        "listing": "https://www.ssga.com/us/en/intermediary/etfs/state-street-health-care-select-sector-spdr-etf-xlv"
+      },
+      "instrument_id": "U0202",
+      "listing_currency": "USD",
+      "path": "data\\raw\\capture_batches\\cut_2026-10-09_batch_etf_official_2026-10-11\\raw\\XLV.json",
+      "provider_symbol": "XLV",
+      "sha256": "7ecf5961bb71627fdc246414c3d807b3dda9f4010c16e19a1d4f93b0ffb5f6af",
+      "source_manifest": "data\\raw\\capture_batches\\cut_2026-10-09_batch_etf_official_2026-10-11\\capture_manifest.json",
+      "symbol": "XLV"
+    }
+  ],
+  "period": {
+    "currency": "USD",
+    "end": "2026-10-09",
+    "frequency": "daily",
+    "start": "2018-01-02"
+  },
+  "sealed_at_utc": "2026-10-11T06:21:47.059378+00:00",
+  "status": "SEALED_ENTRY_UNIVERSE"
+}

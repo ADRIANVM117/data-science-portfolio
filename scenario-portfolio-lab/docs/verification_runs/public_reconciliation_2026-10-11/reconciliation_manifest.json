@@ -1,0 +1,22 @@
+{
+  "catalog_records": 202,
+  "created_at_utc": "2026-10-11T04:40:12+00:00",
+  "provider_duplicate_events": 103,
+  "provider_event_count": 259,
+  "provider_unique_instruments": 156,
+  "rules": {
+    "confirmed_equity": "SEC ticker/exchange + exact captured provider Equity/USD match, excluding ADR proxies",
+    "confirmed_etf": "existing official issuer evidence + exact captured provider ETF/USD match",
+    "excluded": "official structural ETF exclusion",
+    "review": "not silently substituted or promoted"
+  },
+  "sec_sha256": "33b3998934205f0ce54c874470a41689ea5aaaba7d04c909f20976eb3e551ba4",
+  "sec_source_url": "https://www.sec.gov/files/company_tickers_exchange.json",
+  "states_by_asset_class": {
+    "equity:CONFIRMED": 100,
+    "equity:REVIEW": 46,
+    "etf:CONFIRMED": 4,
+    "etf:EXCLUDED": 14,
+    "etf:REVIEW": 38
+  }
+}

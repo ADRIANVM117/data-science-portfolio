@@ -1,0 +1,2342 @@
+﻿[
+    {
+        "instrument_id":  "U0001",
+        "candidate":  "AA",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Alcoa Corp",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "AA",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0002",
+        "candidate":  "AAL",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "American Airlines Group Inc",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "AAL",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0003",
+        "candidate":  "AAPL",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Apple Inc",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "AAPL",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0004",
+        "candidate":  "ABBV",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Abbvie Inc",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "ABBV",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0005",
+        "candidate":  "ABNB",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Airbnb Inc - Class A",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "ABNB",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0008",
+        "candidate":  "AFRM",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Affirm Holdings Inc - Class A",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "AFRM",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0009",
+        "candidate":  "AGNC",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "AGNC Investment Corp",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "AGNC",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0013",
+        "candidate":  "AMAT",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Applied Materials Inc",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "AMAT",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0014",
+        "candidate":  "AMD",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Advanced Micro Devices Inc",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "AMD",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0015",
+        "candidate":  "AMX",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "America Movil S.A.B.DE C.V.",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "AMX",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0016",
+        "candidate":  "AMZN",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Amazon.com Inc",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "AMZN",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0017",
+        "candidate":  "ASR",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Grupo Aeroportuario Del Sureste S.A.",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "ASR",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0018",
+        "candidate":  "AVGO",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Broadcom Inc",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "AVGO",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0019",
+        "candidate":  "AXP",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "American Express Company",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "AXP",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0020",
+        "candidate":  "BA",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Boeing Company",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "BA",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0021",
+        "candidate":  "BABA",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Alibaba Group Holding Ltd",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "BABA",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0022",
+        "candidate":  "BAC",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Bank Of America Corp",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "BAC",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0025",
+        "candidate":  "BMY",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Bristol-Myers Squibb Company",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "BMY",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0028",
+        "candidate":  "C",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Citigroup Inc",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "C",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0029",
+        "candidate":  "CAT",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Caterpillar Inc",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "CAT",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0030",
+        "candidate":  "CCL",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Carnival Corporation Ltd (Paired Stock)",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "CCL",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0031",
+        "candidate":  "CX",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Cemex S.A.B. De C.V.",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "CX",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0033",
+        "candidate":  "CLF",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Cleveland-Cliffs Inc",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "CLF",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0034",
+        "candidate":  "COST",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Costco Wholesale Corp",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "COST",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0036",
+        "candidate":  "CRM",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Salesforce Inc",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "CRM",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0037",
+        "candidate":  "CSCO",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Cisco Systems Inc",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "CSCO",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0039",
+        "candidate":  "CVS",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "CVS Health Corp",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "CVS",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0040",
+        "candidate":  "CVX",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Chevron Corp",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "CVX",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0041",
+        "candidate":  "DAL",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Delta Air Lines Inc",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "DAL",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0042",
+        "candidate":  "DIS",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Walt Disney Co (The)",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "DIS",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0043",
+        "candidate":  "DVN",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Devon Energy Corp",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "DVN",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0045",
+        "candidate":  "ETSY",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Etsy Inc",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "ETSY",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0046",
+        "candidate":  "F",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Ford Motor Company",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "F",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0047",
+        "candidate":  "FANG",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Diamondback Energy Inc",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "FANG",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0048",
+        "candidate":  "FCX",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Freeport-McMoRan Inc",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "FCX",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0049",
+        "candidate":  "FDX",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Fedex Corp",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "FDX",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0053",
+        "candidate":  "FSLR",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "First Solar Inc",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "FSLR",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0054",
+        "candidate":  "FUBO",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "fuboTV Inc - Class A",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "FUBO",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0056",
+        "candidate":  "PAC",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Grupo Aeroportuario Del Pacifico SAB de CV",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "PAC",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0059",
+        "candidate":  "GE",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "General Electric Company",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "GE",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0063",
+        "candidate":  "GM",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "General Motors Company",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "GM",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0064",
+        "candidate":  "GME",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Gamestop Corporation - Class A",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "GME",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0066",
+        "candidate":  "B",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Barrick Gold Corp",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "B",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0067",
+        "candidate":  "GOOGL",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Alphabet Inc - Class A",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "GOOGL",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0069",
+        "candidate":  "HD",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Home Depot Inc",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "HD",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0070",
+        "candidate":  "INTC",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Intel Corp",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "INTC",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0071",
+        "candidate":  "JNJ",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Johnson \u0026 Johnson",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "JNJ",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0072",
+        "candidate":  "JPM",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "JPMorgan Chase \u0026 Company",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "JPM",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0074",
+        "candidate":  "KO",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Coca-Cola Company",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "KO",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0075",
+        "candidate":  "KOF",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Coca-Cola Femsa S.A.B. DE C.V.",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "KOF",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0078",
+        "candidate":  "LCID",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Lucid Group Inc",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "LCID",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0080",
+        "candidate":  "LLY",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Lilly(Eli) \u0026 Company",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "LLY",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0081",
+        "candidate":  "LUV",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Southwest Airlines Company",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "LUV",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0082",
+        "candidate":  "LVS",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Las Vegas Sands Corp",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "LVS",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0083",
+        "candidate":  "MA",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Mastercard Incorporated - Class A",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "MA",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0084",
+        "candidate":  "MARA",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "MARA Holdings Inc",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "MARA",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0085",
+        "candidate":  "MCD",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "McDonald`s Corp",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "MCD",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0087",
+        "candidate":  "MELI",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "MercadoLibre Inc",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "MELI",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0088",
+        "candidate":  "META",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Meta Platforms Inc - Class A",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "META",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0090",
+        "candidate":  "MRK",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Merck \u0026 Co Inc",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "MRK",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0091",
+        "candidate":  "MRNA",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Moderna Inc",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "MRNA",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0093",
+        "candidate":  "MSFT",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Microsoft Corporation",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "MSFT",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0094",
+        "candidate":  "MU",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Micron Technology Inc",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "MU",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0095",
+        "candidate":  "NCLH",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Norwegian Cruise Line Holdings Ltd",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "NCLH",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0096",
+        "candidate":  "NFLX",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Netflix Inc",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "NFLX",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0097",
+        "candidate":  "NKE",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Nike Inc - Class B",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "NKE",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0098",
+        "candidate":  "NU",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Nu Holdings Ltd Class A",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "NU",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0099",
+        "candidate":  "NVAX",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Novavax Inc",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "NVAX",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0100",
+        "candidate":  "NVDA",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "NVIDIA Corp",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "NVDA",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0103",
+        "candidate":  "ORCL",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Oracle Corp",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "ORCL",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0104",
+        "candidate":  "OXY",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Occidental Petroleum Corp",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "OXY",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0107",
+        "candidate":  "PEP",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "PepsiCo Inc",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "PEP",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0108",
+        "candidate":  "PFE",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Pfizer Inc",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "PFE",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0109",
+        "candidate":  "PG",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Procter \u0026 Gamble Company",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "PG",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0111",
+        "candidate":  "PINS",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Pinterest Inc - Class A",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "PINS",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0112",
+        "candidate":  "PLTR",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Palantir Technologies Inc - Class A",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "PLTR",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0113",
+        "candidate":  "PYPL",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "PayPal Holdings Inc",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "PYPL",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0115",
+        "candidate":  "QCOM",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Qualcomm Inc",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "QCOM",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0116",
+        "candidate":  "R",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Ryder System Inc",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "R",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0117",
+        "candidate":  "RCL",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Royal Caribbean Group",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "RCL",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0118",
+        "candidate":  "RIOT",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Riot Platforms Inc",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "RIOT",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0119",
+        "candidate":  "RIVN",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Rivian Automotive Inc - Class A",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "RIVN",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0120",
+        "candidate":  "SBUX",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Starbucks Corp",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "SBUX",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0121",
+        "candidate":  "SHOP",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Shopify Inc - Class A",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "SHOP",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0123",
+        "candidate":  "SOFI",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "SoFi Technologies Inc",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "SOFI",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0124",
+        "candidate":  "SPCE",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Virgin Galactic Holdings Inc - Class A",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "SPCE",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0125",
+        "candidate":  "T",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "AT\u0026T Inc",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "T",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0127",
+        "candidate":  "TGT",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Target Corp",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "TGT",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0129",
+        "candidate":  "TMO",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Thermo Fisher Scientific Inc",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "TMO",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0130",
+        "candidate":  "TSLA",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Tesla Inc",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "TSLA",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0131",
+        "candidate":  "TSM",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Taiwan Semiconductor Manufacturing",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "TSM",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0132",
+        "candidate":  "TX",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Ternium S.A.",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "TX",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0133",
+        "candidate":  "UAL",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "United Airlines Holdings Inc",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "UAL",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0134",
+        "candidate":  "UBER",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Uber Technologies Inc",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "UBER",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0135",
+        "candidate":  "UNH",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Unitedhealth Group Inc",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "UNH",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0136",
+        "candidate":  "UPST",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Upstart Holdings Inc",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "UPST",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0137",
+        "candidate":  "V",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Visa Inc - Class A",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "V",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0140",
+        "candidate":  "VZ",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Verizon Communications Inc",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "VZ",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0142",
+        "candidate":  "WFC",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Wells Fargo \u0026 Company",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "WFC",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0143",
+        "candidate":  "WMT",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Walmart Inc",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "WMT",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0144",
+        "candidate":  "XOM",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Exxon Mobil Corp",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "XOM",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0145",
+        "candidate":  "XYZ",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Block Inc - Class A",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "XYZ",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0146",
+        "candidate":  "ZM",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Zoom Video Communications Inc - Class A",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "ZM",
+                      "provider_type":  "Equity"
+                  }
+    },
+    {
+        "instrument_id":  "U0147",
+        "candidate":  "AAXJ",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "ISHARES MSCI ALL COUNTRY ASIA EX JAPAN ETF ",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "AAXJ",
+                      "provider_type":  "ETF"
+                  }
+    },
+    {
+        "instrument_id":  "U0148",
+        "candidate":  "ACWI",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "ISHARES MSCI ACWI ETF ",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "ACWI",
+                      "provider_type":  "ETF"
+                  }
+    },
+    {
+        "instrument_id":  "U0150",
+        "candidate":  "BIL",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "STATE STREET(R) SPDR(R) BLOOMBERG 1-3 MONTH T-BILL ETF ",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "BIL",
+                      "provider_type":  "ETF"
+                  }
+    },
+    {
+        "instrument_id":  "U0151",
+        "candidate":  "BOTZ",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "GLOBAL X ROBOTICS \u0026 ARTIFICIAL INTELLIGENCE ETF ",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "BOTZ",
+                      "provider_type":  "ETF"
+                  }
+    },
+    {
+        "instrument_id":  "U0152",
+        "candidate":  "DIA",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "SPDR Dow Jones Industrial Average ETF",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "DIA",
+                      "provider_type":  "ETF"
+                  }
+    },
+    {
+        "instrument_id":  "U0154",
+        "candidate":  "EEM",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "ISHARES MSCI EMERGING MARKETS ETF ",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "EEM",
+                      "provider_type":  "ETF"
+                  }
+    },
+    {
+        "instrument_id":  "U0155",
+        "candidate":  "EWZ",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "ISHARES MSCI BRAZIL ETF ",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "EWZ",
+                      "provider_type":  "ETF"
+                  }
+    },
+    {
+        "instrument_id":  "U0156",
+        "candidate":  "FAS",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "DIREXION DAILY FINANCIAL BULL 3X SHARES ",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "FAS",
+                      "provider_type":  "ETF"
+                  }
+    },
+    {
+        "instrument_id":  "U0157",
+        "candidate":  "FAZ",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "DIREXION DAILY FINANCIAL BEAR 3X SHARES ",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "FAZ",
+                      "provider_type":  "ETF"
+                  }
+    },
+    {
+        "instrument_id":  "U0158",
+        "candidate":  "GDX",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "VANECK GOLD MINERS ETF ",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "GDX",
+                      "provider_type":  "ETF"
+                  }
+    },
+    {
+        "instrument_id":  "U0159",
+        "candidate":  "GLD",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "SPDR Gold Shares ETF",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "GLD",
+                      "provider_type":  "ETF"
+                  }
+    },
+    {
+        "instrument_id":  "U0160",
+        "candidate":  "IAU",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "iShares Gold Trust",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "IAU",
+                      "provider_type":  "ETF"
+                  }
+    },
+    {
+        "instrument_id":  "U0161",
+        "candidate":  "ICLN",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "ISHARES GLOBAL CLEAN ENERGY ETF ",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "ICLN",
+                      "provider_type":  "ETF"
+                  }
+    },
+    {
+        "instrument_id":  "U0162",
+        "candidate":  "INDA",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "ISHARES MSCI INDIA ETF ",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "INDA",
+                      "provider_type":  "ETF"
+                  }
+    },
+    {
+        "instrument_id":  "U0163",
+        "candidate":  "IVV",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "ISHARES CORE S\u0026P 500 ETF ",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "IVV",
+                      "provider_type":  "ETF"
+                  }
+    },
+    {
+        "instrument_id":  "U0164",
+        "candidate":  "KWEB",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "KRANESHARES CSI CHINA INTERNET ETF ",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "KWEB",
+                      "provider_type":  "ETF"
+                  }
+    },
+    {
+        "instrument_id":  "U0165",
+        "candidate":  "LIT",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Global X Lithium \u0026 Battery Tech ETF",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "LIT",
+                      "provider_type":  "ETF"
+                  }
+    },
+    {
+        "instrument_id":  "U0166",
+        "candidate":  "MCHI",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "ISHARES MSCI CHINA ETF ",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "MCHI",
+                      "provider_type":  "ETF"
+                  }
+    },
+    {
+        "instrument_id":  "U0168",
+        "candidate":  "PSQ",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "ProShares Short QQQ -1x Shares",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "PSQ",
+                      "provider_type":  "ETF"
+                  }
+    },
+    {
+        "instrument_id":  "U0169",
+        "candidate":  "QCLN",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "FIRST TRUST NASDAQ CLEAN EDGE GREEN ENERGY INDEX FUND ",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "QCLN",
+                      "provider_type":  "ETF"
+                  }
+    },
+    {
+        "instrument_id":  "U0170",
+        "candidate":  "QLD",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "PROSHARES ULTRA QQQ ",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "QLD",
+                      "provider_type":  "ETF"
+                  }
+    },
+    {
+        "instrument_id":  "U0171",
+        "candidate":  "QQQ",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Invesco QQQ Trust Series 1",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "QQQ",
+                      "provider_type":  "ETF"
+                  }
+    },
+    {
+        "instrument_id":  "U0172",
+        "candidate":  "SHV",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "ISHARES 0-1 YEAR TREASURY BOND ETF ",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "SHV",
+                      "provider_type":  "ETF"
+                  }
+    },
+    {
+        "instrument_id":  "U0173",
+        "candidate":  "SHY",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "ISHARES 1-3 YEAR TREASURY BOND ETF ",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "SHY",
+                      "provider_type":  "ETF"
+                  }
+    },
+    {
+        "instrument_id":  "U0174",
+        "candidate":  "SLV",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "iShares Silver Trust",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "SLV",
+                      "provider_type":  "ETF"
+                  }
+    },
+    {
+        "instrument_id":  "U0175",
+        "candidate":  "SOXL",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "DIREXION DAILY SEMICONDUCTOR BULL 3X SHARES ",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "SOXL",
+                      "provider_type":  "ETF"
+                  }
+    },
+    {
+        "instrument_id":  "U0176",
+        "candidate":  "SOXS",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Direxion Daily Semiconductor Bear 3X ETF",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "SOXS",
+                      "provider_type":  "ETF"
+                  }
+    },
+    {
+        "instrument_id":  "U0177",
+        "candidate":  "SOXX",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "ISHARES SEMICONDUCTOR ETF ",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "SOXX",
+                      "provider_type":  "ETF"
+                  }
+    },
+    {
+        "instrument_id":  "U0178",
+        "candidate":  "SPYM",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "SPDR Portfolio S\u0026P 500 ETF",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "SPYM",
+                      "provider_type":  "ETF"
+                  }
+    },
+    {
+        "instrument_id":  "U0179",
+        "candidate":  "SPXL",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "DIREXION DAILY S\u0026P 500(R) BULL 3X SHARES ",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "SPXL",
+                      "provider_type":  "ETF"
+                  }
+    },
+    {
+        "instrument_id":  "U0180",
+        "candidate":  "SPXS",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "DIREXION DAILY S\u0026P 500(R) BEAR 3X SHARES ",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "SPXS",
+                      "provider_type":  "ETF"
+                  }
+    },
+    {
+        "instrument_id":  "U0181",
+        "candidate":  "SPY",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "SPDR S\u0026P 500 ETF Trust",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "SPY",
+                      "provider_type":  "ETF"
+                  }
+    },
+    {
+        "instrument_id":  "U0182",
+        "candidate":  "SQQQ",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "ProShares UltraPro Short QQQ -3x Shares",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "SQQQ",
+                      "provider_type":  "ETF"
+                  }
+    },
+    {
+        "instrument_id":  "U0183",
+        "candidate":  "TAN",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "INVESCO SOLAR ETF ",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "TAN",
+                      "provider_type":  "ETF"
+                  }
+    },
+    {
+        "instrument_id":  "U0184",
+        "candidate":  "TECL",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "DIREXION DAILY TECHNOLOGY BULL 3X SHARES ",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "TECL",
+                      "provider_type":  "ETF"
+                  }
+    },
+    {
+        "instrument_id":  "U0185",
+        "candidate":  "TECS",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Direxion Technology Bear 3X ETF",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "TECS",
+                      "provider_type":  "ETF"
+                  }
+    },
+    {
+        "instrument_id":  "U0186",
+        "candidate":  "TLT",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "ISHARES 20+ YEAR TREASURY BOND ETF ",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "TLT",
+                      "provider_type":  "ETF"
+                  }
+    },
+    {
+        "instrument_id":  "U0187",
+        "candidate":  "TNA",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "DIREXION DAILY SMALL CAP BULL 3X SHARES ",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "TNA",
+                      "provider_type":  "ETF"
+                  }
+    },
+    {
+        "instrument_id":  "U0188",
+        "candidate":  "TQQQ",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "PROSHARES ULTRAPRO QQQ ",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "TQQQ",
+                      "provider_type":  "ETF"
+                  }
+    },
+    {
+        "instrument_id":  "U0189",
+        "candidate":  "TZA",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Direxion Small Cap Bear 3X ETF",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "TZA",
+                      "provider_type":  "ETF"
+                  }
+    },
+    {
+        "instrument_id":  "U0190",
+        "candidate":  "USO",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "United States Oil Fund",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "USO",
+                      "provider_type":  "ETF"
+                  }
+    },
+    {
+        "instrument_id":  "U0191",
+        "candidate":  "VEA",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "VANGUARD DEVELOPED MARKETS INDEX FUND ETF SHARES",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "VEA",
+                      "provider_type":  "ETF"
+                  }
+    },
+    {
+        "instrument_id":  "U0192",
+        "candidate":  "VGT",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "VANGUARD INFORMATION TECHNOLOGY INDEX FUND ETF SHARES",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "VGT",
+                      "provider_type":  "ETF"
+                  }
+    },
+    {
+        "instrument_id":  "U0193",
+        "candidate":  "VNQ",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "VANGUARD REAL ESTATE INDEX FUND ETF SHARES",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "VNQ",
+                      "provider_type":  "ETF"
+                  }
+    },
+    {
+        "instrument_id":  "U0194",
+        "candidate":  "VOO",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "VANGUARD 500 INDEX FUND ETF SHARES",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "VOO",
+                      "provider_type":  "ETF"
+                  }
+    },
+    {
+        "instrument_id":  "U0195",
+        "candidate":  "VT",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "VANGUARD TOTAL WORLD STOCK INDEX FUND ETF SHARES",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "VT",
+                      "provider_type":  "ETF"
+                  }
+    },
+    {
+        "instrument_id":  "U0196",
+        "candidate":  "VTI",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "Vanguard Morningstar Total Stock Market ETF",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "VTI",
+                      "provider_type":  "ETF"
+                  }
+    },
+    {
+        "instrument_id":  "U0197",
+        "candidate":  "VWO",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "VANGUARD EMERGING MARKETS STOCK INDEX FUND ETF SHARES",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "VWO",
+                      "provider_type":  "ETF"
+                  }
+    },
+    {
+        "instrument_id":  "U0198",
+        "candidate":  "VYM",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "VANGUARD HIGH DIVIDEND YIELD INDEX FUND ETF SHARES",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "VYM",
+                      "provider_type":  "ETF"
+                  }
+    },
+    {
+        "instrument_id":  "U0199",
+        "candidate":  "XLE",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "STATE STREET(R) ENERGY SELECT SECTOR SPDR(R) ETF ",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "XLE",
+                      "provider_type":  "ETF"
+                  }
+    },
+    {
+        "instrument_id":  "U0200",
+        "candidate":  "XLF",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "STATE STREET(R) FINANCIAL SELECT SECTOR SPDR(R) ETF ",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "XLF",
+                      "provider_type":  "ETF"
+                  }
+    },
+    {
+        "instrument_id":  "U0201",
+        "candidate":  "XLK",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "STATE STREET(R) TECHNOLOGY SELECT SECTOR SPDR(R) ETF ",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "XLK",
+                      "provider_type":  "ETF"
+                  }
+    },
+    {
+        "instrument_id":  "U0202",
+        "candidate":  "XLV",
+        "provider_status":  "MATCHED",
+        "http_status":  200,
+        "classification":  "HTTP_SUCCESS",
+        "match":  {
+                      "match_score":  "1.0000",
+                      "provider_currency":  "USD",
+                      "provider_name":  "STATE STREET(R) HEALTH CARE SELECT SECTOR SPDR(R) ETF ",
+                      "provider_region":  "United States",
+                      "provider_symbol":  "XLV",
+                      "provider_type":  "ETF"
+                  }
+    }
+]

@@ -1,0 +1,20 @@
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.tmp
+*.temp
+data/raw/
+data/silver/
+data/gold/
+data/published/
+artifacts/
+AGENTS.md
+private_notes/
+tests/_tmp/
+Portfolio Construction and Risk Management_260813_200300.pdf
