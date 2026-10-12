@@ -41,3 +41,6 @@ The source catalog is contemporary, not a historical point-in-time universe. Dow
 2. Entropy pooling and posterior distributions.
 3. Robust portfolio construction and diagnostics.
 4. Educational notebooks, one stage at a time.
+
+
+
