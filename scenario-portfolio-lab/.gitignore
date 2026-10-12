@@ -9,6 +9,7 @@ __pycache__/
 .ruff_cache/
 *.tmp
 *.temp
+docs/
 data/raw/
 data/silver/
 data/gold/
