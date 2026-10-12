@@ -1,0 +1,36 @@
+{
+  "provenance": {
+    "source_report": "data/published/cut_2026-10-09_run_2026-10-11_full_window_final/reports/coverage_report.csv",
+    "source_report_sha256": "557c83dbe47f07a907d8fe5d9ba36a338c2058685323f273e5e9e1e571388315",
+    "scope": "Structured public summary only; no downloaded prices or returns are included."
+  },
+  "counts": {
+    "captured_instruments": 138,
+    "eligible_complete_window": 125,
+    "blocked_by_coverage": 13,
+    "coverage_status_counts": {
+      "ELIGIBLE": 125,
+      "INSUFFICIENT_HISTORY": 12,
+      "INSUFFICIENT_HISTORY_AND_INTERIOR_NULL": 1
+    }
+  },
+  "eligible_matrix": {
+    "price_dates": 2205,
+    "instrument_columns": 125,
+    "usable_returns_per_instrument": 2204,
+    "initial_nulls_per_instrument": 1,
+    "subsequent_return_nulls_per_instrument": 0
+  },
+  "instrument_evidence": {
+    "FUBO": {
+      "observations": 2198,
+      "leading_nulls": 5,
+      "interior_nulls": 2,
+      "trailing_nulls": 0,
+      "first_observation": "2018-01-09",
+      "last_observation": "2026-10-09",
+      "coverage_status": "INSUFFICIENT_HISTORY_AND_INTERIOR_NULL",
+      "leading_gap_interpretation": "UNVERIFIED_CAUSE_NOT_AUTOMATICALLY_PRE_LISTING"
+    }
+  }
+}
