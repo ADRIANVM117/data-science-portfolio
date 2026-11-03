@@ -12,7 +12,7 @@ import polars as pl
 from scenario_portfolio_lab.catalog import CatalogError, read_catalog, report_catalog
 from scenario_portfolio_lab.eligibility import eligible
 from scenario_portfolio_lab.ingest import ProviderResponseError, parse_daily_adjusted, validate_cutoff
-from scenario_portfolio_lab.matrices import coverage, simple_returns
+from scenario_portfolio_lab.matrices import coverage, price_matrix, simple_returns
 from scenario_portfolio_lab.pipeline import build_from_raw
 from scripts.verify_provider_symbols import append_event, successful_ids
 
@@ -34,6 +34,24 @@ class DataBoundaryTests(unittest.TestCase):
         returned=simple_returns(prices,{"AAA":{date(2020,1,2),date(2020,1,3),date(2020,1,6)}})
         self.assertIsNone(returned["AAA"][1])
         with self.assertRaises(ValueError): validate_cutoff("2026-10-10")
+
+    def test_unexpected_non_session_does_not_contaminate_returns_or_remain_eligible(self):
+        expected={"AAPL":{date(2020,1,3),date(2020,1,6)},"XYZ":{date(2020,1,3),date(2020,1,6)}}
+        prices=price_matrix({
+            "AAPL":pl.DataFrame({"session_date":[date(2020,1,3),date(2020,1,6)],"adjusted_close":[100.0,102.0]}),
+            "XYZ":pl.DataFrame({"session_date":[date(2020,1,3),date(2020,1,4),date(2020,1,6)],"adjusted_close":[50.0,51.0,52.0]}),
+        })
+        self.assertEqual(prices["session_date"].to_list(),[date(2020,1,3),date(2020,1,4),date(2020,1,6)])
+        self.assertAlmostEqual(simple_returns(prices,expected)["AAPL"][2],102.0/100.0-1.0)
+        self.assertNotEqual(coverage(prices,"2020-01-06",2,expected)[1].reason,"ELIGIBLE")
+
+    def test_missing_expected_price_blocks_monday_return_and_eligibility_despite_saturday_price(self):
+        expected={"AAA":{date(2020,1,2),date(2020,1,3),date(2020,1,6)}}
+        prices=price_matrix({
+            "AAA":pl.DataFrame({"session_date":[date(2020,1,2),date(2020,1,3),date(2020,1,4),date(2020,1,6)],"adjusted_close":[100.0,None,101.0,102.0]}),
+        })
+        self.assertIsNone(simple_returns(prices,expected)["AAA"][3])
+        self.assertFalse(coverage(prices,"2020-01-06",2,expected)[0].eligible)
 
     def test_leading_expected_session_gaps_are_insufficient_history(self):
         prices=pl.DataFrame({"session_date":[date(2020,1,2),date(2020,1,3),date(2020,1,6)],"AAA":[None,10.0,11.0]})

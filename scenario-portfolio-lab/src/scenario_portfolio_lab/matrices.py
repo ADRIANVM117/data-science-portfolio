@@ -26,10 +26,15 @@ def simple_returns(prices: pl.DataFrame, expected_sessions: dict[str, set[date]]
     dates = rows["session_date"]
     for col in prices.columns[1:]:
         if col not in expected_sessions: raise ValueError(f"missing calendar for {col}")
-        allowed = expected_sessions[col]; values = prices[col].to_list(); output = [None]
-        for i in range(1, len(values)):
-            consecutive = dates[i - 1] in allowed and dates[i] in allowed and all(day not in allowed for day in _days_between(dates[i - 1], dates[i]))
-            output.append(values[i] / values[i - 1] - 1 if consecutive and values[i] is not None and values[i - 1] is not None else None)
+        allowed = expected_sessions[col]; values = prices[col].to_list(); output = []
+        previous = None
+        for current, value in zip(dates, values):
+            if current not in allowed:
+                output.append(None)
+                continue
+            consecutive = previous is not None and all(day not in allowed for day in _days_between(previous[0], current))
+            output.append(value / previous[1] - 1 if consecutive and value is not None and previous[1] is not None else None)
+            previous = (current, value)
         rows[col] = output
     return pl.DataFrame(rows, schema={"session_date": pl.Date, **{c: pl.Float64 for c in prices.columns[1:]}})
 
@@ -48,6 +53,7 @@ def coverage(prices: pl.DataFrame, cutoff: str, minimum_observations: int, expec
         if not valid: results.append(Coverage(col,0,0,0,len(values),None,None,False,"ALL_NULL")); continue
         if col not in expected_sessions: raise ValueError(f"missing calendar for {col}")
         first,last=valid[0],valid[-1]; expected=expected_sessions[col]; observed_dates=prices["session_date"].to_list(); observed_by_date=dict(zip(observed_dates, values)); first_date=observed_dates[first]
+        unexpected_non_session = any(value is not None and day not in expected for day, value in zip(observed_dates, values))
         leading=sum(observed_by_date.get(day) is None for day in expected if day < first_date)
         interior=sum(observed_by_date.get(day) is None for day in expected if first_date <= day <= observed_dates[last])
         trailing=sum(observed_by_date.get(day) is None for day in expected if observed_dates[last] < day <= date.fromisoformat(cutoff))
@@ -59,6 +65,8 @@ def coverage(prices: pl.DataFrame, cutoff: str, minimum_observations: int, expec
             reason = "INSUFFICIENT_HISTORY"
         elif interior:
             reason = "INTERIOR_NULL"
+        elif unexpected_non_session:
+            reason = "UNEXPECTED_NON_SESSION"
         elif trailing or str(prices["session_date"].max()) != cutoff:
             reason = "MISSING_CUTOFF"
         elif len(valid) < minimum_observations:
