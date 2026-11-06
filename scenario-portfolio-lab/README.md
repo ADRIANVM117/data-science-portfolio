@@ -1,45 +1,44 @@
 # Scenario Portfolio Lab
 
-An educational quantitative-finance project exploring scenario-based portfolio construction through a progressive implementation inspired by Anton Vorobets.
+**A scenario-based portfolio engine: from market data to constrained allocations and cost-aware backtesting.**
 
-The project uses real Alpha Vantage historical data and separates data validation, model construction, numerical checks, predictive evaluation, and portfolio decisions.
+Built for an independent Quant Desk, using entropy pooling, market-state conditioning and CVaR optimization to turn joint return scenarios into portfolio decisions. Inspired by Anton Vorobets’ portfolio-construction framework.
 
-## Current status
+**Research implementation complete. Next milestone: operational integration with Interactive Brokers paper trading.**
 
-The data pipeline and notebooks 02–04 are implemented and numerically checked:
+## The engine
 
-- **Data:** 138 approved entry instruments and 125 data-eligible instruments for the common window from 2018-01-02 to 2026-10-09.
-- **Historical distribution:** 2,204 joint daily return observations, with marginal, temporal, and dependence diagnostics.
-- **Joint resampling:** one-session and five-session scenarios under uniform and exponential historical probabilities.
-- **State conditioning:** entropy pooling using lagged VIX, followed by five-session simulations with state updates.
+- **Data:** real Alpha Vantage history; 138 approved entry instruments, 125 data-eligible instruments and 2,204 joint daily return observations, covering 2018–2026-10-09.
+- **Scenarios:** joint resampling, exponential time weighting and VIX-conditioned entropy pooling, including simulated state evolution.
+- **Allocation:** minimum CVaR portfolios with explicit investment and concentration constraints.
+- **Evaluation:** temporal forecast evaluation and monthly portfolio backtesting with drifting weights, turnover and self-financed transaction costs.
 
-**Predictive validation and portfolio optimization remain pending.** Numerical checks establish consistency with the implemented model; they do not establish forecasting skill or investment usefulness.
+The implemented portfolio experiment uses eight USD ETFs, full investment, no shorting or leverage, and a 15% target-weight cap. Data eligibility and portfolio-universe selection are separate decisions.
 
-## Data pipeline
+## Portfolio results
 
-| Stage | Function | Result |
-|---|---|---:|
-| Raw | Original responses and provenance | 138 instruments |
-| Silver | Parsing and a uniform schema | 138 series |
-| Gold | Series-quality controls | 138 series |
-| Matrices | Aligned prices and daily returns | 2,205 price dates |
-| Data-eligible universe | Full coverage and instrument requirements | 125 instruments |
+January 31, 2020–October 9, 2026. USD 1M initial capital; 81 monthly allocation decisions. Net results assume **5 basis points per side**, including initial entry costs.
 
-Data eligibility is not portfolio selection. No economic ranking, portfolio weights, or allocation has been produced.
+| Rule | Annualized return (CAGR) | Annualized volatility | Maximum drawdown |
+|---|---:|---:|---:|
+| Equal weight | 9.31% | 12.48% | −25.23% |
+| Minimum CVaR · exponential | 8.20% | 11.36% | −22.35% |
+| Minimum CVaR · VIX-conditioned | 8.32% | 11.33% | −22.24% |
 
-## Educational notebooks
+CVaR portfolios traded lower growth for lower realized volatility and drawdown. The incremental VIX result was modest and sensitive to transaction costs; it does not establish predictive or investment superiority.
 
-| Notebook | Question |
+## Research workflow
+
+| Notebook | Focus |
 |---|---|
-| [02 — Returns and empirical distribution](notebooks/02_returns_and_empirical_distribution.ipynb) | What does the historical joint return sample contain? |
-| [03 — Joint resampling](notebooks/03_joint_resampling.ipynb) | How do we construct scenarios and distinguish model effects from Monte Carlo noise? |
-| [04 — State-conditioned resampling](notebooks/04_state_conditioned_resampling.ipynb) | How can historical probabilities incorporate market state and evolve across simulated sessions? |
+| [02](notebooks/02_returns_and_empirical_distribution.ipynb) | Historical joint distribution and dependence |
+| [03](notebooks/03_joint_resampling.ipynb) | Joint scenarios and temporal weighting |
+| [04](notebooks/04_state_conditioned_resampling.ipynb) | Entropy pooling and state-conditioned simulation |
+| [05](notebooks/05_scenario_evaluation.ipynb) | Temporal forecast evaluation |
+| [06](notebooks/06_portfolio_construction.ipynb) | Constrained CVaR portfolio construction |
+| [07](notebooks/07_portfolio_backtest.ipynb) | Portfolio backtesting, costs and diagnostics |
 
-Notebook 04 uses 2,203 return observations aligned with VIX. The first historical return remains in the audit but lacks the required antecedent within the published calendar.
-
-Its three state groups use empirical 25th/75th percentile cuts. The exponential half-life is 1,102 sessions. These are illustrative configurations, not demonstrated optimal choices.
-
-## Install and validate
+## Reproduce
 
 ```powershell
 python -m venv .venv
@@ -48,35 +47,10 @@ $env:PYTHONPATH = 'src'
 .\.venv\Scripts\python -m unittest discover -s tests -v
 ```
 
-The tests use shareable synthetic fixtures and make no API requests. They are separate from the checks executed inside the notebooks.
+Tests use synthetic fixtures without API calls. Notebooks require local data artifacts, which are not distributed. See [offline reproduction](docs/offline_run_2026-10-11.md), [data contract](docs/data-contract.md) and [methodology status](docs/methodology-status.md).
 
-See the [local-raw offline reproduction](docs/offline_run_2026-10-11.md) for the sealed historical data run. Executing the notebooks requires the corresponding local data artifacts, which are not published.
+## Scope and next milestone
 
-A new Alpha Vantage acquisition is a separate operation and may differ because historical data can be revised.
+This is retrospective research: the universe was selected after observing the history, the sample has been explored, and data may be revised. VIX timing follows a documented availability convention rather than historical point-in-time verification. Matrix hashes recorded later establish subsequent consistency, not original sealed provenance. Closing-price execution and transaction costs are modeled assumptions.
 
-## Documentation
-
-- [Data contract](docs/data-contract.md)
-- [Full-window coverage audit](docs/full_window_coverage_audit_2026-10-11.md)
-- [Methodology status](docs/methodology-status.md)
-
-## Essential limitations
-
-- The source catalog is contemporary, not a historical point-in-time universe.
-- The historical sample has already been explored; it is not an untouched holdout.
-- VIX conditioning uses a documented two-equity-session lag. Historical availability is assumed under that convention, not verified through point-in-time data versions.
-- The original sealed manifest does not contain reference hashes for the two matrix Parquet files. Later hashes establish subsequent consistency, not original historical integrity.
-- The state variable and historical support represent only part of market uncertainty.
-- Numerical consistency does not demonstrate predictive accuracy, trading feasibility, or economic value.
-
-Downloaded data, generated matrices, credentials, local working instructions, and the source PDF are excluded from the repository. Gold quality approval and data eligibility remain separate controls.
-
-## Next steps
-
-1. Define a temporal evaluation protocol before examining evaluation results.
-2. Compare state-conditioned forecasts with uniform and exponential baselines.
-3. Assess calibration, distributional forecast quality, and parameter sensitivity.
-4. Investigate portfolio construction, constraints, costs, and execution in a separate stage.
-
-
-
+The next delivery is a repeatable paper-trading workflow: updated data, decision reports, position sizing, broker reconciliation and execution monitoring. **Broker integration and live execution are not yet implemented.**
