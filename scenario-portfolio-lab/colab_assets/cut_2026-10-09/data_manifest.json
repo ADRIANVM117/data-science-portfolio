@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "research_cut": "2026-10-09",
+  "purpose": "Reproducible notebook research inputs",
+  "artifacts": {
+    "gold/eligible_simple_total_return_matrix.parquet": {
+      "sha256": "EB290A25AFC3C1949A9723F503346F7F878075732E9CBB38222317A98273A282",
+      "size_bytes": 2028709
+    },
+    "gold/adjusted_close_matrix.parquet": {
+      "sha256": "B46D50A33F4477871016438ED69EBEF3501BF6902D86ECE5467E912C01684E58",
+      "size_bytes": 1872044
+    },
+    "reports/eligible_universe.csv": {
+      "sha256": "4BC0352331002C5D33422A31E10E540B6CF52DD70EAF10D0639CCAD264C4DF02",
+      "size_bytes": 5903
+    }
+  }
+}
