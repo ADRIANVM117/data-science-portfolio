@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "research_cut": "2026-10-09",
+  "purpose": "State-conditioned resampling research inputs",
+  "artifacts": {
+    "vix/vix_daily_close.parquet": {
+      "sha256": "CDDF2341D863422B6C7A7DB7732A7D0AFD1F6F8555614BF5C104993D62B9FF39",
+      "size_bytes": 11831
+    },
+    "vix/vix_return_alignment.parquet": {
+      "sha256": "DC5BC9309D7E5E1A5F93091F6CCA21A7A31D255607CA7B67B8F26E961BEFAEDD",
+      "size_bytes": 26912
+    }
+  }
+}
